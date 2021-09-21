@@ -1,11 +1,13 @@
 html{
     font-family: 'Rubik Mono One', sans-serif;
 }
+
 .inner{
-    animation: change 25s infinite;
+    animation: change 5s infinite;
     font-size:75px;
     color: rgb(226, 75, 75)
 }
+
 @keyframes change{
     0%{
         color: rgb(226, 75, 75)
