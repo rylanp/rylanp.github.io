@@ -2,5 +2,18 @@ html{
     font-family: 'Rubik Mono One', sans-serif;
 }
 .inner{
+    animation: change 25s infinite;
     font-size:75px;
+    color: rgb(226, 75, 75)
+}
+@keyframes change{
+    0%{
+        color: rgb(226, 75, 75)
+    }
+    50%{
+        color: rgb(75, 158, 226)
+    }
+    100%{
+        color: rgb(226, 75, 75)
+    }
 }
