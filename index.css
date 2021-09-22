@@ -40,7 +40,7 @@ body{
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 800px;
     height: 400px;
 }
 .grid__item {
