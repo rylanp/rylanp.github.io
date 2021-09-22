@@ -1,11 +1,14 @@
-html{
+body{
+    
     font-family: 'Rubik Mono One', sans-serif;
+    display: flex;
+    overflow: hidden;
 }
 
 .inner{
     animation: change 5s infinite;
     font-size:75px;
-    color: rgb(226, 75, 75)
+    color: rgb(226,75,75);
 }
 
 @keyframes change{
@@ -18,4 +21,20 @@ html{
     100%{
         color: rgb(226, 75, 75)
     }
+}
+
+#cursor{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0,0,0);
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+h1:hover ~ #cursor{
+    width: 1000px;
+    hight: 1000px;
+    border: 2px dashed rgb(0,0,0);
 }

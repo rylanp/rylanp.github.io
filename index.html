@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css"/>
-    <title>Document</title>
+    <title>Rylan's Portfolio</title>
 </head>
 <body>
-    <section id="banner">
-        <div class="inner">
-            <header>
-                <h1>Hi,<br /> I'm Rylan,<br />a software developer</h1>
-            </header>
-        </div>
-    </section>
+    <h1>Hi,<br>I'm Rylan,<br>software developer</h1>
+    <div class="inner">
+            <h1>Hi,<br>I'm Rylan,<br>software developer</h1>
+    </div>
+    
+    <div id="cursor"></div>
+    
+    <script type="text/javascript">
+        var cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.left = x + "px";
+            cursor.style.top = y + "px";
+        });
+    </script>
+    
 </body>
-
 </html>
