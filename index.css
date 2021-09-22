@@ -37,5 +37,5 @@ body{
 :active ~ #cursor{
     width: 100px;
     height: 100px;
-    border: 3px solid rgba(0, 0, 0, 0.1)
+    border: 3px solid rgb(0, 0, 0)
 }
