@@ -7,10 +7,13 @@ body{
 }
 
 .inner{
+    position: absolute;
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
     z-index: 10;
+    width: 100%;
+    height: 500px
 }
 
 @keyframes change{
@@ -39,6 +42,7 @@ body{
 
 
 .grid {
+    position: absolute;
     background: salmon;
     display: flex;
     flex-wrap: wrap;
