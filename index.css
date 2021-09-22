@@ -33,7 +33,7 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-body:hover ~ #cursor{
+h2:hover ~ #cursor{
     width: 1000px;
     hight: 1000px;
     border: 3px dashed rgb(0,0,0);
