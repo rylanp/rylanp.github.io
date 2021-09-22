@@ -40,6 +40,15 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
+    animation: orbit;
+}
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translate(120px);
+    }
+    to {
+        transform: rotate(360deg) translate(120px);
+    }
 }
 
 
@@ -77,3 +86,4 @@ body{
     transition: opacity 0.6s ease;
     transform: scale(1.1);
 }
+
