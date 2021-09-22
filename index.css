@@ -10,6 +10,7 @@ body{
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
+    z-index: 10;
 }
 
 @keyframes change{
@@ -33,6 +34,7 @@ body{
     transition: 0.1s;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+    z-index: 10000;
 }
 
 
@@ -41,14 +43,18 @@ body{
     flex-wrap: wrap;
     width: 500px;
     height: 400px;
+    z-index: 0;
   }
   .grid__item {
     height: 60px;
     width: 60px;
     background: grey;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 2s ease 0.4s, transform 0.8s ease;
+    transform: scale(1);
   }  
   .grid__item:hover {
     opacity: 1;
+    transition: opacity 0.2s ease;
+    transform: scale(1.04);
   }
