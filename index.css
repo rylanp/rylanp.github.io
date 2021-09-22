@@ -43,7 +43,6 @@ body{
 
 .grid {
     position: absolute;
-    background: salmon;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
