@@ -46,7 +46,7 @@ body{
 .grid__item {
     height: 60px;
     width: 60px;
-    background: grey;
+    background: rgb(0,0,0);
     opacity: 1;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
