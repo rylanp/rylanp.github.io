@@ -35,6 +35,6 @@ body{
 }
 h1:hover ~ #cursor{
     width: 1000px;
-    hight: 1000px;
+    height: 1000px;
     border: 2px dashed rgb(0,0,0);
 }
