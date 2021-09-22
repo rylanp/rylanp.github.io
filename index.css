@@ -7,25 +7,20 @@ body{
 }
 
 .inner{
-    position: absolute;
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
-    transform: translate(-50%, -50%, rotate(0deg));
 }
 
 @keyframes change{
     0%{
         color: rgb(226, 75, 75);
-        transform: translate(-50%, -50%, rotate(0deg));
     }
     50%{
         color: rgb(75, 158, 226);
-        transform: translate(-50%, -50%, rotate(360deg));
     }
     100%{
         color: rgb(226, 75, 75);
-        transform: translate(-50%, -50%, rotate(0deg));
     }
 }
 
@@ -39,9 +34,8 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-.title:hover ~ #cursor{
+:hover ~ cursor{
     width: 100px;
     height: 100px;
-    border: 2px dashed rgb(0,0,0);
-    animation: cursorrotate
+    border: 3px dashed rgb(0,0,0);
 }
