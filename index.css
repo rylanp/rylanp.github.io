@@ -10,6 +10,7 @@ body{
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
+    z-index: 10;
 }
 
 @keyframes change{
