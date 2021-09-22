@@ -1,5 +1,6 @@
 html{
     font-family: 'Rubik Mono One', sans-serif;
+    
 }
 
 .inner{
@@ -18,4 +19,14 @@ html{
     100%{
         color: rgb(226, 75, 75)
     }
+}
+
+#cursor{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0,0,0);
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
 }
