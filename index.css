@@ -26,7 +26,7 @@ html{
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 2px solid rgb(0,0,0);
+    border: 2px solid rgb(255,75,75);
     box-sizing: border-box;
     transition: 0.1s;
     transform: translate(-50%, -50%);
