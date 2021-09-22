@@ -51,12 +51,12 @@ body{
     justify-content: center;
 }
 .grid_item {
-    animation: change_item_color 2s infinite;
+    animation: change_item_color 5s infinite;
     height: 30px;
     width: 30px;
     background: rgb(70, 49, 255);
     opacity: 0;
-    transition: opacity 2s ease 0.4s, transform 0.8s ease;
+    transition: opacity 2s ease 0.3s, transform 0.6s ease;
     transform: scale(1);
     z-index: 0;
     justify-content: center;
@@ -75,5 +75,5 @@ body{
 .grid_item:hover {
     opacity: 1;
     transition: opacity 0.2s ease;
-    transform: scale(1.06);
+    transform: scale(1.1);
 }
