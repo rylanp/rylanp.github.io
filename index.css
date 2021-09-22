@@ -43,7 +43,7 @@ body{
     flex-wrap: wrap;
     width: 500px;
     height: 400px;
-    z-index: 90;
+    z-index: 0;
 }
 .grid__item {
     height: 60px;
