@@ -1,7 +1,8 @@
-html{
-    font-family: 'Rubik Mono One', sans-serif;
-    cursor: none;
+body{
     
+    font-family: 'Rubik Mono One', sans-serif;
+    display: flex;
+    overflow: hidden;
 }
 
 .inner{
