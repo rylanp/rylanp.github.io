@@ -35,5 +35,25 @@
             i++;
         }
     </script>
+
+    <script type="text/javascript">
+        var startTime = (new Date()).getTime();
+        var rotationSpeed = 500; // Milliseconds for a full turn
+        var orbitRadius = 75;
+        function draw() {
+            var boundsX = canvas.width;
+            var boundsY = canvas.height;
+            ctx.clearRect(0, 0, boundsX, boundsY);
+            ctx.fillStyle = kule.color;
+
+            var currentTime = (new Date()).getTime();
+            var passedTime = currentTime - startTime;
+            var angle = Math.PI * 2 * (passedTime / rotationSpeed);
+
+            ctx.beginPath();
+            ctx.arc(mouseX + Math.cos(angle) * orbitRadius, mouseY + Math.sin(angle) * orbitRadius, kule.r, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    </script>
 </body>
 </html>
