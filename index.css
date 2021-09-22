@@ -46,13 +46,13 @@ body{
 .grid_item {
     height: 80px;
     width: 80px;
-    background: rgb(0,0,0);
-    opacity: 0;
+    background: rgb(61, 61, 61);
+    opacity: 0.1;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
 }  
 .grid_item:hover {
     opacity: 1;
     transition: opacity 0.2s ease;
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
