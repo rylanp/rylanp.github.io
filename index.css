@@ -34,7 +34,7 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-:onclick ~ #cursor{
+:active ~ #cursor{
     width: 100px;
     height: 100px;
     border: 3px dashed rgb(0,0,0);
