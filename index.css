@@ -40,7 +40,7 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
-    animation: orbit;
+    animation: orbit 2.5s linear infinite;
 }
 @keyframes orbit {
     from {
