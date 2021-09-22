@@ -49,7 +49,7 @@ body{
     height: 60px;
     width: 60px;
     background: grey;
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
   }  
