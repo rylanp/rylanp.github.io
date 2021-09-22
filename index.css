@@ -74,6 +74,6 @@ body{
 } 
 .grid_item:hover {
     opacity: 1;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.6s ease;
     transform: scale(1.1);
 }
