@@ -3,6 +3,7 @@ body{
     font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     overflow: hidden;
+    cursor: none;
 }
 
 .inner{
@@ -33,7 +34,7 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-.inner:hover ~ #cursor{
+#title:hover ~ #cursor{
     width: 100px;
     height: 100px;
     border: 2px dashed rgb(0,0,0);
