@@ -10,6 +10,7 @@ body{
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
+    z-index: 0;
 }
 
 @keyframes change{
@@ -42,12 +43,13 @@ body{
     flex-wrap: wrap;
     width: 800px;
     height: 400px;
+    z-index: -10;
 }
 .grid_item {
     height: 80px;
     width: 80px;
     background: rgb(0,0,0);
-    opacity: 1;
+    opacity: 0;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
 }  
