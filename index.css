@@ -7,6 +7,7 @@ body{
 }
 
 .inner{
+    position: absolute;
     animation: change 5s infinite;
     font-size:75px;
     color: rgb(226,75,75);
@@ -15,13 +16,16 @@ body{
 
 @keyframes change{
     0%{
-        color: rgb(226, 75, 75)
+        color: rgb(226, 75, 75);
+        transform: translate(-50%, -50%, rotate(0deg));
     }
     50%{
-        color: rgb(75, 158, 226)
+        color: rgb(75, 158, 226);
+        transform: translate(-50%, -50%, rotate(360deg));
     }
     100%{
-        color: rgb(226, 75, 75)
+        color: rgb(226, 75, 75);
+        transform: translate(-50%, -50%, rotate(0deg));
     }
 }
 
