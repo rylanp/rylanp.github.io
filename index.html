@@ -8,87 +8,7 @@
     <title>Rylan's Portfolio</title>
 </head>
 <body>
-    <div class="grid">
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
-        <div class="grid_item"></div>
+    <div class="grid" id="grid">
     </div>
     <div class="inner">
         <h1 class="title">Hi,<br>I'm Rylan,<br>software developer</h1>
@@ -104,6 +24,16 @@
             cursor.style.left = x + "px";
             cursor.style.top = y + "px";
         });
+    </script>
+    <script type="text/javascript">
+        
+        var g = document.getElementById('grid');
+        var i = 0;
+        while (i < 1000){
+            var element = document.createElement('div');
+            document.getElementById('grid').appendChild(element);
+            i++;
+        }
     </script>
     
 </body>
