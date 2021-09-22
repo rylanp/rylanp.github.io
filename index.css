@@ -43,15 +43,15 @@ body{
     width: 800px;
     height: 400px;
 }
-.grid__item {
-    height: 60px;
-    width: 60px;
+.grid_item {
+    height: 80px;
+    width: 80px;
     background: rgb(0,0,0);
     opacity: 1;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
 }  
-.grid__item:hover {
+.grid_item:hover {
     opacity: 1;
     transition: opacity 0.2s ease;
     transform: scale(1.04);
