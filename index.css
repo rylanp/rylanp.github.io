@@ -3,7 +3,6 @@ body{
     font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     overflow: hidden;
-    cursor: none;
 }
 
 .inner{
@@ -30,8 +29,8 @@ body{
 
 #cursor{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border: 2px solid rgb(0,0,0);
     box-sizing: border-box;
     transition: 0.1s;
