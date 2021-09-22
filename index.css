@@ -50,15 +50,27 @@ body{
     justify-content: center;
 }
 .grid_item {
+    animation: change_item_color 2s infinite;
     height: 30px;
     width: 30px;
-    background: rgb(61, 61, 61);
-    opacity: 0.1;
+    background: rgb(70, 49, 255);
+    opacity: 0;
     transition: opacity 2s ease 0.4s, transform 0.8s ease;
     transform: scale(1);
     z-index: 0;
     justify-content: center;
-}  
+} 
+@keyframes change_item_color{
+    0%{
+        background: rgb(226, 75, 75);
+    }
+    50%{
+        background: rgb(75, 158, 226);
+    }
+    100%{
+        background: rgb(226, 75, 75);
+    }
+} 
 .grid_item:hover {
     opacity: 1;
     transition: opacity 0.2s ease;
