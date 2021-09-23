@@ -27,6 +27,9 @@ class Ball{
         this.div.style.height = (m*2) + "px";
     }
     adjustVelocity(fx, fy){
+        if (this.posX <= m){
+            this.velocityX *= -1;
+        }
         this.velocityX += fx;
         this.velocityY += fy;
         this.posX += this.velocityX / timestep;
@@ -47,7 +50,7 @@ let balldiv3 = document.getElementById('ball3');
 
 let ball1 = new Ball(100,100,7,15, balldiv1);
 let ball2 = new Ball(100,200,5,10, balldiv2);
-let ball3 = new Ball(100,300,10,3, balldiv3);
+let ball3 = new Ball(100,300,6,3, balldiv3);
 let cursor = new Cursor(30);
 
 const onMouseMove = (e) =>{
