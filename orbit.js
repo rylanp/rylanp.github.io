@@ -1,7 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
 let timestep = 10; //# milliseconds
-let gravity = 4;
+let gravity = 2;
 
 class Cursor{
     constructor(m) {
@@ -61,7 +61,7 @@ let balldiv3 = document.getElementById('ball3');
 let ball1 = new Ball(100,100,7,15, balldiv1);
 let ball2 = new Ball(100,200,5,10, balldiv2);
 let ball3 = new Ball(100,300,6,3, balldiv3);
-let cursor = new Cursor(30);
+let cursor = new Cursor(100);
 
 const onMouseMove = (e) =>{
   //cursordiv.style.left = e.pageX + 'px';
