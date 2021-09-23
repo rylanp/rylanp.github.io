@@ -30,6 +30,15 @@ class Ball{
         if (this.posX <= this.mass && this.velocityX < 0){
             this.velocityX *= -1;
         }
+        if (this.posX <= window.innerWidth - this.mass && this.velocityX > 0){
+            this.velocityX *= -1;
+        }
+        if (this.posY <= this.mass && this.velocityY < 0){
+            this.velocityY *= -1;
+        }
+        if (this.posY >= window.innerHeight - this.mass && this.velocityY > 0){
+            this.velocityY *= -1;
+        }
         this.velocityX += fx;
         this.velocityY += fy;
         this.posX += this.velocityX / timestep;
