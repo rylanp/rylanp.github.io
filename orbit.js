@@ -23,6 +23,12 @@ class Ball{
         this.velocityX = iv;
         this.velocityY = 0;
         this.div = d;
+        this.div.style.width = m*m / 10;
+        this.div.style.height = m*m / 10;
+        var colors = [rgb(255, 145, 0),rgb(245, 47, 21),rgb(21, 144, 245),rgb(144, 21, 245),rgb(245, 21, 226)];
+        var new_color = colors[Math.floor(Math.random()*colors.length)];
+        this.div.style.background = new_color;
+        this.div.style.border = new_color;
     }
     adjustVelocity(fx, fy){
         this.velocityX += fx;
@@ -38,11 +44,15 @@ class Ball{
 
 }
 
-let balldiv = document.getElementById('ball');
+let balldiv1 = document.getElementById('ball');
+let balldiv2 = document.getElementById('ball');
+let balldiv3 = document.getElementById('ball');
 //let cursordiv = document.getElementById('cursor');
 
-let ball = new Ball(100,100,5,5, balldiv);
-let cursor = new Cursor(30);
+let ball1 = new Ball(100,100,5,5, balldiv1);
+let ball2 = new Ball(100,200,8,10, balldiv2);
+let ball3 = new Ball(100,300,12,15, balldiv3);
+let cursor = new Cursor(40);
 
 const onMouseMove = (e) =>{
   //cursordiv.style.left = e.pageX + 'px';
@@ -58,8 +68,8 @@ function update() {
     x1 = cursor.posX;
     y1 = cursor.posY;
 
-    x2 = ball.posX;
-    y2 = ball.posY;
+    x2 = ball1.posX;
+    y2 = ball1.posY;
 
     dirX = x1 - x2;
     dirY = y1 - y2;
@@ -74,10 +84,56 @@ function update() {
     console.log("FX: " + forceX);
     console.log("FY: " + forceY);
     //# adjust the balls current velocity
-    ball.adjustVelocity(forceX, forceY);
+    ball1.adjustVelocity(forceX, forceY);
 
     //# move the ball according to it's velocity
-    ball.move();
+    ball1.move();
+
+    //# Calculate the x and y forces
+
+    x2 = ball2.posX;
+    y2 = ball2.posY;
+
+    dirX = x1 - x2;
+    dirY = y1 - y2;
+    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
+
+    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    console.log("x1: " + x1);
+    console.log("y1: " + y1);
+    console.log("x2: " + x2);
+    console.log("y2: " + y2);
+    console.log("FX: " + forceX);
+    console.log("FY: " + forceY);
+    //# adjust the balls current velocity
+    ball2.adjustVelocity(forceX, forceY);
+
+    //# move the ball according to it's velocity
+    ball2.move();
+
+    //# Calculate the x and y forces
+
+    x2 = ball3.posX;
+    y2 = ball3.posY;
+
+    dirX = x1 - x2;
+    dirY = y1 - y2;
+    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
+
+    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    console.log("x1: " + x1);
+    console.log("y1: " + y1);
+    console.log("x2: " + x2);
+    console.log("y2: " + y2);
+    console.log("FX: " + forceX);
+    console.log("FY: " + forceY);
+    //# adjust the balls current velocity
+    ball3.adjustVelocity(forceX, forceY);
+
+    //# move the ball according to it's velocity
+    ball3.move();
 }
 
 //# update loop in milliseconds
