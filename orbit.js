@@ -1,7 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
 let timestep = 10; //# milliseconds
-let gravity = 2;
+let gravity = 4;
 
 class Cursor{
     constructor(m) {
