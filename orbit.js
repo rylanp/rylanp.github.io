@@ -41,7 +41,7 @@ class Ball{
 
 
 let timestep = 10; //# milliseconds
-let gravity = 10;
+let gravity = 10000;
 
 let balldiv = document.getElementById('ball');
 let cursordiv = document.getElementById('cursor');
