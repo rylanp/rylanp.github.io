@@ -1,4 +1,45 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
+
+
+class Cursor{
+    constructor(m) {
+        this.mass = m;
+        this.posX = 100;
+        this.posY = 100;
+    }
+    setPos(x,y){
+        this.posX = x;
+        this.posY = y;
+    }
+}
+
+class Ball{
+    constructor(x,y,m, iv, d){
+        this.posX = x;
+        this.posY = y;
+        this.mass = m;
+        this.velocityX = iv;
+        this.velocityY = 0;
+        this.div = d;
+    }
+    applyVelocity(){
+        this.posX += this.velocityX / timestep;
+        this.posY += this.velocityY / timestep;
+    }
+    adjustVelocity(fx, fy){
+        this.posX += fx;
+        this.posY += fy;
+    }
+    move(){
+        this.applyVelocity();
+        cursordiv.style.left = this.posX + 'px';
+        cursordiv.style.top = this.posY + 'px';
+    }
+
+
+}
+
+
 let timestep = 10; //# milliseconds
 let gravity = 10;
 
@@ -53,40 +94,3 @@ setInterval(update, timestep)
 
 
 
-class Cursor{
-    constructor(m) {
-        this.mass = m;
-        this.posX = 100;
-        this.posY = 100;
-    }
-    setPos(x,y){
-        this.posX = x;
-        this.posY = y;
-    }
-}
-
-class Ball{
-    constructor(x,y,m, iv, d){
-        this.posX = x;
-        this.posY = y;
-        this.mass = m;
-        this.velocityX = iv;
-        this.velocityY = 0;
-        this.div = d;
-    }
-    applyVelocity(){
-        this.posX += this.velocityX / timestep;
-        this.posY += this.velocityY / timestep;
-    }
-    adjustVelocity(fx, fy){
-        this.posX += fx;
-        this.posY += fy;
-    }
-    move(){
-        this.applyVelocity();
-        cursordiv.style.left = this.posX + 'px';
-        cursordiv.style.top = this.posY + 'px';
-    }
-
-
-}
