@@ -41,7 +41,7 @@ class Ball{
 
 
 let timestep = 10; //# milliseconds
-let gravity = 10000;
+let gravity = 100;
 
 let balldiv = document.getElementById('ball');
 //let cursordiv = document.getElementById('cursor');
@@ -56,12 +56,6 @@ const onMouseMove = (e) =>{
 }
 document.addEventListener('mousemove', onMouseMove);
 
-
-function sqrdist(x1,y1,x2,y2){
-    let val = (x1 - x2)*(x1 - x2);
-    val += (y1 - y2)*(y1 - y2);
-    return val;
-}
 function update() {
     //# called every timestep
 
@@ -74,7 +68,7 @@ function update() {
 
     let dirX = x1 - x2;
     let dirY = y1 - y2;
-    let sqrdistance = sqrdist(x1,y1,x2,y2);
+    let sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
     let forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
     let forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
