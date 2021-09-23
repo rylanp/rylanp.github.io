@@ -41,8 +41,8 @@ class Ball{
 }
 
 let balldiv1 = document.getElementById('ball');
-let balldiv2 = document.getElementById('ball');
-let balldiv3 = document.getElementById('ball');
+let balldiv2 = document.getElementById('ball2');
+let balldiv3 = document.getElementById('ball3');
 //let cursordiv = document.getElementById('cursor');
 
 let ball1 = new Ball(100,100,5,5, balldiv1);
