@@ -45,10 +45,10 @@ let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(100,100,5,5, balldiv1);
-let ball2 = new Ball(100,200,8,10, balldiv2);
-let ball3 = new Ball(100,300,12,15, balldiv3);
-let cursor = new Cursor(40);
+let ball1 = new Ball(100,100,3,5, balldiv1);
+let ball2 = new Ball(100,200,5,10, balldiv2);
+let ball3 = new Ball(100,300,8,15, balldiv3);
+let cursor = new Cursor(30);
 
 const onMouseMove = (e) =>{
   //cursordiv.style.left = e.pageX + 'px';
