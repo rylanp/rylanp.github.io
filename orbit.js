@@ -23,8 +23,8 @@ class Ball{
         this.velocityX = iv;
         this.velocityY = 0;
         this.div = d;
-        this.div.style.width = m*m / 10;
-        this.div.style.height = m*m / 10;
+        this.div.style.width = m*m;
+        this.div.style.height = m*m;
     }
     adjustVelocity(fx, fy){
         this.velocityX += fx;
@@ -73,12 +73,6 @@ function update() {
 
     forceX = gravity * (ball1.mass * cursor.mass) * dirX / sqrdistance;
     forceY = gravity * (ball1.mass * cursor.mass) * dirY / sqrdistance;
-    console.log("x1: " + x1);
-    console.log("y1: " + y1);
-    console.log("x2: " + x2);
-    console.log("y2: " + y2);
-    console.log("FX: " + forceX);
-    console.log("FY: " + forceY);
     //# adjust the balls current velocity
     ball1.adjustVelocity(forceX, forceY);
 
@@ -96,12 +90,6 @@ function update() {
 
     forceX = gravity * (ball2.mass * cursor.mass) * dirX / sqrdistance;
     forceY = gravity * (ball2.mass * cursor.mass) * dirY / sqrdistance;
-    console.log("x1: " + x1);
-    console.log("y1: " + y1);
-    console.log("x2: " + x2);
-    console.log("y2: " + y2);
-    console.log("FX: " + forceX);
-    console.log("FY: " + forceY);
     //# adjust the balls current velocity
     ball2.adjustVelocity(forceX, forceY);
 
@@ -119,12 +107,6 @@ function update() {
 
     forceX = gravity * (ball3.mass * cursor.mass) * dirX / sqrdistance;
     forceY = gravity * (ball3.mass * cursor.mass) * dirY / sqrdistance;
-    console.log("x1: " + x1);
-    console.log("y1: " + y1);
-    console.log("x2: " + x2);
-    console.log("y2: " + y2);
-    console.log("FX: " + forceX);
-    console.log("FY: " + forceY);
     //# adjust the balls current velocity
     ball3.adjustVelocity(forceX, forceY);
 
