@@ -74,11 +74,12 @@ function update() {
 
     let dirX = x1 - x2;
     let dirY = y1 - y2;
-    let sqrdistance = sqrdist(x1,y1,x2,y2)
+    let sqrdistance = sqrdist(x1,y1,x2,y2);
 
     let forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
     let forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
-
+    console.log("FX: " + forceX);
+    console.log("FY: " + forceY);
     //# adjust the balls current velocity
     ball.adjustVelocity(forceX, forceY);
 
