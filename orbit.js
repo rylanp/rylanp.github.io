@@ -40,7 +40,7 @@ class Ball{
 
 }
 
-let balldiv1 = document.getElementById('ball');
+let balldiv1 = document.getElementById('ball1');
 let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 //let cursordiv = document.getElementById('cursor');
