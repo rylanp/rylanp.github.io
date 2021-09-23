@@ -44,14 +44,14 @@ let timestep = 10; //# milliseconds
 let gravity = 10000;
 
 let balldiv = document.getElementById('ball');
-let cursordiv = document.getElementById('cursor');
+//let cursordiv = document.getElementById('cursor');
 
 let ball = new Ball(100,100,5,5, balldiv);
 let cursor = new Cursor(30);
 
 const onMouseMove = (e) =>{
-  cursordiv.style.left = e.pageX + 'px';
-  cursordiv.style.top = e.pageY + 'px';
+  //cursordiv.style.left = e.pageX + 'px';
+  //cursordiv.style.top = e.pageY + 'px';
   cursor.setPos(e.pageX, e.pageY);
 }
 document.addEventListener('mousemove', onMouseMove);
