@@ -25,19 +25,19 @@ class Ball{
         this.div = d;
         this.div.style.width = ((m*2)+6) + "px";
         this.div.style.height = ((m*2)+6) + "px";
+        this.radius = this.mass + 3;
     }
     adjustVelocity(fx, fy){
-        radius = this.mass + 3;
-        if (this.posX <= radius && this.velocityX < 0){
+        if (this.posX <= this.radius && this.velocityX < 0){
             this.velocityX *= -1;
         }
-        if (this.posX >= window.innerWidth - radius && this.velocityX > 0){
+        if (this.posX >= window.innerWidth - this.radius && this.velocityX > 0){
             this.velocityX *= -1;
         }
-        if (this.posY <= radius && this.velocityY < 0){
+        if (this.posY <= this.radius && this.velocityY < 0){
             this.velocityY *= -1;
         }
-        if (this.posY >= window.innerHeight - radius && this.velocityY > 0){
+        if (this.posY >= window.innerHeight - this.radius && this.velocityY > 0){
             this.velocityY *= -1;
         }
         this.velocityX += fx;
