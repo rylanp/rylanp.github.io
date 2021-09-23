@@ -32,8 +32,8 @@ class Ball{
     }
     move(){
         this.applyVelocity();
-        cursordiv.style.left = this.posX + 'px';
-        cursordiv.style.top = this.posY + 'px';
+        this.div.style.left = this.posX + 'px';
+        this.div.style.top = this.posY + 'px';
     }
 
 
