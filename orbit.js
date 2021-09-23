@@ -1,5 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
+let timestep = 10; //# milliseconds
+let gravity = 1;
 
 class Cursor{
     constructor(m) {
@@ -22,26 +24,17 @@ class Ball{
         this.velocityY = 0;
         this.div = d;
     }
-    applyVelocity(){
-        this.posX += this.velocityX / timestep;
-        this.posY += this.velocityY / timestep;
-    }
     adjustVelocity(fx, fy){
-        this.posX += fx;
-        this.posY += fy;
+        this.posX = (fx + this.velocityX) / timestep;
+        this.posY = (fy + this.velocityY) / timestep;
     }
     move(){
-        this.applyVelocity();
         this.div.style.left = this.posX + 'px';
         this.div.style.top = this.posY + 'px';
     }
 
 
 }
-
-
-let timestep = 10; //# milliseconds
-let gravity = 1;
 
 let balldiv = document.getElementById('ball');
 //let cursordiv = document.getElementById('cursor');
@@ -60,18 +53,18 @@ function update() {
     //# called every timestep
 
     //# Calculate the x and y forces
-    let x1 = cursor.posX;
-    let y1 = cursor.posY;
+    x1 = cursor.posX;
+    y1 = cursor.posY;
 
-    let x2 = ball.posX;
-    let y2 = ball.posY;
+    x2 = ball.posX;
+    y2 = ball.posY;
 
-    let dirX = x1 - x2;
-    let dirY = y1 - y2;
-    let sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
+    dirX = x1 - x2;
+    dirY = y1 - y2;
+    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
-    let forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
-    let forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
     console.log("x1: " + x1);
     console.log("y1: " + y1);
     console.log("x2: " + x2);
