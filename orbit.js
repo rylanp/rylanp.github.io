@@ -25,10 +25,6 @@ class Ball{
         this.div = d;
         this.div.style.width = m*m / 10;
         this.div.style.height = m*m / 10;
-        var colors = ['red','yellow','purple','green','blue'];
-        var new_color = colors[Math.floor(Math.random()*colors.length)];
-        this.div.style.background = new_color;
-        this.div.style.border = new_color;
     }
     adjustVelocity(fx, fy){
         this.velocityX += fx;
@@ -75,8 +71,8 @@ function update() {
     dirY = y1 - y2;
     sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
-    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    forceX = gravity * (ball1.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball1.mass * cursor.mass) * dirY / sqrdistance;
     console.log("x1: " + x1);
     console.log("y1: " + y1);
     console.log("x2: " + x2);
@@ -98,8 +94,8 @@ function update() {
     dirY = y1 - y2;
     sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
-    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    forceX = gravity * (ball2.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball2.mass * cursor.mass) * dirY / sqrdistance;
     console.log("x1: " + x1);
     console.log("y1: " + y1);
     console.log("x2: " + x2);
@@ -121,8 +117,8 @@ function update() {
     dirY = y1 - y2;
     sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
-    forceX = gravity * (ball.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball.mass * cursor.mass) * dirY / sqrdistance;
+    forceX = gravity * (ball3.mass * cursor.mass) * dirX / sqrdistance;
+    forceY = gravity * (ball3.mass * cursor.mass) * dirY / sqrdistance;
     console.log("x1: " + x1);
     console.log("y1: " + y1);
     console.log("x2: " + x2);
