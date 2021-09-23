@@ -27,7 +27,7 @@ class Ball{
         this.div.style.height = (m*2) + "px";
     }
     adjustVelocity(fx, fy){
-        if (this.posX <= this.mass){
+        if (this.posX <= this.mass && this.velocityX < 0){
             this.velocityX *= -1;
         }
         this.velocityX += fx;
