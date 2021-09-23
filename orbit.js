@@ -25,7 +25,7 @@ class Ball{
         this.div = d;
         this.div.style.width = m*m / 10;
         this.div.style.height = m*m / 10;
-        var colors = [rgb(255, 145, 0),rgb(245, 47, 21),rgb(21, 144, 245),rgb(144, 21, 245),rgb(245, 21, 226)];
+        var colors = ['red','yellow','purple','green','blue'];
         var new_color = colors[Math.floor(Math.random()*colors.length)];
         this.div.style.background = new_color;
         this.div.style.border = new_color;
