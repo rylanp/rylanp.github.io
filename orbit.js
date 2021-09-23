@@ -46,8 +46,8 @@ let gravity = 10;
 let balldiv = document.getElementById('ball');
 let cursordiv = document.getElementById('cursor');
 
-let ball = Ball(100,100,5,5, balldiv);
-let cursor = Cursor(30);
+let ball = new Ball(100,100,5,5, balldiv);
+let cursor = new Cursor(30);
 
 const onMouseMove = (e) =>{
   cursordiv.style.left = e.pageX + 'px';
