@@ -30,7 +30,7 @@ class Ball{
         if (this.posX <= this.mass && this.velocityX < 0){
             this.velocityX *= -1;
         }
-        if (this.posX <= window.innerWidth - this.mass && this.velocityX > 0){
+        if (this.posX >= window.innerWidth - this.mass && this.velocityX > 0){
             this.velocityX *= -1;
         }
         if (this.posY <= this.mass && this.velocityY < 0){
