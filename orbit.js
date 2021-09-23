@@ -25,8 +25,8 @@ class Ball{
         this.div = d;
     }
     adjustVelocity(fx, fy){
-        this.posX = (fx + this.velocityX) / timestep;
-        this.posY = (fy + this.velocityY) / timestep;
+        this.posX += (fx + this.velocityX) / timestep;
+        this.posY += (fy + this.velocityY) / timestep;
     }
     move(){
         this.div.style.left = this.posX + 'px';
