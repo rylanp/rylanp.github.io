@@ -23,8 +23,8 @@ class Ball{
         this.velocityX = iv;
         this.velocityY = 0;
         this.div = d;
-        this.div.style.width = m*m;
-        this.div.style.height = m*m;
+        this.div.style.width = m*m + "px";
+        this.div.style.height = m*m + "px";
     }
     adjustVelocity(fx, fy){
         this.velocityX += fx;
