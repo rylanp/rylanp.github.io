@@ -103,26 +103,26 @@ body{
 .adjectives::before{
     text-decoration: none;
     content: '';
-    animation: textchange infinite 10s;
+    animation: textchange infinite 20s;
 }
 @keyframes textchange {
     0%{
-        content:'software developer';
+        content:'Programmer';
     }
     20%{
         content:'C#, Python, HTML, CSS, JS';
     }
     40%{
-        content:'game developer';
+        content:'Web Designer';
     }
     60%{
-        content:'web developer';
+        content:'Coder';
     }
     80%{
         content:'CAD Designer';
     }
     100%{
-        content:'software developer';
+        content:'Game Designer';
     }
 }
 
