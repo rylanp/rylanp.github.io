@@ -9,7 +9,7 @@ body{
 .inner{
     position: absolute;
     animation: change 5s infinite;
-    font-size:50px;
+    font-size:75px;
     color: rgb(226,75,75);
     z-index: 1;
     width: 100%;
@@ -125,4 +125,37 @@ body{
         content:'Game Designer';
     }
 }
+
+.adjectives {
+    position: absolute;
+    animation: change 5s infinite;
+    font-size:50px;
+    color: rgb(226,75,75);
+    z-index: 1;
+
+    border-right: solid 3px rgba(223, 223, 223, 0.733);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+  }
+  
+  /* Animation */
+  p {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
 
