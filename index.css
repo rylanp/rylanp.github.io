@@ -9,7 +9,7 @@ body{
 .inner{
     position: absolute;
     animation: change 5s infinite;
-    font-size:75px;
+    font-size:50px;
     color: rgb(226,75,75);
     z-index: 1;
     width: 100%;
@@ -100,7 +100,8 @@ body{
     background: rgb(56, 156, 223);
     
 }
-.adjectives:before{
+.adjectives::before{
+    text-decoration: none;
     content: '';
     animation: textchange infinite 10s;
 }
