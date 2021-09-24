@@ -100,4 +100,28 @@ body{
     background: rgb(56, 156, 223);
     
 }
+#adjectives::before{
+    content: '';
+    animation: textchange infinite 10s;
+}
+@keyframes textchange {
+    0%{
+        content:'software developer';
+    }
+    20%{
+        content:'C#, Python, HTML, CSS, JS';
+    }
+    40%{
+        content:'game developer';
+    }
+    60%{
+        content:'web developer';
+    }
+    80%{
+        content:'CAD Designer';
+    }
+    100%{
+        content:'software developer';
+    }
+}
 
