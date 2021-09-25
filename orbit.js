@@ -1,8 +1,8 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
 let timestep = 10; //# milliseconds
-let gravity = 1;
-
+let gravity = 2;
+let distscale = 5;
 class Cursor{
     constructor(m) {
         this.mass = m;
@@ -38,8 +38,8 @@ class Ball{
         let dirY = y1 - y2;
         let sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
 
-        let forceX = gravity * (this.mass * c.mass) * dirX / sqrdistance;
-        let forceY = gravity * (this.mass * c.mass) * dirY / sqrdistance;
+        let forceX = gravity * (this.mass * c.mass) * dirX / (sqrdistance * distscale);
+        let forceY = gravity * (this.mass * c.mass) * dirY / (sqrdistance * distscale);
         let fx = forceX;
         let fy = forceY;
 
@@ -61,6 +61,8 @@ class Ball{
         this.posY += this.velocityY / timestep;
     }
     move(cr){
+        this.velocityX *= 1 - (0.01 / timestep);
+        this.velocityY *= 1 - (0.01 / timestep);
         this.adjustVelocity(cr)
         this.div.style.left = this.posX + 'px';
         this.div.style.top = this.posY + 'px';
@@ -74,13 +76,17 @@ let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 let balldiv4 = document.getElementById('ball4');
 let balldiv5 = document.getElementById('ball5');
+let balldiv6 = document.getElementById('ball6');
+let balldiv7 = document.getElementById('ball7');
 //let cursordiv = document.getElementById('cursor');
 
 let ball1 = new Ball(100,200,5,15, balldiv1);
 let ball2 = new Ball(100,200,3,10, balldiv2);
 let ball3 = new Ball(100,200,1,12, balldiv3);
 let ball4 = new Ball(100,200,7,1, balldiv4);
-let ball5 = new Ball(100,200,9,0, balldiv5);
+let ball5 = new Ball(100,200,5,0, balldiv5);
+let ball6 = new Ball(100,400,1,40, balldiv6);
+let ball7 = new Ball(100,300,1,20, balldiv7);
 
 let cursor = new Cursor(100);
 
@@ -97,6 +103,8 @@ function update() {
     ball3.move(cursor);
     ball4.move(cursor);
     ball5.move(cursor);
+    ball6.move(cursor);
+    ball7.move(cursor);
 }
 
 //# update loop in milliseconds
