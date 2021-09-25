@@ -27,7 +27,22 @@ class Ball{
         this.div.style.height = ((m*2)+6) + "px";
         this.radius = this.mass + 3;
     }
-    adjustVelocity(fx, fy){
+    adjustVelocity(c){
+        let x1 = c.posX;
+        let y1 = c.posY;
+
+        let x2 = this.posX;
+        let y2 = this.posY;
+
+        let dirX = x1 - x2;
+        let dirY = y1 - y2;
+        let sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
+
+        let forceX = gravity * (this.mass * c.mass) * dirX / sqrdistance;
+        let forceY = gravity * (this.mass * c.mass) * dirY / sqrdistance;
+        let fx = forceX;
+        let fy = forceY;
+
         if (this.posX <= this.radius && this.velocityX < 0){
             this.velocityX *= -0.5;
         }
@@ -45,7 +60,8 @@ class Ball{
         this.posX += this.velocityX / timestep;
         this.posY += this.velocityY / timestep;
     }
-    move(){
+    move(cr){
+        this.adjustVelocity(cr)
         this.div.style.left = this.posX + 'px';
         this.div.style.top = this.posY + 'px';
     }
@@ -56,11 +72,16 @@ class Ball{
 let balldiv1 = document.getElementById('ball1');
 let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
+let balldiv4 = document.getElementById('ball4');
+let balldiv5 = document.getElementById('ball5');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(100,100,7,15, balldiv1);
-let ball2 = new Ball(100,200,5,10, balldiv2);
-let ball3 = new Ball(100,300,6,3, balldiv3);
+let ball1 = new Ball(100,200,5,15, balldiv1);
+let ball2 = new Ball(100,200,3,10, balldiv2);
+let ball3 = new Ball(100,200,1,12, balldiv3);
+let ball4 = new Ball(100,200,7,1, balldiv4);
+let ball5 = new Ball(100,200,9,0, balldiv5);
+
 let cursor = new Cursor(100);
 
 const onMouseMove = (e) =>{
@@ -71,60 +92,11 @@ const onMouseMove = (e) =>{
 document.addEventListener('mousemove', onMouseMove);
 
 function update() {
-    //# called every timestep
-
-    //# Calculate the x and y forces
-    x1 = cursor.posX;
-    y1 = cursor.posY;
-
-    x2 = ball1.posX;
-    y2 = ball1.posY;
-
-    dirX = x1 - x2;
-    dirY = y1 - y2;
-    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
-
-    forceX = gravity * (ball1.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball1.mass * cursor.mass) * dirY / sqrdistance;
-    //# adjust the balls current velocity
-    ball1.adjustVelocity(forceX, forceY);
-
-    //# move the ball according to it's velocity
-    ball1.move();
-
-    //# Calculate the x and y forces
-
-    x2 = ball2.posX;
-    y2 = ball2.posY;
-
-    dirX = x1 - x2;
-    dirY = y1 - y2;
-    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
-
-    forceX = gravity * (ball2.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball2.mass * cursor.mass) * dirY / sqrdistance;
-    //# adjust the balls current velocity
-    ball2.adjustVelocity(forceX, forceY);
-
-    //# move the ball according to it's velocity
-    ball2.move();
-
-    //# Calculate the x and y forces
-
-    x2 = ball3.posX;
-    y2 = ball3.posY;
-
-    dirX = x1 - x2;
-    dirY = y1 - y2;
-    sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
-
-    forceX = gravity * (ball3.mass * cursor.mass) * dirX / sqrdistance;
-    forceY = gravity * (ball3.mass * cursor.mass) * dirY / sqrdistance;
-    //# adjust the balls current velocity
-    ball3.adjustVelocity(forceX, forceY);
-
-    //# move the ball according to it's velocity
-    ball3.move();
+    ball1.move(cursor);
+    ball2.move(cursor);
+    ball3.move(cursor);
+    ball4.move(cursor);
+    ball5.move(cursor);
 }
 
 //# update loop in milliseconds
