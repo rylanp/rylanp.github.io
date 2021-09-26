@@ -1,17 +1,18 @@
 body{
-    
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Source Code Pro', monospace;
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
     background: rgb(44, 44, 44);
 }
-
-.inner{
-    margin-top: -60px;
-    margin-left: 20px;
-    animation: change 5s infinite;
-    font-size:50px;
+.title{
+    font-weight: 500;
+    font-size:80px;
     color: rgb(226,75,75);
+    animation: change 5s infinite;
+}
+.inner{
+    margin-top: -20px;
+    margin-left: 50px;
     z-index: 1;
     width: 100%;
     height: 310px;
@@ -101,15 +102,15 @@ body{
 }
 .dynamic-txt li{
     list-style-type: none;
-    font-weight: 500;
-    font-size: 60px;
+    font-weight: 100;
+    font-size: 40px;
     position: relative;
     top: 0;
     animation: slide 24s steps(8) infinite;
 }
 @keyframes slide {
     100%{
-        top: -640px;
+        top: -480px;
     }
 }
 .dynamic-txt li span::after{
@@ -118,9 +119,9 @@ body{
     left:0;
     background: rgb(44,44,44,1);
     width: 100%;
-    height: 80px;
+    height: 60px;
     border-left: 2px solid rgba(236, 236, 236, 0.87);
-    animation: typing 3s steps(25) infinite;
+    animation: typing 3s steps(18) infinite;
 }
 @keyframes typing {
     60%{
@@ -133,10 +134,110 @@ body{
 .dynamic-txt li span{
     position: relative;
     color: rgb(226,75,75);
-    animation: change 2.5s infinite;
+    animation: change 5s infinite;
 }
 .inner .dynamic-txt{
     overflow: hidden;
-    line-height: 80px;
-    height: 80px;
+    line-height: 60px;
+    height: 60px;
+}
+.section2L{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    margin-top: 400px;
+    margin-left: 0;
+    z-index: 0;
+    position:absolute;
+    background: rgb(61, 61, 61);
+    width: 50%;
+    height: 420px;
+    grid-auto-flow:row;
+}
+.section2L h2{
+    margin-bottom: 0px;
+    color: rgb(192, 192, 192);
+}
+.section2L p{
+    margin-top: 0px;
+    margin-bottom: 0px;;
+    color: rgb(179, 179, 179);
+}
+.section2R{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    margin-top: 400px;
+    margin-left: 50%;
+    z-index: 0;
+    position:absolute;
+    background: rgb(61, 61, 61);
+    width: 50%;
+    height: 420px;
+    grid-auto-flow:row;
+}
+.section2R h2{
+    margin-bottom: 0px;
+    color: rgb(192,192,192);
+}
+.section2R p{
+    margin-top: 0px;
+    margin-bottom: 0px;;
+    color: rgb(179, 179, 179);
+}
+button{
+    margin-top: 20px;
+    background: rgb(233, 230, 58);
+    width: 50%;
+    height: 50px;
+}
+#unityimg{
+    margin: 0px 0px 0px 0px;
+    width: 220px;
+    height: 150px;
+}
+#mvlinksimg{
+    margin: 0px 0px 0px 0px;
+    width: 240px;
+    height: 150px;
+}
+.button-unity{
+    width: 200px;
+    height: 50px;
+    line-height: 15px;
+    text-align: center;
+    background:rgb(236, 140, 49);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    border-radius: 10px;
+    color: rgb(22, 22, 22);
+    text-decoration:rgb(226, 75, 75);
+
+}
+.button-unity:hover{
+    background:rgb(189, 112, 40);
+    color: rgb(22, 22, 22);
+}
+.button-extension{
+    width: 200px;
+    height: 50px;
+    line-height: 15px;
+    text-align: center;
+    background:rgb(236, 140, 49);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    border-radius: 10px;
+    color: rgb(22, 22, 22);
+    text-decoration:rgb(226, 75, 75);
+
+}
+.button-extension:hover{
+    background:rgb(189, 112, 40);
+    color: rgb(22, 22, 22);
 }
