@@ -52,7 +52,7 @@ class Ball{
         if (this.posY <= this.radius && this.velocityY < 0){
             this.velocityY *= -0.5;
         }
-        if (this.posY >= window.innerHeight - this.radius && this.velocityY > 0){
+        if (this.posY >= window.height - this.radius && this.velocityY > 0){
             this.velocityY *= -0.5;
         }
         this.velocityX += fx;
