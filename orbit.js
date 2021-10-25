@@ -1,6 +1,6 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
-let timestep = 10; //# milliseconds
+let timestep = 15; //# milliseconds
 let gravity = 2;
 let distscale = 5;
 class Cursor{
@@ -23,8 +23,8 @@ class Ball{
         this.velocityX = iv;
         this.velocityY = 0;
         this.div = d;
-        this.div.style.width = ((m*2)+6) + "px";
-        this.div.style.height = ((m*2)+6) + "px";
+        this.div.style.width = ((m*2)+1) + "px";
+        this.div.style.height = ((m*2)+1) + "px";
         this.radius = this.mass + 3;
     }
     adjustVelocity(c){
