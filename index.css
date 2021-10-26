@@ -23,15 +23,15 @@ body{
 @keyframes change{
     0%{
         color: rgb(226, 75, 75);
-        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(226, 75, 75), 0 0 18px rgb(75, 158, 226);
+        text-shadow: 0 0 15px rgb(226, 75, 75), 0 0 30px rgb(75, 158, 226);
     }
     50%{
         color: rgb(75, 158, 226);
-        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(75, 158, 226), 0 0 18px rgb(226, 75, 75);
+        text-shadow: 0 0 15px rgb(75, 158, 226), 0 0 30px rgb(226, 75, 75);
     }
     100%{
         color: rgb(226, 75, 75);
-        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(226, 75, 75), 0 0 18px rgb(75, 158, 226);
+        text-shadow: 0 0 15px rgb(226, 75, 75), 0 0 30px rgb(75, 158, 226);
     }
 }
 
@@ -140,7 +140,18 @@ body{
 .dynamic-txt li span{
     position: relative;
     color: rgb(226,75,75);
-    animation: change 5s infinite;
+    animation: change_dynamic_txt 5s infinite;
+}
+@keyframes change_dynamic_txt{
+    0%{
+        color: rgb(226, 75, 75);
+    }
+    50%{
+        color: rgb(75, 158, 226);
+    }
+    100%{
+        color: rgb(226, 75, 75);
+    }
 }
 .inner .dynamic-txt{
     overflow: hidden;
@@ -205,11 +216,15 @@ button{
     margin: 0px 0px 0px 0px;
     width: 220px;
     height: 150px;
+    box-shadow: 
+        0 0 10px 5px rgb(255, 255, 255);
 }
 #mvlinksimg{
     margin: 0px 0px 0px 0px;
     width: 240px;
     height: 150px;
+    box-shadow: 
+        0 0 10px 5px rgb(255, 255, 255);
 }
 .button-unity{
     width: 200px;

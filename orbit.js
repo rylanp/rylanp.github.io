@@ -1,7 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 
-let timestep = 15; //# milliseconds
-let gravity = 2;
+let timestep = 30; //# milliseconds
+let gravity = 4;
 let distscale = 5;
 class Cursor{
     constructor(m) {
@@ -61,8 +61,8 @@ class Ball{
         this.posY += this.velocityY / timestep;
     }
     move(cr){
-        this.velocityX *= 1 - (0.01 / timestep);
-        this.velocityY *= 1 - (0.01 / timestep);
+        this.velocityX *= 1 - (0.05 / timestep);
+        this.velocityY *= 1 - (0.05 / timestep);
         this.adjustVelocity(cr)
         this.div.style.left = this.posX + 'px';
         this.div.style.top = this.posY + 'px';
@@ -88,7 +88,7 @@ let ball5 = new Ball(100,200,5,0, balldiv5);
 let ball6 = new Ball(100,400,1,40, balldiv6);
 let ball7 = new Ball(100,300,1,20, balldiv7);
 
-let cursor = new Cursor(100);
+let cursor = new Cursor(300);
 
 const onMouseMove = (e) =>{
   //cursordiv.style.left = e.pageX + 'px';
