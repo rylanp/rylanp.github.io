@@ -281,6 +281,7 @@ button{
         background: rgb(226, 75, 75);
     }
 }
+
 .section3{
     display:grid;
     justify-content: center;
@@ -306,4 +307,9 @@ button{
     margin: 0px 0px 0px 0px;
     width: 500px;
     height: 150px;
+}
+.counter{
+    position: absolute;
+    top: 4%;
+    right: 2%;
 }
