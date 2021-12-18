@@ -2,13 +2,12 @@ body{
     font-family: 'Source Code Pro', monospace;
     display: flex;
     overflow: scroll;
-    background: rgb(44, 44, 44);
+    background: rgb(217, 218, 224);
 }
 .title{
     font-weight: 500;
     font-size:80px;
     color: rgb(226,75,75);
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(226, 75, 75), 0 0 18px rgb(75, 158, 226);
     animation: change 5s infinite;
 }
 .counter{
@@ -28,15 +27,12 @@ body{
 @keyframes change{
     0%{
         color: rgb(226, 75, 75);
-        text-shadow: 0 0 15px rgb(226, 75, 75), 0 0 30px rgb(75, 158, 226);
     }
     50%{
         color: rgb(75, 158, 226);
-        text-shadow: 0 0 15px rgb(75, 158, 226), 0 0 30px rgb(226, 75, 75);
     }
     100%{
         color: rgb(226, 75, 75);
-        text-shadow: 0 0 15px rgb(226, 75, 75), 0 0 30px rgb(75, 158, 226);
     }
 }
 
@@ -54,53 +50,15 @@ body{
 }
 
 .ball{
-    animation: change_planet_color 30s infinite;
     position: absolute;
     box-sizing: border-box;
     transition: 0.1s;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
-    border: 0px solid rgb(202, 200, 52);
-    background: rgb(255, 255, 255);
-    
-    box-shadow:
-        0 0 2px 1px #fff,  /* inner */
-        0 0 8px 3px rgb(255, 230, 0), /* middle */
-        0 0 13px 4px rgb(255, 0, 0); /* outer */   
+    border: 0px solid rgb(255, 255, 255);
+    background: rgb(75, 158, 226);
 }
-@keyframes change_planet_color{
-    0%{
-        box-shadow:
-            0 0 2px 1px #fff,  /* inner */
-            0 0 8px 3px rgb(255, 230, 0), /* middle */
-            0 0 13px 4px rgb(255, 0, 0); /* outer */   
-    }
-    25%{
-        box-shadow:
-        0 0 2px 1px #fff,  /* inner */
-        0 0 8px 3px rgb(21, 255, 0), /* middle */
-        0 0 13px 4px rgb(255, 230, 0); /* outer */
-    }
-    75%{
-        box-shadow:
-        0 0 2px 1px #fff,  /* inner */
-        0 0 8px 7px rgb(0, 153, 255), /* middle */
-        0 0 13px 4px rgb(21, 255, 0); /* outer */
-    }
-    75%{
-        box-shadow:
-        0 0 2px 1px #fff,  /* inner */
-        0 0 8px 3px rgb(255, 0, 0), /* middle */
-        0 0 13px 4px rgb(0, 153, 255); /* outer */
-    }
-    100%{
-        box-shadow:
-        0 0 2px 1px #fff,  /* inner */
-        0 0 8px 3px rgb(255, 230, 0), /* middle */
-        0 0 13px 4px rgb(255, 0, 0); /* outer */
-    }
-} 
 
 .dynamic-txt{
     margin-top: -30px;
@@ -128,7 +86,7 @@ body{
     content: '';
     position: absolute;
     left:0;
-    background: rgb(44,44,44,1);
+    background: rgb(217, 218, 224);;
     width: 100%;
     height: 60px;
     border-left: 2px solid rgba(236, 236, 236, 0.87);
@@ -173,19 +131,19 @@ body{
     margin-left: 0;
     z-index: 0;
     position:absolute;
-    background: rgb(88, 88, 88);
+    background: rgb(201, 202, 207);
     width: 50%;
     height: 420px;
     grid-auto-flow:row;
 }
 .section2L h2{
     margin-bottom: 0px;
-    color: rgb(192, 192, 192);
+    color: rgb(49, 49, 49);
 }
 .section2L p{
     margin-top: 0px;
     margin-bottom: 0px;;
-    color: rgb(179, 179, 179);
+    color: rgb(49, 49, 49);
 }
 .section2R{
     display:grid;
@@ -197,19 +155,19 @@ body{
     margin-left: 50%;
     z-index: 0;
     position:absolute;
-    background: rgb(88, 88, 88);
+    background: rgb(201, 202, 207);
     width: 50%;
     height: 420px;
     grid-auto-flow:row;
 }
 .section2R h2{
     margin-bottom: 0px;
-    color: rgb(192,192,192);
+    color: rgb(49, 49, 49);
 }
 .section2R p{
     margin-top: 0px;
     margin-bottom: 0px;;
-    color: rgb(179, 179, 179);
+    color: rgb(49, 49, 49);
 }
 button{
     margin-top: 20px;
@@ -292,11 +250,11 @@ button{
     margin-left: 0px;
     z-index: 0;
     position:absolute;
-    background: rgb(75, 75, 75);
+    background: rgb(191, 192, 197);
     width: 100%;
     height: 420px;
     grid-auto-flow:row;
-    color: rgb(206, 206, 206);
+    color: rgb(49, 49, 49);
 }
 #blenderimg{
     margin: 0px 0px 0px 0px;
@@ -308,8 +266,20 @@ button{
     width: 500px;
     height: 150px;
 }
-.counter{
-    position: absolute;
-    top: 4%;
-    right: 2%;
+
+.section4{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    margin-top: 1240px;
+    margin-left: 0px;
+    z-index: 0;
+    position:absolute;
+    background: rgb(201, 202, 207);
+    width: 100%;
+    height: 420px;
+    grid-auto-flow:row;
+    color: rgb(49, 49, 49);
 }

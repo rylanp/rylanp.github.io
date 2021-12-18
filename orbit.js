@@ -76,17 +76,13 @@ let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 let balldiv4 = document.getElementById('ball4');
 let balldiv5 = document.getElementById('ball5');
-let balldiv6 = document.getElementById('ball6');
-let balldiv7 = document.getElementById('ball7');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(100,200,5,15, balldiv1);
+let ball1 = new Ball(100,200,6,15, balldiv1);
 let ball2 = new Ball(100,200,3,10, balldiv2);
-let ball3 = new Ball(100,200,1,12, balldiv3);
+let ball3 = new Ball(100,200,4,12, balldiv3);
 let ball4 = new Ball(100,200,7,1, balldiv4);
 let ball5 = new Ball(100,200,5,0, balldiv5);
-let ball6 = new Ball(100,400,1,40, balldiv6);
-let ball7 = new Ball(100,300,1,20, balldiv7);
 
 let cursor = new Cursor(300);
 
@@ -103,8 +99,6 @@ function update() {
     ball3.move(cursor);
     ball4.move(cursor);
     ball5.move(cursor);
-    ball6.move(cursor);
-    ball7.move(cursor);
 }
 
 //# update loop in milliseconds
