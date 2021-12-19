@@ -1,3 +1,13 @@
+#raindrop {
+    position: absolute;
+    height: 200px;
+    background: linear-gradient(transparent,#fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Source Code Pro', monospace;
     display: flex;
@@ -283,3 +293,4 @@ button{
     grid-auto-flow:row;
     color: rgb(49, 49, 49);
 }
+
