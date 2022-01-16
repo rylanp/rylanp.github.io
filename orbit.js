@@ -16,7 +16,7 @@ class Cursor{
 }
 
 class Ball{
-    constructor(x,y,m, iv, d){
+    constructor(x,y,m, iv, d,id){
         this.posX = x;
         this.posY = y;
         this.mass = m;
@@ -26,6 +26,8 @@ class Ball{
         this.div.style.width = ((m*2)+1) + "px";
         this.div.style.height = ((m*2)+1) + "px";
         this.radius = this.mass + 3;
+        this.active = true;
+        this.id = id;
     }
     adjustVelocity(c){
         let x1 = c.posX;
@@ -52,7 +54,7 @@ class Ball{
         if (this.posY <= this.radius && this.velocityY < 0){
             this.velocityY *= -0.4;
         }
-        if (this.posY >= window.height - this.radius && this.velocityY > 0){
+        if (this.posY >= 456 && this.velocityY > 0){
             this.velocityY *= -0.4;
         }
         this.velocityX += fx;
@@ -61,11 +63,19 @@ class Ball{
         this.posY += this.velocityY / timestep;
     }
     move(cr){
-        this.velocityX *= 1 - (0.05 / timestep);
-        this.velocityY *= 1 - (0.05 / timestep);
-        this.adjustVelocity(cr)
-        this.div.style.left = this.posX + 'px';
-        this.div.style.top = this.posY + 'px';
+        if (this.active){
+            this.velocityX *= 1 - (0.05 / timestep);
+            this.velocityY *= 1 - (0.05 / timestep);
+            this.adjustVelocity(cr)
+            this.div.style.left = this.posX + 'px';
+            this.div.style.top = this.posY + 'px';
+        }
+    }
+    disable(){
+        if (this.active){
+            this.active = false;
+            this.div.parentNode.removeChild(this.div);
+        }
     }
 
 
@@ -75,14 +85,12 @@ let balldiv1 = document.getElementById('ball1');
 let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 let balldiv4 = document.getElementById('ball4');
-let balldiv5 = document.getElementById('ball5');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(300,200,100,100, balldiv1);
-let ball2 = new Ball(100,200,100,10, balldiv2);
-let ball3 = new Ball(50,200,100,50, balldiv3);
-let ball4 = new Ball(150,200,100,30, balldiv4);
-let ball5 = new Ball(200,200,100,20, balldiv5);
+let ball1 = new Ball(300,200,100,100, balldiv1,'ball1');
+let ball2 = new Ball(100,200,100,10, balldiv2,'ball2');
+let ball3 = new Ball(50,200,100,50, balldiv3,'ball3');
+let ball4 = new Ball(150,200,100,30, balldiv4,'ball4');
 
 let cursor = new Cursor(200);
 
@@ -94,11 +102,18 @@ const onMouseMove = (e) =>{
 document.addEventListener('mousemove', onMouseMove);
 
 function update() {
-    ball1.move(cursor);
-    ball2.move(cursor);
-    ball3.move(cursor);
-    ball4.move(cursor);
-    ball5.move(cursor);
+    if (ball1.active){
+        ball1.move(cursor);
+    }
+    if (ball2.active){
+        ball2.move(cursor);
+    }
+    if (ball3.active){
+        ball3.move(cursor);
+    }
+    if (ball4.active){
+        ball4.move(cursor);
+    }
 }
 
 //# update loop in milliseconds

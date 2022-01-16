@@ -19,4 +19,7 @@ function rain(){
         i++
     }
 }
-rain();
+is_raining_here = false
+if (is_raining_here == true){
+    rain();
+};

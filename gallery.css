@@ -1,8 +1,8 @@
 
-.section4{
+.section4-Gallery{
     display:grid;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: top;
     padding-left: 100px;
     
     margin-top: 1240px;
@@ -15,4 +15,7 @@
     grid-auto-flow:row;
     color: rgb(49, 49, 49);
 
+}
+.gallery{
+    background-color: chartreuse;
 }
