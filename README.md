@@ -3,9 +3,10 @@
 This is a fun website I've made to share my ideas and gain some web development experience.
 
 Github Pages Guide:
-1. The CNAME document is very important. It must contain your domain name. Ex: rylanpaul.com
-2. The main HTML file must be titled index.html
-3. I used Google Domains for my domain so this pertains to Google Domains, idk about other services. (As of 1/16/22)
+1. Under settings/pages you need to add your domain name, the entry is "custom domain name" (Ex: rylanpaul.com)
+2. The CNAME document is very important. It must contain your domain name. Ex: rylanpaul.com
+3. The main HTML file must be titled index.html
+4. I used Google Domains for my domain so this pertains to Google Domains, idk about other services. (As of 1/16/22)
       A. go to the DNS settings page
       B. click manage custom records
       C. Add a type A with the host name as your domain name (rylanpaul.com)
@@ -16,10 +17,10 @@ Github Pages Guide:
       G. under host name I have www
       H. TTL again is 100
       I. Then under data I have my github repository name, which for mine is (rylanp.github.io)
-4. This is why your repository must be named as follows: username.github.io
+5. This is why your repository must be named as follows: username.github.io
             After you create the repository, the top file name part should read, "username/username.github.io,"
             Mine reads "rylanp/rylanp.github.io"
-5. Lastly, back in github double checkyou have your CNAME file, index.html, then make sure the repository is public.
+6. Lastly, back in github double checkyou have your CNAME file, index.html, then make sure the repository is public.
 
 IMPORTANT: Because the repository is public, anyone can access these files, so do not put anything sensitive on here.
 
