@@ -3,7 +3,7 @@
 }
 body{
     font-family: 'Source Code Pro', monospace;
-    display: flex;
+    display: grid;
     overflow: scroll;
     background: rgb(217, 218, 224);
     max-width:  100%;
@@ -240,7 +240,7 @@ button{
     align-items: center;
     
     text-align: center;
-    margin-top: 820px;
+    margin-top: 1607px;
     margin-left: 0px;
     z-index: 0;
     position:absolute;
