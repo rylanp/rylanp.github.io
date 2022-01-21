@@ -260,3 +260,29 @@ button{
     width: 500px;
     height: 150px;
 }
+
+.githublink > img {
+    display: block;
+    box-sizing: border-box;
+    inset: 0;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    opacity: 1;
+    transition: 200ms opacity ease-in-out;
+}
+.githublink{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.githublink > img:hover,
+.githublink > img:focus{
+    opacity: 0.5;
+}
