@@ -2,7 +2,7 @@
 
 This is a fun website I've made to share my ideas and gain some web development experience.
 
-Github Pages Guide:
+<------- Github Pages Tutorial ------->
 1. Under settings/pages you need to add your domain name, the entry is "custom domain name" (Ex: rylanpaul.com)
 2. The CNAME document is very important. It must contain your domain name. Ex: rylanpaul.com
 3. The main HTML file must be titled index.html
@@ -26,3 +26,8 @@ IMPORTANT: Because the repository is public, anyone can access these files, so d
 
 
 Hopefully this was a massive help, if you have questions, comments, concerns, improvements, or suggestions, please feel free to write a comment.
+<------- End Github Pages Tutorial ------->
+
+I'm not really too sure what to put it the readme, so——yeah. Cool.
+
+Enjoy!
