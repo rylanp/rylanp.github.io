@@ -254,6 +254,7 @@ button{
     margin: 0px 0px 0px 0px;
     width: 150px;
     height: 150px;
+    border-radius: 25px;
 }
 #pythonimg{
     margin: 0px 0px 0px 0px;
