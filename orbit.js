@@ -1,8 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
-
 let timestep = 40; //# milliseconds
 let gravity = 3;
-let distscale = 100;
+let distscale = 20;
 class Cursor{
     constructor(m) {
         this.mass = m;
@@ -54,7 +53,7 @@ class Ball{
         if (this.posY <= this.radius && this.velocityY < 0){
             this.velocityY *= -0.4;
         }
-        if (this.posY >= 456 && this.velocityY > 0){
+        if (this.posY >= window.innerHeight && this.velocityY > 0){
             this.velocityY *= -0.4;
         }
         this.velocityX += fx;
@@ -84,15 +83,13 @@ class Ball{
 let balldiv1 = document.getElementById('ball1');
 let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
-let balldiv4 = document.getElementById('ball4');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(300,200,100,100, balldiv1,'ball1');
-let ball2 = new Ball(100,200,100,10, balldiv2,'ball2');
-let ball3 = new Ball(50,200,100,50, balldiv3,'ball3');
-let ball4 = new Ball(150,200,100,30, balldiv4,'ball4');
+let ball1 = new Ball(300,200,5,100, balldiv1,'ball1');
+let ball2 = new Ball(100,200,5,10, balldiv2,'ball2');
+let ball3 = new Ball(50,200,5,50, balldiv3,'ball3');
 
-let cursor = new Cursor(200);
+let cursor = new Cursor(300);
 
 const onMouseMove = (e) =>{
   //cursordiv.style.left = e.pageX + 'px';
@@ -111,16 +108,7 @@ function update() {
     if (ball3.active){
         ball3.move(cursor);
     }
-    if (ball4.active){
-        ball4.move(cursor);
-    }
 }
 
 //# update loop in milliseconds
 setInterval(update, timestep)
-
-
-
-
-
-
