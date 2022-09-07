@@ -2,6 +2,7 @@
 let timestep = 40; //# milliseconds
 let gravity = 3;
 let distscale = 20;
+
 class Cursor{
     constructor(m) {
         this.mass = m;
@@ -109,6 +110,7 @@ function update() {
         ball3.move(cursor);
     }
 }
+
 
 //# update loop in milliseconds
 setInterval(update, timestep)
