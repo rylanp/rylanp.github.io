@@ -38,7 +38,7 @@ class Ball{
 
         let dirX = x1 - x2;
         let dirY = y1 - y2;
-        let sqrdistance = (x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2);
+        let sqrdistance = (dirX)*(dirX) + (dirY)*(dirY);
 
         let forceX = gravity * (this.mass * c.mass) * dirX / (sqrdistance * distscale);
         let forceY = gravity * (this.mass * c.mass) * dirY / (sqrdistance * distscale);

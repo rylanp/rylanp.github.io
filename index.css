@@ -4,7 +4,8 @@
 body{
     font-family: 'Source Code Pro', monospace;
     display: grid;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background: rgb(217, 218, 224);
     max-width:  100%;
     max-height: 100%;
