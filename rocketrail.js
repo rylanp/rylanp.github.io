@@ -48,8 +48,8 @@ function drawdots() {
    dot.x = x;
    dot.y = y;
    dot.draw();
-   x += (nextDot.x - dot.x) * .85;
-   y += (nextDot.y - dot.y) * .85;
+   x += (nextDot.x - dot.x) * .7;
+   y += (nextDot.y - dot.y) * .7;
  });
 }
 var scrollPosY = 0

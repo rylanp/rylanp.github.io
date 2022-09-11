@@ -38,8 +38,8 @@
     width: 10px;
     height: 10px;
     z-index: 7;
-    background-color: rgba(174, 174, 174, 0.183);
+    background-color: rgba(108, 108, 108, 0.053);
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.086);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.064);
 }

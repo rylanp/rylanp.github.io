@@ -14,6 +14,7 @@ class Rocket{
         this.gravity = 1000;
         this.friction = 0.3
         this.getNewDestination()
+        this.currentAnimation = "idle"
     }
     getNewDestination(){
         this.destinationX = Math.random() * window.innerWidth
