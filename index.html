@@ -154,35 +154,6 @@
         <p>I just recently released my first ever app! It works in conjuncion<br></br>with a Firebase database to store data about each course. It keeps track<br></br>of your scores, plus you can create new courses and play courses that others<br></br>have created. Get the app on the Apple Appstore for free - Disc Golf Score Tracker</p>
         </a>
     </div>
-    <div class ="section4"><p><a href="DiscGolf/discgolf.html">See Disc Golf Score Tracker</a></p></div>
-    <script lang="JavaScript">
-        const { MailtrapClient } = require("mailtrap");
-
-        const TOKEN = "0a89fa48f2de962c77e8d71d0323185b";
-        const ENDPOINT = "https://send.api.mailtrap.io/";
-
-        const client = new MailtrapClient({ endpoint: ENDPOINT, token: TOKEN });
-
-        const sender = {
-        email: "mailtrap@rylanpaul.com",
-        name: "Mailtrap Test",
-        };
-        const recipients = [
-        {
-            email: "rylan21paul@gmail.com",
-        }
-        ];
-
-        client
-        .send({
-            from: sender,
-            to: recipients,
-            subject: "You are awesome!",
-            text: "Congrats for sending test email with Mailtrap!",
-            category: "Integration Test",
-        })
-        .then(console.log, console.error);
-    </script>
 </body>
 
 </html>
