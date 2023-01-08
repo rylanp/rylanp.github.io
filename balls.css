@@ -7,6 +7,7 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.184);
+    pointer-events: none;
 }
 .trail { /* className for the trail elements */
     position: absolute;
