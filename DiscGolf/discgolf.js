@@ -1,14 +1,4 @@
-OkHttpClient client = new OkHttpClient().newBuilder()
-    .build();
-MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "{\"from\":{\"email\":\"mailtrap@rylanpaul.com\",\"name\":\"Mailtrap Test\"},\"to\":[{\"email\":\"rylan21paul@gmail.com\"}],\"subject\":\"You are awesome!\",\"text\":\"Congrats for sending test email with Mailtrap!\",\"category\":\"Integration Test\"}");
-Request request = new Request.Builder()
-    .url("https://send.api.mailtrap.io/api/send")
-    .method("POST", body)
-    .addHeader("Authorization", "Bearer 0a89fa48f2de962c77e8d71d0323185b")
-    .addHeader("Content-Type", "application/json")
-    .build();
-Response response = client.newCall(request).execute();
+
 
 var fields = {}
 document.addEventListener("DOMContentLoaded", function(){
