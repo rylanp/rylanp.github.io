@@ -4,27 +4,28 @@
     <meta charset="utf-8">
     <title>Disc Golf Score Tracker</title>
     <link rel="stylesheet" href="discgolf.css"/>
+    <script src="discgolf.js"></script>
   </head>
   <body>
     <p>Welcome to Disc Golf Score Tracker</p>
     <div class="container">
-      <form action="action_page.php">
+      <form>
     
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name..">
         
-        <label for="lname">Email</label>
-        <input type="text" id="email" name="electronicmail" placeholder="example@gmail.com">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="example@gmail.com">
     
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    
-        <input type="submit" value="Submit">
+        <label for="message">Subject</label>
+        <textarea id="message" placeholder="Write something..." style="height:200px"></textarea>
+        <!--<input type="submit" value="Send Form">-->
+        <button onclick="sendContact();">Submit</button>
     
       </form>
+      
     </div>
+    
   </body>
+  
 </html> 
