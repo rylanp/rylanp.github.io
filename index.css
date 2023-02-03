@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 body{
     font-family: 'Source Code Pro', monospace;
@@ -26,7 +27,7 @@ body{
     margin-left: 50px;
     z-index: 1;
     width: 100%;
-    height: 310px;
+    height: 400px;
     pointer-events: none;
 }
 
@@ -56,7 +57,7 @@ body{
 }
 
 .dynamic-txt{
-    margin-top: -30px;
+    margin-top: 30px;
     margin-left: -36px;
     
     z-index: 1;
@@ -116,56 +117,38 @@ body{
     line-height: 60px;
     height: 60px;
 }
-.section2L{
-    display:grid;
+.section2container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(191, 192, 197);
+}
+.section2Child{
+    display: inline-block;
+    width: 80%;
+    float: none;
     justify-content: center;
     align-items: center;
-    
     text-align: center;
-    margin-top: 400px;
-    margin-left: 0;
     z-index: 0;
-    position:absolute;
-    background: rgb(201, 202, 207);
-    width: 50%;
-    height: 420px;
-    grid-auto-flow:row;
 }
-.section2L h2{
-    margin-bottom: 0px;
+.section2Child h2{
+    padding: 5px;
     color: rgb(49, 49, 49);
 }
-.section2L p{
-    margin-top: 0px;
-    margin-bottom: 0px;;
+.section2Child p{
+    padding: 5px;
     color: rgb(49, 49, 49);
 }
-.section2R{
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    
-    text-align: center;
-    margin-top: 400px;
-    margin-left: 50%;
-    z-index: 0;
-    position:absolute;
-    background: rgb(201, 202, 207);
-    width: 50%;
-    height: 420px;
-    grid-auto-flow:row;
-}
-.section2R h2{
-    margin-bottom: 0px;
-    color: rgb(49, 49, 49);
-}
-.section2R p{
-    margin-top: 0px;
-    margin-bottom: 0px;;
-    color: rgb(49, 49, 49);
+@media only screen and (min-width: 768px){
+    .section2Child{
+        width: 50%;
+        float: left;
+    }
 }
 button{
-    margin-top: 20px;
+    padding: 5px;
     background: rgb(233, 230, 58);
     width: 50%;
     height: 50px;
@@ -174,81 +157,23 @@ button{
     margin: 0px 0px 0px 0px;
     width: 150px;
     height: 150px;
-    box-shadow: 
-        0 0 10px 5px rgb(255, 255, 255);
 }
 #mvlinksimg{
     margin: 0px 0px 0px 0px;
     width: 240px;
     height: 150px;
-    box-shadow: 
-        0 0 10px 5px rgb(255, 255, 255);
-}
-.button-unity{
-    width: 200px;
-    height: 50px;
-    line-height: 15px;
-    text-align: center;
-    background:rgb(236, 140, 49);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 30px;
-    border-radius: 10px;
-    color: rgb(22, 22, 22);
-    animation: change_button_bg 5s infinite;
-}
-.button-unity:hover{
-    width: 220px;
-    height: 70px;
-    line-height: 35px;
-}
-.button-extension{
-    width: 200px;
-    height: 50px;
-    line-height: 15px;
-    text-align: center;
-    background:rgb(236, 140, 49);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 50px;
-    border-radius: 10px;
-    color: rgb(22, 22, 22);
-    text-decoration:rgb(226, 75, 75);
-    animation: change_button_bg 5s infinite;
-
-}
-.button-extension:hover{
-    width: 220px;
-    height: 70px;
-    line-height: 35px;
-}
-@keyframes change_button_bg{
-    0%{
-        background: rgb(226, 75, 75);
-    }
-    50%{
-        background: rgb(75, 158, 226);
-    }
-    100%{
-        background: rgb(226, 75, 75);
-    }
 }
 
 .section3{
-    display:grid;
     justify-content: center;
     align-items: center;
-    
     text-align: center;
-    margin-top: 1607px;
-    margin-left: -7px;
     z-index: 0;
-    position:absolute;
     background: rgb(191, 192, 197);
     width: 100%;
-    height: 420px;
+    height: 500px;
     grid-auto-flow:row;
-    color: rgb(49, 49, 49);
+    color: rgb(29, 29, 29);
 }
 #blenderimg{
     margin: 0px 0px 0px 0px;
@@ -286,4 +211,14 @@ button{
 .githublink > img:hover,
 .githublink > img:focus{
     opacity: 0.5;
+}
+.section4 {
+    width: 120%;
+    height: 500px;
+    margin-left: -10px;
+    margin-top: 468px;
+    padding: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+    background-color:lightsalmon;
 }

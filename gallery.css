@@ -2,11 +2,10 @@
     width: 50vw;
     height: 90vh;
     position: relative;
-    margin-top: 498px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0px;
+    margin-bottom: 48px;
 }
 
 .carousel > ul {

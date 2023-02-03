@@ -48,13 +48,13 @@ class Ball{
         if (this.posX <= this.radius && this.velocityX < 0){
             this.velocityX *= -0.4;
         }
-        if (this.posX >= window.innerWidth && this.velocityX > 0){
+        if (this.posX >= document.documentElement.clientWidth-this.radius && this.velocityX > 0){
             this.velocityX *= -0.4;
         }
         if (this.posY <= this.radius && this.velocityY < 0){
             this.velocityY *= -0.4;
         }
-        if (this.posY >= window.innerHeight && this.velocityY > 0){
+        if (this.posY >= document.body.clientHeight-this.radius && this.velocityY > 0){
             this.velocityY *= -0.4;
         }
         this.velocityX += fx;
