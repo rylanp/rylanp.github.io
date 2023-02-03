@@ -11,6 +11,51 @@ body{
     max-width:  100%;
     max-height: 100%;
 }
+.menubar {
+    width: 100%;
+    padding: 5px 20px 20px 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.menubarbtn {
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(120, 120, 124);
+    color: rgb(55, 63, 63);
+    
+}
+#selectedpage {
+    background-color: rgb(170, 170, 176);
+}
+.menubarbtn :hover{
+    color: rgb(216, 216, 224);
+}
+.menubarbtn a:link{
+    color: rgb(55, 63, 63);
+    text-decoration: none;
+    background-color: transparent;
+
+}
+.menubarbtn a:visited {
+    color: rgb(55, 63, 63);
+    background-color: transparent;
+    text-decoration: none;
+}
+.menubarbtn a:hover {
+    color: rgb(55, 63, 63);
+    background-color: transparent;
+    text-decoration: none;
+}
+.menubarbtn a:active {
+    color: rgb(55, 63, 63);
+    background-color: transparent;
+    text-decoration: none;
+}
 .title{
     font-weight: 500;
     font-size:80px;
@@ -171,20 +216,33 @@ button{
     z-index: 0;
     background: rgb(191, 192, 197);
     width: 100%;
-    height: 500px;
     grid-auto-flow:row;
     color: rgb(29, 29, 29);
 }
+.section3 p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
 #blenderimg{
     margin: 0px 0px 0px 0px;
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 25px;
 }
 #pythonimg{
     margin: 0px 0px 0px 0px;
-    width: 500px;
-    height: 150px;
+    width: 250px;
+    height: 75px;
+}
+@media only screen and (min-width: 768px){
+    #blenderimg{
+        width: 150px;
+        height: 150px;
+    }
+    #pythonimg{
+        width: 500px;
+        height: 150px;
+    }
 }
 
 .githublink > img {

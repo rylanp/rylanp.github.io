@@ -1,11 +1,12 @@
 .carousel {
-    width: 50vw;
-    height: 90vh;
+    width: 500px;
+    height: 500px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
     margin-bottom: 48px;
+    background-color: aquamarine;
 }
 
 .carousel > ul {
@@ -42,9 +43,10 @@
     position: relative;
     background-color:rgb(169, 170, 175);
     margin: 0;
-    height: 3rem;
+    height: 50px;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 10px;
+    padding-top: 10px;
     font-family: 'Roboto Mono', monospace;
 }
 .slide[data-active] {
