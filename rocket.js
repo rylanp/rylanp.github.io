@@ -17,8 +17,8 @@ class Rocket{
         this.currentAnimation = "idle"
     }
     getNewDestination(){
-        this.destinationX = Math.random() * window.innerWidth
-        this.destinationY = Math.random() * window.innerHeight
+        this.destinationX = Math.random() * document.documentElement.clientWidth
+        this.destinationY = Math.random() * document.body.clientHeight
     }
     Lerp(a, b, t){
         return a + t*(b-a)
@@ -51,6 +51,19 @@ class Rocket{
         let forceY = this.gravity * dirY / (sqrdistance * this.distscale);
         let fx = forceX;
         let fy = forceY;
+        let radius = 8
+        if (this.posX <= radius && this.velX < 0){
+            this.velX *= -0.5;
+        }
+        if (this.posX >= document.documentElement.clientWidth-radius && this.velX > 0){
+            this.velX *= -0.5;
+        }
+        if (this.posY <= radius && this.velY < 0){
+            this.velY *= -0.5;
+        }
+        if (this.posY >= document.body.clientHeight-radius && this.velY > 0){
+            this.velY *= -0.5;
+        }
 
         this.velX += fx;
         this.velY += fy;

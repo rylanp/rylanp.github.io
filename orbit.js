@@ -1,7 +1,7 @@
 //#region F = 10 * (mass1 * mass2) * vector direction / (vector magnitiude)
 let timestep = 40; //# milliseconds
 let gravity = 3;
-let distscale = 20;
+let distscale = 5;
 
 class Cursor{
     constructor(m) {
@@ -59,6 +59,18 @@ class Ball{
         }
         this.velocityX += fx;
         this.velocityY += fy;
+        if (this.velocityX >= 500){
+            this.velocityX = 500;
+        } else if (this.velocityX <= -500){
+            this.velocityX = -500;
+        }
+        if (this.velocityY >= 500){
+            this.velocityY = 500;
+        }else if (this.velocityY <= -500){
+            this.velocityY = -500;
+        }
+        
+        
         this.posX += this.velocityX / timestep;
         this.posY += this.velocityY / timestep;
     }
@@ -98,7 +110,33 @@ const onMouseMove = (e) =>{
   cursor.setPos(e.pageX, e.pageY);
 }
 document.addEventListener('mousemove', onMouseMove);
+function checkBallCollisions(b1, b2){
+    let r1 = b1.radius;
+    let r2 = b2.radius;
 
+    let sqrdist = (b1.posX - b2.posX)*(b1.posX - b2.posX) + (b1.posY - b2.posY)*(b1.posY - b2.posY);
+
+    if (sqrdist < (r1+r2)*(r1+r2)){
+        // ball 1 and 2 bounce
+        
+        let M = b1.mass + b2.mass;
+        let dot1 = (b1.velocityX - b2.velocityX) * (b1.posX - b2.posX) + (b1.velocityY - b2.velocityY) * (b1.posY - b2.posY);
+        let dot2 = (b2.velocityX - b1.velocityX) * (b2.posX - b1.posX) + (b2.velocityY - b1.velocityY) * (b2.posY - b1.posY);
+
+        let d1 = (b1.posX - b2.posX)*(b1.posX - b2.posX) + (b1.posY - b2.posY)*(b1.posY - b2.posY)
+        let d2 = (b2.posX - b1.posX)*(b2.posX - b1.posX) + (b2.posY - b1.posY)*(b2.posY - b1.posY)
+
+        let x1 = b1.velocityX - (2*b2.mass / M) * dot1 / d1 * (b1.posX - b2.posX);
+        let y1 = b1.velocityY - (2*b2.mass / M) * dot1 / d1 * (b1.posY - b2.posY);
+        let x2 = b2.velocityX - (2*b1.mass / M) * dot2 / d2 * (b2.posX - b1.posX);
+        let y2 = b2.velocityY - (2*b1.mass / M) * dot2 / d2 * (b2.posY - b1.posY);
+
+        b1.velocityX = x1;
+        b1.velocityY = y1;
+        b2.velocityX = x2;
+        b2.velocityY = y2;
+    }
+}
 function update() {
     if (ball1.active){
         ball1.move(cursor);
@@ -109,6 +147,9 @@ function update() {
     if (ball3.active){
         ball3.move(cursor);
     }
+    checkBallCollisions(ball1, ball2);
+    checkBallCollisions(ball1, ball3);
+    checkBallCollisions(ball2, ball3);
 }
 
 
