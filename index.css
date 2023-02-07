@@ -260,11 +260,12 @@ button{
 }
 .githublink{
     position: absolute;
-    top: 30px;
-    right: 0%;
+    padding-top: 35px;
+    padding-left: 90%;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 .githublink > img:hover,
 .githublink > img:focus{
