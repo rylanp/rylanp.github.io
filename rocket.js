@@ -1,7 +1,7 @@
 class Rocket{
     constructor(div){
-        this.posX = 200;
-        this.posY = 200;
+        this.posY = Math.random() * document.body.clientHeight;
+        this.posX = Math.random() * document.documentElement.clientWidth;
         this.angle = 0;
         this.velX = 0;
         this.velY = 0;

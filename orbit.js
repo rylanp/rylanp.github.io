@@ -98,9 +98,9 @@ let balldiv2 = document.getElementById('ball2');
 let balldiv3 = document.getElementById('ball3');
 //let cursordiv = document.getElementById('cursor');
 
-let ball1 = new Ball(300,200,5,100, balldiv1,'ball1');
-let ball2 = new Ball(100,200,5,10, balldiv2,'ball2');
-let ball3 = new Ball(50,200,5,50, balldiv3,'ball3');
+let ball1 = new Ball(Math.random() * document.documentElement.clientWidth, Math.random() * document.body.clientHeight,Math.random()*10+5,Math.random() * 75 + 10, balldiv1,'ball1');
+let ball2 = new Ball(Math.random() * document.documentElement.clientWidth, Math.random() * document.body.clientHeight,Math.random()*5+5,Math.random() * 75 + 10, balldiv2,'ball2');
+let ball3 = new Ball(Math.random() * document.documentElement.clientWidth, Math.random() * document.body.clientHeight,Math.random()*1+5,Math.random() * 75 + 10, balldiv3,'ball3');
 
 let cursor = new Cursor(300);
 
