@@ -1,0 +1,191 @@
+.topnavigation {
+    overflow: hidden;
+    background-color: #080F0F;
+    z-index: -100;
+}
+/* Style the links inside the navigation bar */
+.topnavigation h1 {
+    float: left;
+    color: #EF476F;
+    text-align: center;
+    
+    padding: 0px 100px;
+    text-decoration: none;
+    font-size: 50px;
+  }
+.topnavigation a {
+    float: left;
+    color: #EFF9F0;
+    text-align: center;
+    padding: 33px 50px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Change the color of links on hover */
+.topnavigation a:hover {
+    background-color: #EF476F;
+    color: #F1D302;
+    scale: 1.2;
+  }
+  
+  /* Add a color to the active/current link */
+.topnavigation a.active {
+    background-color: #06D6A0;
+    color: white;
+  }
+.TitleSection {
+    display: flex;
+    align-items: center;
+}
+.Skills {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.SkillsText {
+    font-size: 3.5vw;
+    color: #06D6A0;
+    height: fit-content;
+    padding-top: 10%;
+}
+.SkillsText span{
+    margin: -0.3%;
+    display: inline-block;
+    user-select: none;
+    line-height: 0;
+}
+.SkillsText span:nth-child(10){
+    margin: 1%;
+}
+.SkillsText span.active {
+    animation: skillsLetterAnimation 0.6s ease-out;
+    transform-origin: bottom center;
+}
+
+.SkillsWords {
+    font-size: 3vw;
+    height: auto;
+    color: #06D6A0;
+    padding: 10% 0 10% 0;
+}
+.SkillsWords span{
+    margin: -0.1%;
+    display: inline-block;
+    user-select: none;
+    line-height: 0;
+}
+.SkillsWords span.active {
+    animation: skillsLetterAnimation 0.6s ease-out;
+    transform-origin: bottom center;
+}
+.SkillsWords span.start{
+    animation: skillsLetterAppear 0.3s ease-in-out 0s 1;
+  }
+@keyframes skillsLetterAppear {
+    0% {
+        transform: scale(0,0) translate(0,0);
+        opacity: 0;
+    }
+	50% {
+		transform: scale(1,1) translate(0, 0);
+        opacity: 1;
+	}
+    100% {
+        transform: scale(1,1) translate(0,0);
+        opacity: 1;
+    }
+}
+@keyframes skillsLetterAnimation {
+    0% {
+        transform: scale(1,1) translate(0,0);
+        color: #06D6A0;
+    }
+	
+	20% {
+		transform: scale(1.4,1.4) translate(0, 0);
+        color: #F1D302;
+	}
+	65% {
+        transform: scale(0,0) translate(0,0);
+        color: #F1D302;
+    }
+	80% {
+		transform: scale(0,0) translate(0, 0);
+	}
+    100% {
+        transform: scale(1,1) translate(0,0);
+        color: #06D6A0;
+    }
+}
+
+.RylanPaulContainer {
+    flex: 1;
+}
+  .RylanPaul {
+    color: #8a2be2;
+    font-size: 10vw;
+    padding: 0vh 1vw;
+  }
+  .RylanPaul span{
+    margin: -1.2%;
+    display: inline-block;
+    user-select: none;
+    line-height: 0;
+  }
+  .RylanPaul span:nth-child(5).start{
+    animation: lettersAppearAnimation 1.5s ease-out 0s 1;
+  }
+  .RylanPaul span:nth-child(4).start{
+    animation: lettersAppearAnimation 1.7s ease-out 0s 1;
+  }
+  .RylanPaul span:nth-child(3).start{
+    animation: lettersAppearAnimation 1.9s ease-out 0s 1;
+  }
+  .RylanPaul span:nth-child(2).start{
+    animation: lettersAppearAnimation 2.1s ease-out 0s 1;
+  }
+  .RylanPaul span:nth-child(1).start{
+    animation: lettersAppearAnimation 2.3s ease-out 0s 1;
+  }
+  @keyframes lettersAppearAnimation {
+    0% {
+        transform: scale(1,1) translate(-10000px,0);
+        color: #8a2be2;
+    }
+	70% {
+		transform: scale(0.8,1.1) translate(20px, 0);
+	}
+    100% {
+        transform: scale(1,1) translate(0,0);
+    }
+  }
+  .RylanPaul span.active {
+    animation: letterAnimation 0.6s ease-out;
+    transform-origin: bottom center;
+  }
+
+  @keyframes letterAnimation {
+    0% {
+        transform: scale(1,1) translate(0,0);
+        color: #8a2be2;
+    }
+	10% {
+		transform: scale(1.2, .6) translate(0, 0);
+	}
+	
+	30% {
+		transform: scale(0.8,1.4) translate(0, -50px);
+        color: #EF476F;
+	}
+	
+	80% {
+		transform: scale(1.2,.8) translate(0, 10px);
+	}
+    100% {
+        transform: scale(1,1) translate(0,0);
+        color: #8a2be2;
+    }
+}
