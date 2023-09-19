@@ -47,7 +47,7 @@ skills_spans.forEach((span, idx) => {
 
 var skills = document.querySelector('.SkillsWords');
 var skillword_spans = document.querySelectorAll('.SkillsWords span');
-const skill_list = ["Swift in Xcode", "Firebase by Google", "Fusion 360", "Python", "C# with Unity", "Microsoft Office", "Google Workspace", "HTML, CSS, JS", "3D Priting", "Raspberry Pi", "Ardiuno"];
+const skill_list = ["Swift in Xcode", "Firebase by Google", "Fusion 360", "Python", "C# with Unity", "Microsoft Office", "Google Workspace", "HTML, CSS, JS", "3D Priting", "Raspberry Pi", "Arduino Uno"];
 var skills_index = 0;
 DisplayWords()
 setInterval(DisplayWords, 4000);
