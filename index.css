@@ -95,7 +95,7 @@
     user-select: none;
     line-height: 0;
 }
-.SkillsText span:nth-child(10){
+.SkillsText span:nth-child(5){
     margin: 1%;
 }
 .SkillsText span.active {
