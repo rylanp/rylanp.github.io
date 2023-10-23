@@ -1,8 +1,62 @@
+:root {
+    --background: #F9ECCC;
+    --navigationBackground: #222E50;
+    --title: #5B85AA;
+    --lightText: #98473E;
+    --darkText: #222E50;
+    --backgroundSection: #306B34;
+    --backgroundSection2: #8797AF;
+    --burgundy: #7B0D1E;
+}
+
 /*Main stuff*/
+h1 {
+    text-align: center;
+    width: fit-content;
+    color: var(--background);
+    font-size: 3.5vw;
+    height: fit-content;
+}
+h2 {
+    text-align: center;
+    width: fit-content;
+    color: var(--background);
+    font-size: 1.8vw;
+    height: fit-content;
+}
+p {
+    font-size: 2vw;
+    height: fit-content;
+}
+body {
+    background: linear-gradient(60deg,var(--lightText),var(--background),var(--background), var(--darkText));
+    animation: bgGradient 10s ease-in-out infinite;
+    background-attachment: fixed;
+    background-size: 150% 150%;
+    font-family: 'Varela Round', sans-serif;
+    height: 100vh;
+    color: var(--darkText);
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+}
+@keyframes bgGradient {
+    0% {
+        background-position: 00% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 00% 0%;
+    }
+}
 .wrapper{
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
 }
 /*Navigation Bar---------------------------------------------*/
 .topnavigation {
@@ -10,7 +64,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: #080F0F;
+    background-color: var(--navigationBackground);
     z-index: -100;
     animation: NavigationBarSlideDown 0.9s ease-out 0s 1;
 }
@@ -18,42 +72,40 @@
 .topnavigation h1 {
     flex: 0.5;
     float:left;
-    color: #06D6A0;
+    color: var(--title);
     text-align: center;
     padding: 0vh 0vh;
     text-decoration: none;
     font-size: 2vw;
     animation: RPAnim 4s linear 0s infinite;
-  }
-  @keyframes RPAnim {
-   100%,0%{
-        color: #06D6A0;
+}
+@keyframes RPAnim {
+    100%,0%{
+        color: var(--title);
     }
     50%{
-        color: #8a2be2;
+        color: var(--background);
     }
-  }
+}
 .topnavigation a {
     flex: 1;
     float: left;
-    color: #EFF9F0;
+    color: var(--background);
     text-align: center;
     text-decoration: none;
     font-size: 1.5vw;
-  }
-  
+}
+
   /* Change the color of links on hover */
 .topnavigation a:hover {
-    background-color: #06D6A0;
-    color: #EFF9F0;
+    background-color: var(--lightText);
     scale: 1.2;
-  }
-  
+}
+
   /* Add a color to the active/current link */
 .topnavigation a.active {
-    background-color: #06D6A0;
-    color: white;
-  }
+    background-color: var(--lightText);
+}
 @keyframes NavigationBarSlideDown {
     0%{
         transform: translate(-120vw,0);
@@ -64,30 +116,24 @@
 }
 /*Navigation Bar---------------------------------------------*/
 
-
-
-
-
-/*Entire Title Section ----------------------------*/
-.TitleSection {
-    display: flex;
-    position: relative;
-    align-items: center;
-    height: fit-content;
-}
 /*Skills Section -------------------*/
 .Skills {
-    flex: 1;
+    display: flex;
+    position: relative;
+    padding-left: 18%;
+    padding-right: 18%;
+    height: fit-content;
     text-align: center;
+    justify-content: center;
+    align-content: center;
     vertical-align: middle;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 .SkillsText {
+    flex: 1;
     font-size: 3.5vw;
-    color: #06D6A0;
-    height: fit-content;
-    padding-top: 10%;
+    color: var(--lightText);
+    height: auto;
+    padding: 10% 0 10% 0;
 }
 .SkillsText span{
     margin: -0.3%;
@@ -99,14 +145,37 @@
     margin: 1%;
 }
 .SkillsText span.active {
-    animation: skillsLetterAnimation 0.6s ease-out;
+    animation: skillsLetterExperienceAnimation 0.6s ease-out;
     transform-origin: bottom center;
+}
+@keyframes skillsLetterExperienceAnimation {
+    0% {
+        transform: scale(1,1) translate(0,0);
+        color: var(--lightText);
+    }
+	
+	20% {
+		transform: scale(1.4,1.4) translate(0, 0);
+        color: var(--darkText);
+	}
+	65% {
+        transform: scale(0,0) translate(0,0);
+        color: var(--darkText);
+    }
+	80% {
+		transform: scale(0,0) translate(0, 0);
+	}
+    100% {
+        transform: scale(1,1) translate(0,0);
+        color: var(--lightText);
+    }
 }
 
 .SkillsWords {
-    font-size: 3vw;
+    flex: 1;
+    font-size: 3.5vw;
     height: auto;
-    color: #06D6A0;
+    color: var(--darkText);
     padding: 10% 0 10% 0;
 }
 .SkillsWords span{
@@ -121,7 +190,7 @@
 }
 .SkillsWords span.start{
     animation: skillsLetterAppear 0.3s ease-in-out 0s 1;
-  }
+}
 @keyframes skillsLetterAppear {
     0% {
         transform: scale(0,0) translate(0,0);
@@ -139,59 +208,60 @@
 @keyframes skillsLetterAnimation {
     0% {
         transform: scale(1,1) translate(0,0);
-        color: #06D6A0;
+        color: var(--darkText);
     }
 	
 	20% {
 		transform: scale(1.4,1.4) translate(0, 0);
-        color: #F1D302;
 	}
 	65% {
         transform: scale(0,0) translate(0,0);
-        color: #F1D302;
+        color: var(--lightText);
     }
 	80% {
 		transform: scale(0,0) translate(0, 0);
 	}
     100% {
         transform: scale(1,1) translate(0,0);
-        color: #06D6A0;
+        color: var(--darkText);
     }
 }
 /*RYLANPAUL Section -------------------*/
 .RylanPaulContainer {
-    flex: 1;
+    text-align: center;
+    padding-top: 3vh;
 }
-  .RylanPaul {
-    color: #8a2be2;
+.RylanPaul {
+    color: var(--title);
     font-size: 10vw;
+    font-weight: 1000;
     padding: 0vh 1vw
-  }
-  .RylanPaul span{
+}
+.RylanPaul span{
     margin: -1.2%;
     display: inline-block;
     user-select: none;
     line-height: 0;
-  }
-  .RylanPaul span:nth-child(5).start{
+}
+.RylanPaul span:nth-child(5).start{
     animation: lettersAppearAnimation 1.5s ease-out 0s 1;
-  }
-  .RylanPaul span:nth-child(4).start{
+}
+.RylanPaul span:nth-child(4).start{
     animation: lettersAppearAnimation 1.7s ease-out 0s 1;
-  }
-  .RylanPaul span:nth-child(3).start{
+}
+.RylanPaul span:nth-child(3).start{
     animation: lettersAppearAnimation 1.9s ease-out 0s 1;
-  }
-  .RylanPaul span:nth-child(2).start{
+}
+.RylanPaul span:nth-child(2).start{
     animation: lettersAppearAnimation 2.1s ease-out 0s 1;
-  }
-  .RylanPaul span:nth-child(1).start{
+}
+.RylanPaul span:nth-child(1).start{
     animation: lettersAppearAnimation 2.3s ease-out 0s 1;
-  }
-  @keyframes lettersAppearAnimation {
+}
+@keyframes lettersAppearAnimation {
     0% {
         transform: scale(1,1) translate(-10000px,0);
-        color: #8a2be2;
+        color: var(--title);
     }
 	70% {
 		transform: scale(0.8,1.1) translate(20px, 0);
@@ -199,16 +269,16 @@
     100% {
         transform: scale(1,1) translate(0,0);
     }
-  }
-  .RylanPaul span.active {
+}
+.RylanPaul span.active {
     animation: letterAnimation 0.6s ease-out;
     transform-origin: bottom center;
-  }
+}
 
-  @keyframes letterAnimation {
+@keyframes letterAnimation {
     0% {
         transform: scale(1,1) translate(0,0);
-        color: #8a2be2;
+        color: var(--title);
     }
 	10% {
 		transform: scale(1.2, .6) translate(0, 0);
@@ -216,7 +286,7 @@
 	
 	30% {
 		transform: scale(0.8,1.4) translate(0, -50px);
-        color: #EF476F;
+        color: var(--lightText);
 	}
 	
 	80% {
@@ -224,55 +294,44 @@
 	}
     100% {
         transform: scale(1,1) translate(0,0);
-        color: #8a2be2;
+        color: var(--title);
     }
 }
-/*Background Section -------------------*/
-.SkillsBG {
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    position: absolute;
-    top: 0;
-    left: 0;
+/*Apps Section -------------------*/
+.Apps-Section {
+    margin-left: 10%;
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;/*Horizontal*/
+    align-items: center; /*Vertical*/
+    background-color: var(--backgroundSection2);
+    border-radius: 1vw;
+    text-align: center;
+}
+.App-Wrapper {
+    display: flex;
     width: 100%;
-    height: 100%;
-    z-index: -2;
-    vertical-align: top;
+    justify-content:center;
+    align-items:flex-start;
 }
-.SkillBGPanel {
-    pointer-events: all;
-    overflow: hidden;
+.App-Wrapper img {
     flex: 1;
-    float:left;
-    clear: left;
-    background-color: #06D6A0;
-    border-radius: 20%;
-    box-shadow: 0px 0px 15px 15px #06D6A0;
-    opacity: 0;
+    border-radius: 25%;
+    object-fit: contain;
+    width: 1vw;
+    padding: 1vw;
 }
-.SkillBGPanel:nth-child(even) {
-    background-color: #8a2be2;
-    box-shadow: 0px 0px 20px 20px #8a2be2;
+.App-Text {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
-
-.SkillsBG span{
-    animation: panelHover calc(3s * var(--i) + 2s) linear calc(3s * var(--i)) infinite;
-}
-@keyframes panelHover {
-    0%{
-        transform: scale(0.1,0.1) translate(0,0);
-        opacity: 0;
-    }
-    30%{
-        transform: scale(0.1,0.1) translate(0,0);
-        opacity: 0;
-    }
-    50%{
-        transform: scale(0.5,0.5) translate(0,0);
-        opacity: 0.3;
-    }
-    100%{
-        transform: scale(0.1,0.1) translate(0,0);
-        opacity: 0;
-    }
+.App-Text p{
+    text-align: left;
 }

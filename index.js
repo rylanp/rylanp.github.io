@@ -15,17 +15,6 @@ spans.forEach((span, idx) => {
 });
 
 
-var skillword_parent = document.querySelector('.SkillsBG');
-const numspans = 125;
-for (let index = 0; index < numspans; index++) {
-    var element = document.createElement("span");
-    const randvalue = Math.random();
-    element.style = '--i:' + randvalue.toString() + ";";
-    element.classList.add("SkillBGPanel");
-    skillword_parent.appendChild(element);
-};
-
-
 
 
 
@@ -47,7 +36,7 @@ skills_spans.forEach((span, idx) => {
 
 var skills = document.querySelector('.SkillsWords');
 var skillword_spans = document.querySelectorAll('.SkillsWords span');
-const skill_list = ["Swift in Xcode", "Firebase by Google", "Fusion 360", "Python", "C# with Unity", "Microsoft Office", "Google Workspace", "HTML, CSS, JS", "3D Priting", "Raspberry Pi", "Arduino Uno"];
+const skill_list = ["Swift in Xcode", "Firebase by Google", "Fusion 360","Solidworks", "Python", "C# with Unity", "HTML, CSS, JS", "Virtual Box", "Docker","3D Printing", "Microsoft Office", "Google Workspace", "Raspberry Pi", "Arduino Uno", "Sidekiq Z2"];
 var skills_index = 0;
 DisplayWords()
 setInterval(DisplayWords, 4000);
