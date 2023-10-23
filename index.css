@@ -12,14 +12,12 @@
 /*Main stuff*/
 h1 {
     text-align: center;
-    width: fit-content;
     color: var(--background);
-    font-size: 3.5vw;
+    font-size: 3.4vw;
     height: fit-content;
 }
 h2 {
     text-align: center;
-    width: fit-content;
     color: var(--background);
     font-size: 1.8vw;
     height: fit-content;
@@ -71,13 +69,12 @@ body {
 /* Style the links inside the navigation bar */
 .topnavigation h1 {
     flex: 0.5;
-    float:left;
     color: var(--title);
     text-align: center;
     padding: 0vh 0vh;
     text-decoration: none;
     font-size: 2vw;
-    animation: RPAnim 4s linear 0s infinite;
+    animation: RPAnim 4s ease-in-out 0s infinite;
 }
 @keyframes RPAnim {
     100%,0%{
@@ -89,13 +86,11 @@ body {
 }
 .topnavigation a {
     flex: 1;
-    float: left;
     color: var(--background);
     text-align: center;
     text-decoration: none;
     font-size: 1.5vw;
 }
-
   /* Change the color of links on hover */
 .topnavigation a:hover {
     background-color: var(--lightText);
@@ -299,14 +294,15 @@ body {
 }
 /*Apps Section -------------------*/
 .Apps-Section {
-    margin-left: 10%;
-    width: 80%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    width: 90%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     justify-content: center;/*Horizontal*/
     align-items: center; /*Vertical*/
     background-color: var(--backgroundSection2);
-    border-radius: 1vw;
+    border-radius: 6vw;
     text-align: center;
 }
 .App-Wrapper {
@@ -320,17 +316,18 @@ body {
     border-radius: 25%;
     object-fit: contain;
     width: 1vw;
-    padding: 1vw;
+    padding: 5vw;
 }
 .App-Text {
     flex: 1;
     text-align: center;
     justify-content: center;
     align-content: center;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+    align-self: center;
+    padding-top: 1vw;
+    padding-left: 0vw;
+    padding-right: 5vw;
+    padding-bottom: 1vw;
 }
 .App-Text p{
     text-align: left;
