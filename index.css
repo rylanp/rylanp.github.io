@@ -304,6 +304,7 @@ body {
     background-color: var(--backgroundSection2);
     border-radius: 6vw;
     text-align: center;
+    border: 0.5vw solid var(--navigationBackground);
 }
 .App-Wrapper {
     display: flex;
@@ -312,11 +313,11 @@ body {
     align-items:flex-start;
     text-align: center;
 }
-.App-Wrapper img {
+.bigimg {
     flex: 1;
     border-radius: 25%;
-    object-fit: contain;
-    width: 1vw;
+    object-fit: fill;
+    overflow: hidden;
     padding: 5vw;
 }
 .App-Text {
@@ -347,11 +348,20 @@ body {
     width: fit-content;
     height: 6vw;
     margin: 0 auto;
-    scale: 1;
     transition: 0.8s;
 }
 .App-Text a:hover{
     scale: 1.2;
+}
+.App-Text img {
+    box-sizing: border-box;
+    flex: 1;
+    filter: invert(1%) sepia(9%) saturate(2887%) hue-rotate(307deg) brightness(105%) contrast(97%);
+    animation: AppleSymbolAnim 2s ease-in-out 0s infinite;
+    height: 8vw;
+    width: 8vw;
+    object-fit: cover;
+    padding: 1vw;
 }
 .AppleSymbol {
     font-size: 6vw;
@@ -370,4 +380,11 @@ body {
 }
 .AppStore {
     font-size: 3vw;
+}
+/* Footer */
+.Footer {
+    background-color: var(--navigationBackground);
+    padding: 2vw;
+    color: var(--background);
+    font-size: 1.2vw;
 }
