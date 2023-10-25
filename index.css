@@ -8,6 +8,7 @@
     --backgroundSection2: #8797AF;
     --burgundy: #7B0D1E;
     --purple: #5A246C;
+    --coral: #FF7477;
 }
 
 /*Main stuff*/
@@ -29,7 +30,7 @@ p {
 }
 body {
     background: linear-gradient(60deg,var(--lightText),var(--background),var(--background), var(--darkText));
-    animation: bgGradient 10s ease-in-out infinite;
+    animation: bgGradient 15s ease-in-out infinite;
     background-attachment: fixed;
     background-size: 150% 150%;
     font-family: 'Varela Round', sans-serif;
@@ -43,7 +44,10 @@ body {
     0% {
         background-position: 00% 0%;
     }
-    50% {
+    45% {
+        background-position: 100% 0%;
+    }
+    55% {
         background-position: 100% 0%;
     }
     100% {
@@ -349,7 +353,7 @@ body {
     width: fit-content;
     height: 6vw;
     margin: 0 auto;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 .App-Text a:hover{
     scale: 1.2;
@@ -384,6 +388,18 @@ body {
 }
 #GithubButton {
     background-color: var(--purple);
+}
+#ItchButton {
+    background-color: var(--coral);
+}
+#NotreDame {
+    border-radius: 0;
+    color: var(--background);
+}
+#ContactInfo {
+    border: 0;
+    background-color: transparent;
+    color: var(--darkText);
 }
 /* Footer */
 .Footer {
