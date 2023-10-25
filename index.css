@@ -7,6 +7,7 @@
     --backgroundSection: #306B34;
     --backgroundSection2: #8797AF;
     --burgundy: #7B0D1E;
+    --purple: #5A246C;
 }
 
 /*Main stuff*/
@@ -356,8 +357,6 @@ body {
 .App-Text img {
     box-sizing: border-box;
     flex: 1;
-    filter: invert(1%) sepia(9%) saturate(2887%) hue-rotate(307deg) brightness(105%) contrast(97%);
-    animation: AppleSymbolAnim 2s ease-in-out 0s infinite;
     height: 8vw;
     width: 8vw;
     object-fit: cover;
@@ -366,9 +365,11 @@ body {
 .AppleSymbol {
     font-size: 6vw;
     padding: 1vw;
-    animation: AppleSymbolAnim 2s ease-in-out 0s infinite;
 }
-@keyframes AppleSymbolAnim {
+.RotateSymbol{
+    animation: RotateSymbolAnim 2s ease-in-out 0s infinite;
+}
+@keyframes RotateSymbolAnim {
     0%,100%{
         rotate: -10deg;
     }
@@ -380,6 +381,9 @@ body {
 }
 .AppStore {
     font-size: 3vw;
+}
+#GithubButton {
+    background-color: var(--purple);
 }
 /* Footer */
 .Footer {
