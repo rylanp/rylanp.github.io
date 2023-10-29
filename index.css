@@ -392,9 +392,14 @@ body {
 #ItchButton {
     background-color: var(--coral);
 }
+#IrishSatButton {
+    background-color: #051e3dff;
+}
 #NotreDame {
     border-radius: 0;
-    color: var(--background);
+}
+#NotreDame h1{
+    color: var(--darkText);
 }
 #ContactInfo {
     border: 0;
