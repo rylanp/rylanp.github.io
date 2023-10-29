@@ -38,8 +38,9 @@ var skills = document.querySelector('.SkillsWords');
 var skillword_spans = document.querySelectorAll('.SkillsWords span');
 const skill_list = ["Swift in Xcode", "Firebase by Google", "Fusion 360","Solidworks", "Python", "C# with Unity", "HTML, CSS, JS", "Virtual Box", "Docker","3D Printing", "Microsoft Office", "Google Workspace", "Raspberry Pi", "Arduino Uno", "Sidekiq Z2"];
 var skills_index = 0;
+var word_change_dely_seconds = 4.5;
 DisplayWords()
-setInterval(DisplayWords, 4000);
+setInterval(DisplayWords, word_change_dely_seconds * 1000);
 
 function DisplayWords(){
     

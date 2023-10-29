@@ -130,10 +130,20 @@ body {
 }
 .SkillsText {
     flex: 1;
+    position: relative;
     font-size: 3.5vw;
     color: var(--lightText);
     height: auto;
     padding: 10% 0 10% 0;
+    animation: 3s SkillTextAnim 0s ease-in-out 1;
+}
+@keyframes SkillTextAnim {
+    0%{
+        right: 200vw;
+    }
+    100%{
+        right: 0vw;
+    }
 }
 .SkillsText span{
     margin: -0.3%;
@@ -170,13 +180,25 @@ body {
         color: var(--lightText);
     }
 }
-
 .SkillsWords {
     flex: 1;
+    position: relative;
     font-size: 3.5vw;
     height: auto;
     color: var(--darkText);
     padding: 10% 0 10% 0;
+    animation: 4s SkillWordsAnim 0s cubic-bezier(.31,0,.05,1.03) 1;
+}
+@keyframes SkillWordsAnim {
+    0%{
+        left: 1000vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
+.SkillsWords::after {
+    opacity: 1;
 }
 .SkillsWords span{
     margin: -0.1%;
