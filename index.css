@@ -337,29 +337,45 @@ body {
     display: flex;
     width: 100%;
     justify-content:center;
-    align-items:flex-start;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width: 450px) {
+    .App-Wrapper {
+        flex-direction: row;
+    }
+    .bigimg {
+        padding: 5vw;
+    }
 }
 .bigimg {
     flex: 1;
     border-radius: 25%;
-    object-fit: fill;
+    object-fit:contain;
     overflow: hidden;
-    padding: 5vw;
+    padding: 1vw;
+    width: 50%;
 }
 .App-Text {
     flex: 1;
-    text-align: center;
     justify-content: center;
     align-content: center;
     align-self: center;
+    text-align: left;
     padding-top: 1vw;
-    padding-left: 0vw;
-    padding-right: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-bottom: 1vw;
 }
-.App-Text p{
-    text-align: left;
+@media (min-width: 450px) {
+    .App-Text{
+        text-align: left;
+        padding-top: 1vw;
+        padding-left: 0vw;
+        padding-right: 5vw;
+        padding-bottom: 1vw;
+    }
 }
 .App-Text a{
     display: flex;
