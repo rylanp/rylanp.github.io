@@ -9,6 +9,7 @@
     --burgundy: #7B0D1E;
     --purple: #5A246C;
     --coral: #FF7477;
+    --i: 0;
 }
 
 /*Main stuff*/
@@ -56,8 +57,7 @@ body {
 }
 .wrapper{
     height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
 }
@@ -131,6 +131,7 @@ body {
     justify-content: center;
     align-content: center;
     vertical-align: middle;
+    overflow: hidden;
 }
 .SkillsText {
     flex: 1;
@@ -140,6 +141,7 @@ body {
     height: auto;
     padding: 10% 0 10% 0;
     animation: 3s SkillTextAnim 0s ease-in-out 1;
+    overflow: hidden;
 }
 @keyframes SkillTextAnim {
     0%{
@@ -192,6 +194,7 @@ body {
     color: var(--darkText);
     padding: 10% 0 10% 0;
     animation: 4s SkillWordsAnim 0s cubic-bezier(.31,0,.05,1.03) 1;
+    overflow: hidden;
 }
 @keyframes SkillWordsAnim {
     0%{
@@ -336,6 +339,7 @@ body {
     border-radius: 6vw;
     text-align: center;
     border: 0.5vw solid var(--navigationBackground);
+    overflow: hidden;
 }
 .App-Wrapper {
     display: flex;
@@ -348,6 +352,7 @@ body {
 @media (min-width: 450px) {
     .App-Wrapper {
         flex-direction: row;
+        overflow: hidden;
     }
     .bigimg {
         padding: 5vw;
@@ -459,4 +464,24 @@ body {
     padding: 2vw;
     color: var(--background);
     font-size: 1.2vw;
+}
+
+/*  Scroll Animation  */
+.scrollhidden {
+    opacity: 0;
+    width: 0%;
+    height: 40vw;
+    translate: 100%;
+    transition: 1s all ease-in-out;
+    
+}
+@media(prefers-reduced-motion) {
+    .scrollhidden {
+        transition: none;
+    }
+}
+.scrollshow {
+    opacity: 1;
+    translate: 0%;
+    width: 90%;
 }
