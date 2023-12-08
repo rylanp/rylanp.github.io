@@ -354,12 +354,11 @@ body {
     }
 }
 .bigimg {
-    flex: 1;
+    flex: 0.7;
     border-radius: 25%;
-    object-fit:contain;
+    object-fit:cover;
     overflow: hidden;
-    padding: 1vw;
-    width: 50%;
+    padding: 3vw;
 }
 .App-Text {
     flex: 1;
