@@ -95,11 +95,16 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 1.5vw;
+    padding: 1.4% 0% 1.4% 0%;
 }
   /* Change the color of links on hover */
 .topnavigation a:hover {
     background-color: var(--lightText);
     scale: 1.2;
+}
+.topnavigation #active {
+    text-decoration: underline;
+    text-underline-offset: 7px;
 }
 
   /* Add a color to the active/current link */
