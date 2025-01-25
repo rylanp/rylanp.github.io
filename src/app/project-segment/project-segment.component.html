@@ -1,0 +1,35 @@
+<div class="main">
+    <div class="container">
+        <div class="left-side">
+            <h1>{{title}}</h1>
+            <small>{{subtitle}}</small>
+            <h3>ABOUT</h3>
+            <p>{{about}}</p>
+            <h3>LINKS</h3>
+            <div *ngFor="let link of extralinks">
+                <img [src]="link.image" style="width: 50px; height: 50px;">
+                <p>{{link.name}}</p>
+                <a [href]="link.link">{{link.link}}</a>
+            </div>
+        </div>
+        <div class="right-side">
+            <!-- Cycle through image array -->
+             <!-- <app-carousel></app-carousel> -->
+            <div *ngFor="let image of images">
+                <img [src]="image" style="width: 100px; height: 100px;">
+            </div>
+    
+            <h3>SKILLS</h3>
+            <div *ngFor="let skill of skills">
+                <p>{{skill}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p>{{projectLink}}</p>
+    </div>
+    
+    <div class="close-btn" (click)="click()">
+        <img src="close.png">
+    </div>
+</div>

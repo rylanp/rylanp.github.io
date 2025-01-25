@@ -1,0 +1,86 @@
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    :hover {
+        animation: hoveranim 1s ease-in-out infinite;
+    }
+    :active{
+        animation: clickanim 0.1s ease-in-out forwards;
+    }
+  }
+p{
+    position: relative;
+    transform: translate(0px, -115px);
+    color: white;
+    pointer-events: none;
+    opacity: 0.25;
+    animation: textanim-reverse 0.2s ease-in-out forwards;
+    transform-origin: center;
+    font-size:small;
+}
+.button:hover ~ p {
+    animation: textanim 0.3s ease-in-out forwards;
+}
+@keyframes textanim {
+    from{
+        opacity: 0.25;
+        transform: translate(0px, -115px);
+        letter-spacing: -1px;
+        font-size:small;
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px, -115px);
+        letter-spacing: 1.2px;
+        font-size:medium;
+    }
+}
+@keyframes textanim-reverse {
+    from{
+        opacity: 1;
+        letter-spacing: 1.2px;
+        transform: translate(0px, -115px);
+        font-size:medium;
+    }
+    to{
+        opacity: 0.25;
+        letter-spacing: -1px;
+        transform: translate(0px, -115px);
+        font-size:small;
+    }
+}
+
+*{
+    background-color: transparent;
+    overflow: visible;
+}
+
+@keyframes hoveranim {
+    0%{
+        scale: 1;
+    }
+    50% {
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes clickanim {
+    0%{
+        scale: 1;
+    }
+    60% {
+        scale: 0.75;
+    }
+    80% {
+        scale: 0.95;
+    }
+    100%{
+        scale: 0.9;
+        rotate: 0;
+    }
+}

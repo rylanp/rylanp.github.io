@@ -1,0 +1,46 @@
+<router-outlet style="padding: 0; margin: 0; width: 100%;">
+<main class="main">
+  <div class="center-container">
+    <img src="RP.gif" alt="RP" class="center-image" style="user-select: none;">
+    <app-button-planet buttontext="Disc Golf Score Tracker" buttonImage="earth.gif" [isSeletced]="false" class="button-planet" id="p1" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="IrishSAT" buttonImage="yellowplanetring.gif" [isSeletced]="false" class="button-planet" id="p2" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Galactic Warfare" buttonImage="galaxyorange.gif" [isSeletced]="false" class="button-planet" id="p3" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="3D Printing" buttonImage="galaxyblue.gif" [isSeletced]="false" class="button-planet" id="p4" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Woodworking" buttonImage="galaxygreen.gif" [isSeletced]="false" class="button-planet" id="p5" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Python Projects" buttonImage="galaxypurple.gif" [isSeletced]="false" class="button-planet" id="p6" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Radio Frequency" buttonImage="lava.gif" [isSeletced]="false" class="button-planet" id="p7" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Notre Dame" buttonImage="earthredring.gif" [isSeletced]="false" class="button-planet" id="p8" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Ascent XR" buttonImage="moon.gif" [isSeletced]="false" class="button-planet" id="p9" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Neural Network" buttonImage="redplanet.gif" [isSeletced]="false" class="button-planet" id="p10" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Discover Posey County" buttonImage="moon.gif" [isSeletced]="false" class="button-planet" id="p11" (buttonClick)="page_select($event)"></app-button-planet>
+  </div>
+  <div>
+    <app-planet-selector [imagesrc]="selectorimage" [page]="selectorpage" (buttonClick)="page_select($event)"></app-planet-selector>
+  </div>
+  <div style="position: relative; z-index: 10;" id="Project Segment">
+    <app-project-segment
+      *ngIf="selectedpage == 'Neural Network'"
+      title="Neural Network"
+      subtitle="Created a feedforward neural network with Python and Numpy"
+      [images]="['RP.gif', 'RP.gif', 'RP.gif']"
+      about="about paragraph"
+      [skills]="['Skill 1']"
+      [extralinks]="[{image: 'RP.gif', name: 'Name of link', link: 'https://example_link.linky.link'}]"
+      projectLink="https://example_link.linky.link"
+      (buttonClick)="page_select($event)"
+      [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <app-project-segment *ngIf="selectedpage == 'Ascent XR'" title="Ascent XR" (buttonClick)="page_select($event)"></app-project-segment>
+    <app-project-segment *ngIf="selectedpage == 'Notre Dame'" title="Notre Dame" (buttonClick)="page_select($event)"></app-project-segment>
+  </div>
+  <div class="spacecontainer">
+    <app-space-background></app-space-background>
+  </div>
+  
+  <div class="cubesatcontainer">
+    <app-cubesat></app-cubesat>
+  </div>
+</main>
+
+
+<router-outlet />

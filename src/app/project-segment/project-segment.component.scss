@@ -1,0 +1,64 @@
+.main{
+    background-color: rgba(6, 13, 25, 0.993);
+    border-radius: 100px 100px 0 0;
+    border: 3px solid rgba(255, 255, 255, 0.619);
+    padding: 50px;
+    color: azure;
+    z-index: 30;
+    animation: fadein 1.5s ease-in-out forwards;
+    display: flex; flex-direction: column;
+}
+.close-btn {
+    position: absolute;
+    border-radius: 5px;
+    top: 50px;
+    right: 50px;
+    transition: scale 0.2s ease-in-out;
+}
+.close-btn:hover {
+    scale: 1.15;
+}
+.close-btn:active {
+    scale: 0.9;
+}
+.fadeout {
+    animation: fadeout 0.8s ease-in-out forwards;
+}
+@keyframes fadein{
+    0% {
+        transform: translate(0,120vh);
+        scale: 0 1;
+    }
+    60% {
+        transform: translate(0,0);
+        scale: 0.6 1;
+    }
+    100% {
+        transform: translate(0,0);
+        scale: 1 1;
+    }
+}
+@keyframes fadeout{
+    0% {
+        opacity: 1;
+        scale: 1 1;
+        transform: translate(0,0);
+    }
+    40% {
+        scale: 0.6 1;
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(0,120vh);
+        scale: 0 1;
+    }
+}
+.container {
+    display: flex;
+}
+.left-side {
+    flex: 1;
+}
+.right-side {
+    flex: 1;
+}

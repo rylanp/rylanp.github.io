@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@use './styles/variables' as vars;
+@font-face {
+    font-family: 'Varela Round';
+    src: url('../src/assets/fonts/VarelaRound-Regular.ttf');
+}
+
+html, body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: vars.$background-color;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    overflow-x: hidden;
+}
+body {
+    background-color: black;
+    overflow-x: hidden;
+}

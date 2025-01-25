@@ -1,0 +1,59 @@
+:root {
+    --border-color: "#EA526F";
+    --background-color: "#493657";
+    --text-color: "#FFFFFF";
+    --fill-color: "#EA526F";
+}
+.button {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #FFFFFF);
+    z-index: 1;
+    overflow: hidden; // Ensure the pseudo-element doesn't go outside the boundaries
+    cursor: pointer;
+    border: solid 2px;
+    border-color: var(--border-color, #EA526F);
+    border-radius: 20px;
+    font-size: large;
+    width: 215px;
+    padding: 10px;
+    background: var(--background-color, #493657);
+    text-align: center;
+    user-select: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: var(--fill-color, #EA526F); // Background fill color
+      z-index: -1;
+      transition: width 0.4s ease; // Smooth transition for fill effect
+    }
+  
+    &:hover::before {
+      width: 100%; // Expand the background fill on hover
+    }
+    &.click {
+        animation: spring-shrink 0.4s ease-out;
+    }
+    @keyframes spring-shrink {
+        0% {
+            transform: scale(1); // Start at normal size
+        }
+        50% {
+            transform: scale(0.9); // Shrink more than the target
+        }
+        70% {
+            transform: scale(1.05); // Overshoot slightly
+        }
+        90% {
+            transform: scale(0.95); // Undershoot slightly
+        }
+        100% {
+            transform: scale(1); // Settle back to normal size
+        }
+    }
+  }
