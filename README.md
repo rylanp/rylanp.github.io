@@ -12,9 +12,9 @@ This is a fun website I've made to share my ideas and gain some web development 
       C. Add a type A with the host name as your domain name (rylanpaul.com)
       D. TTL is the time it takes to publish something on your website, I have mine as 100, works fine
       E. Under Data add 4 rows with each one having the following numbers (185.199.108.153)(185.199.109.153)(185.199.110.153)(185.199.111.153)
-            I think these link the domain to Github, idk how it works, but it works (;
+            these link the domain to Github
       F. Add a second record of type CNAME
-      G. under host name I have www
+      G. under host type www
       H. TTL again is 100
       I. Then under data I have my github repository name, which for mine is (rylanp.github.io)
 5. This is why your repository must be named as follows: username.github.io
@@ -22,12 +22,12 @@ This is a fun website I've made to share my ideas and gain some web development 
             Mine reads "rylanp/rylanp.github.io"
 6. Lastly, back in github double checkyou have your CNAME file, index.html, then make sure the repository is public.
 
-IMPORTANT: Because the repository is public, anyone can access these files, so do not put anything sensitive on here.
+IMPORTANT: Because the repository is public, anyone can access these files, so do not put anything sensitive in here.
 
 
 Hopefully this was a massive help, if you have questions, comments, concerns, improvements, or suggestions, please feel free to write a comment.
 <------- End Github Pages Tutorial ------->
 
-I'm not really too sure what to put it the readme, so——yeah. Cool.
+Cool.
 
 Enjoy!
