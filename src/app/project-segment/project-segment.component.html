@@ -2,31 +2,37 @@
     <div class="container">
         <div class="left-side">
             <h1>{{title}}</h1>
-            <small>{{subtitle}}</small>
+            <small *ngIf="this.subtitle != ''">{{subtitle}}</small>
             <h3>ABOUT</h3>
             <p>{{about}}</p>
-            <h3>LINKS</h3>
+            <h3 *ngIf="this.extralinks.length > 0">LINKS</h3>
             <div *ngFor="let link of extralinks">
-                <img [src]="link.image" style="width: 50px; height: 50px;">
-                <p>{{link.name}}</p>
-                <a [href]="link.link">{{link.link}}</a>
+                <a [href]="link.link" target="_blank">
+                    <div class="link">
+                        <img [src]="link.image" style="width: 50px; height: 50px;">
+                        {{link.name}}
+                    </div>
+                </a>
+                
             </div>
+            <a *ngIf="this.projectLink != ''" [href]="projectLink" target="_blank">
+                <div class="projectlink">
+                    Project Link
+                    <svg [cIcon]="icons.cilExternalLink" width="25" title="Shield Icon"></svg>
+                </div>
+            </a>
         </div>
         <div class="right-side">
-            <!-- Cycle through image array -->
-             <!-- <app-carousel></app-carousel> -->
-            <div *ngFor="let image of images">
-                <img [src]="image" style="width: 100px; height: 100px;">
+            <div style="margin-left: 50px; margin-top: 50px;">
+                <app-carousel [slides]="images"></app-carousel>
             </div>
+            
     
-            <h3>SKILLS</h3>
-            <div *ngFor="let skill of skills">
-                <p>{{skill}}</p>
+            <h3 *ngIf="this.skills.length > 0">SKILLS</h3>
+            <div *ngIf="this.skills.length > 0" class="skill-container">
+                <div *ngFor="let skill of skills; let i = index" class="skill" [ngStyle]="{ 'background-color': getColor(i) }">{{ skill }}</div>
             </div>
         </div>
-    </div>
-    <div class="bottom">
-        <p>{{projectLink}}</p>
     </div>
     
     <div class="close-btn" (click)="click()">

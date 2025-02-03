@@ -8,9 +8,10 @@ import { NgIf, ViewportScroller } from '@angular/common';
 import { ButtonPlanetComponent } from './button-planet/button-planet.component';
 import { PlanetSelectorComponent } from './planet-selector/planet-selector.component';
 import { text } from 'body-parser';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, SpaceBackgroundComponent, CubesatComponent, NgIf, ProjectSegmentComponent, ButtonPlanetComponent, PlanetSelectorComponent],
+  imports: [RouterOutlet, ButtonComponent, SpaceBackgroundComponent, CubesatComponent, NgIf, ProjectSegmentComponent, ButtonPlanetComponent, PlanetSelectorComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -33,51 +34,24 @@ export class AppComponent {
       this.scrollToElement("Project Segment", 1500);
       return;
     }
+    this.scrollToElement("", 500);
     this.fadeOutSelectedPageEvent.emit('Fade out');
     this.selectorpage = "";
     this.selectorimage = "";
-    this.scrollToElement("TOP", 1500);
     setTimeout(() => {
+      console.log("done");
       this.selectedpage = "";
       this.selectedimage = "";
     }, 1500); // 1000 ms = 1 second
     
     
   }
-  scrollToElement(elementId: string, duration: number) {
-    // Check if elementId is "TOP"
-    if (elementId === 'TOP') {
-      const startY = window.scrollY;
-      const targetY = 0; // Top of the page
-      const distance = targetY - startY;
-      const startTime = performance.now();
-  
-      const animateScrollToTop = (currentTime: number) => {
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-  
-        // Smooth easing function (easeInOutQuad)
-        const ease = progress < 0.5
-          ? 2 * progress * progress
-          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-  
-        window.scrollTo(0, startY + distance * ease);
-  
-        if (progress < 1) {
-          requestAnimationFrame(animateScrollToTop);
-        }
-      };
-  
-      requestAnimationFrame(animateScrollToTop);
-      return;
-    }
-  
+  scrollToElement(elementId: string, duration: number) { 
     // Normal scroll to the element
     const element = document.getElementById(elementId);
-    if (!element) return;
-  
+
     const startY = window.scrollY;
-    const targetY = element.getBoundingClientRect().top + window.scrollY;
+    const targetY = element ? element.getBoundingClientRect().top + window.scrollY : 0;
     const distance = targetY - startY;
     const startTime = performance.now();
   

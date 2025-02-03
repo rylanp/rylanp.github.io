@@ -1,9 +1,9 @@
 .main{
-    background-color: rgba(6, 13, 25, 0.993);
+    background-color: #1c0223ec;
     border-radius: 100px 100px 0 0;
-    border: 3px solid rgba(255, 255, 255, 0.619);
+    border: 3px solid #19647E;
     padding: 50px;
-    color: azure;
+    color: white;
     z-index: 30;
     animation: fadein 1.5s ease-in-out forwards;
     display: flex; flex-direction: column;
@@ -61,4 +61,108 @@
 }
 .right-side {
     flex: 1;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping to a new row when the width is exceeded */
+    gap: 10px; /* Optional: Adjust spacing between items */
+}
+
+.skill {
+    display: flex; /* Makes the div a flex container */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    padding: 10px;
+    border: 1px solid #cccccc7a;
+    border-radius: 16px;
+    text-align: center;
+    background-color: #f9f9f923;
+    height: auto; /* Set a fixed height or allow it to adjust dynamically */
+    place-items: center;
+    margin: 0;
+    min-width: 50px;
+    transform: translate(0px, 0px);
+    transition: all 0.2s ease-in-out;
+    color: #ffffff;
+}
+.skill:hover {
+    translate: 0px -6px;
+    transform: scale(1.15);
+    color: #FFD046;
+}
+h3, h1 {
+    color: #ffffffd1;
+}
+a {
+    text-decoration: none;
+}
+small { 
+    color: #19647E;
+}
+p {
+    color: #FFD046;
+}
+.link {
+    padding-left: 15px;
+    max-width: 60%;
+    display: flex;
+    background-color: #004cff20;
+    border: 3px solid #004cff25;
+    border-radius: 16px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    place-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    width: 35%;
+}
+.link:hover{
+    transform: scale(1.1);
+    background-color: #004cff30;
+    border: 3px solid #004cff40;
+    color: #FFD046;
+}
+.link:active{
+    transform: scale(0.9);
+    background-color: #004cff40;
+    border: 3px solid #004cff50;
+    color: white;
+}
+.link img {
+    padding: 7px;
+}
+
+h3 {
+    padding-top: 50px;
+}
+.projectlink {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ea526e40;
+    border: 3px solid #EA526F50;
+    border-radius: 16px;
+    color: white;
+    gap: 40px;
+    max-width: 60%;
+    font-size: 32px;
+    transition: all 0.3s ease-in-out;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.projectlink:hover{
+    transform: scale(1.1);
+    background-color: #ea526e50;
+    border: 3px solid #ea526e60;
+    color: #FFD046;
+}
+.projectlink:active{
+    transform: scale(0.9);
+    background-color: #ea526e60;
+    border: 3px solid #ea526e75;
+    color: rgb(255, 255, 255);
 }

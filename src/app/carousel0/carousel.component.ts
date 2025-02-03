@@ -1,25 +1,21 @@
 import { NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CarouselComponent, CarouselControlComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, ThemeDirective } from '@coreui/angular';
+import { CarouselModule } from '@coreui/angular';
+import { cilCaretLeft, cilCaretRight } from '@coreui/icons';
+import { IconDirective } from '@coreui/icons-angular';
+import { CommonModule } from '@angular/common';
+
+
 @Component({
   selector: 'app-carousel',
-  imports: [ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, NgFor, CarouselItemComponent, CarouselControlComponent, RouterLink],
+  imports: [ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, NgFor, CarouselItemComponent, CarouselControlComponent, RouterLink, CarouselModule, IconDirective, CommonModule],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrl: './carousel.component.scss',
 })
-export class Carousel0Component implements OnInit {
-  slides: any[] = new Array(3).fill({ id: -1, src: '', title: '', subtitle: '' });
-
-  ngOnInit(): void {
-    this.slides[0] = {
-      src: 'earth.gif'
-    };
-    this.slides[1] = {
-      src: 'RP.gif'
-    };
-    this.slides[2] = {
-      src: 'moon.gif'
-    };
-  }
+export class Carousel0Component {
+  icons = { cilCaretLeft, cilCaretRight};
+  @Input() slides: { id: number; src: string }[] = [{ id: 0, src: 'RP.gif'}];
+  activeIndex = 0;
 }

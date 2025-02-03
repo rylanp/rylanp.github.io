@@ -1,14 +1,15 @@
-<c-carousel>
-    <c-carousel-indicators></c-carousel-indicators>
-    <c-carousel-inner>
-      <c-carousel-item *ngFor="let slide of slides">
-        <img
-          [src]="slide.src"
-          alt="{{ slide.title }}"
-          class="d-block w-100"
-          loading="lazy" />
-      </c-carousel-item>
-    </c-carousel-inner>
-    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
-  </c-carousel>
+<c-carousel [interval]="5000" style="height: 45vh;">
+  <c-carousel-indicators *ngIf="slides.length > 1"></c-carousel-indicators>
+  <c-carousel-inner>
+    <c-carousel-item *ngFor="let slide of slides">
+      <img
+        [src]="slide.src"
+        class="d-block w-100 slide"
+        [style.objectFit]="'contain'"
+        style="height: 45vh;"
+        loading="lazy"/>
+    </c-carousel-item>
+  </c-carousel-inner>
+  <c-carousel-control [routerLink] caption="Previous" direction="prev" *ngIf="slides.length > 1"></c-carousel-control>
+  <c-carousel-control [routerLink] caption="Next" direction="next" *ngIf="slides.length > 1"></c-carousel-control>
+</c-carousel>
