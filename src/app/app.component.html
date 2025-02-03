@@ -1,0 +1,190 @@
+<router-outlet style="padding: 0; margin: 0; width: 100%;">
+<main class="main">
+  <div class="center-container">
+    <img src="RP.gif" alt="RP" class="center-image" style="user-select: none;">
+    <app-button-planet buttontext="Disc Golf Score Tracker" buttonImage="earth.gif" [isSeletced]="false" class="button-planet" id="p1" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="IrishSAT" buttonImage="yellowplanetring.gif" [isSeletced]="false" class="button-planet" id="p2" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Galactic Warfare" buttonImage="galaxyorange.gif" [isSeletced]="false" class="button-planet" id="p3" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="3D Printing" buttonImage="galaxyblue.gif" [isSeletced]="false" class="button-planet" id="p4" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Woodworking" buttonImage="galaxygreen.gif" [isSeletced]="false" class="button-planet" id="p5" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Python Projects" buttonImage="galaxypurple.gif" [isSeletced]="false" class="button-planet" id="p6" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="" buttonImage="lava.gif" [isSeletced]="false" class="button-planet" id="p7" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Notre Dame" buttonImage="earthredring.gif" [isSeletced]="false" class="button-planet" id="p8" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Ascent XR" buttonImage="moon.gif" [isSeletced]="false" class="button-planet" id="p9" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Neural Network" buttonImage="redplanet.gif" [isSeletced]="false" class="button-planet" id="p10" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="Discover Posey County" buttonImage="moon.gif" [isSeletced]="false" class="button-planet" id="p11" (buttonClick)="page_select($event)"></app-button-planet>
+    <app-button-planet buttontext="C Projects" buttonImage="earth4.gif" [isSeletced]="false" class="button-planet" id="p12" (buttonClick)="page_select($event)"></app-button-planet>
+  </div>
+  <div>
+    <app-planet-selector [imagesrc]="selectorimage" [page]="selectorpage" (buttonClick)="page_select($event)"></app-planet-selector>
+  </div>
+  <div style="position: relative; z-index: 10;" id="Project Segment">
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Disc Golf Score Tracker'"
+    title="Disc Golf Score Tracker"
+    subtitle="iOS application to record disc golf score and statistics"
+    [images]="[{id: 0, src: 'discgolficon.png'}, {id: 1, src: 'discgolf1.png'}, {id: 2, src: 'discgolf2.png'}, {id: 3, src: 'discgolf3.png'}, {id: 4, src: 'discgolf4.png'}, {id: 5, src: 'discgolf5.png'}, {id: 6, src: 'discgolf6.png'}, {id: 7, src: 'Disc Golf Score Tracker Flyer.png'}]"
+    about="Devloped during my junior and senior year of high school, this was my first taste of a finished project that other people could benefit from! It utilizes Firebase Firestore for the backend, which allows users to create their own courses in the app and see nearby courses. With over 2,500+ downloads, there are over 300+ user added courses. The simple interface makes using the app mid-round a breeze. Additionally, a user can create a group with their friends to compare scores during a round with a live leaderboard. Developed in XCode with Swift, I learned the ins and outs of mobile app development."
+    [skills]="['Swift', 'XCode', 'Firebase Firestore']"
+    [extralinks]="[{image: 'icons8-apple-250.png', name: 'Contact Form', link: 'https://discgolf.rylanpaul.com/'}]"
+    projectLink="https://apps.apple.com/us/app/disc-golf-score-tracker/id1633893666"
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'IrishSAT'"
+    title="IrishSAT"
+    subtitle="Communication Systems Lead for Notre Dame's satellite club"
+    [images]="[{id: 0, src: 'irishsatascii.png'}, {id: 1, src: 'USRP.png'}, {id: 2, src: 'sidekiqz2.jpeg'}, {id: 3, src: 'irishsat.png'}, {id: 4, src: 'graphs.png'}]"
+    about="Coming into Notre Dame as a Computer Engineer, I thought I would want to be a Software Engineer. This dream changed once I found Irishsat. Now I am an Electrical Engineer wanting to get into the RF engineering roles. I joined the communications team for Irishsat the fall of my freshman year where I started working on some digital signal processing algorithms. As I led the team, we were able to pair our digital signal processing programs (C and Python) with an Ettus B210 USRP and an Epiq SidekiqZ2 to send BPSK modulated data from the Sidekiq to the USRP. On receive, the data is corrected and demodulated relatively sucessfully. It is not a perfect system, but it is getting closer as we continuously work to improve the DSP for a 2U Cubesat application. I've learned a tremendous amount from my experiences thus far including digital signal processing (DSP), Linux, SSH, SCP, Linux services, C, makefiles, compilation, toolchains, spectrum analyzers, antenna radiation patterns, git, ..."
+    [skills]="['Ubuntu', 'SidekiqZ2', 'Radio Frequency', 'Team Leader', 'Communication Systems', 'Python', 'C', 'SDR', 'USRP', 'PySDR', 'Signal Processing', 'GitHub', 'Linux', 'DSP', 'GCC', 'Makefiles']"
+    [extralinks]="[]"
+    projectLink="https://github.com/ND-IrishSat/CommunicationSystems"
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Galactic Warfare'"
+    title="Galactic Warfare"
+    subtitle="2D space ship multiplayer game made with Unity2D"
+    [images]="[{id: 0, src: 'galacticwarfare0.png'}, {id: 1, src: 'galacticwarfare1.png'}, {id: 2, src: 'galacticwarfare2.png'}, {id: 3, src: 'galacticwarfare3.png'}, {id: 4, src: 'galacticwarfare4.png'}, {id: 5, src: 'galacticwarfare5.png'}, {id: 6, src: 'galacticwarfare6.png'}, {id: 7, src: 'galacticwarfare7.png'}, {id: 8, src: 'galacticwarfare8.png'}, {id: 9, src: 'galacticwarfare9.png'}, {id: 10, src: 'galacticwarfare10.png'}]"
+    about="From the end of middle school to the beginning of high school, I had gotten into devloping games with Unity. I had tons of small projects, but never any polished games. This changed with Galactic Warfare. This is my first and only more polished game that I have released to the community on Itch.io. All of the beautiful pixel art graphics were handmade myself, aside from the asteroids. The game is a simple multiplayer game where the player is launched into the middle of a free-for-all style battle of ships in space. The player must fly around shooting lasers, dropping bombs, and trapping enemies in vortexes. As per common knowledge, there are lightning storms in space just like in the skies of Earth (lol)! This lightning can take out the power of any ship and reduce it to a floating piece of metal. The player must collect crystals to upgrade their fire rate and destroy enemy ships to level up their ship. Additionally, you can connect up to 4 xbox controllers to play a local multiplayer with your friends."
+    [skills]="['Unity2D', 'C#', 'Pixel Art', 'Sound Design', 'Local Multiplayer', 'Unity WebGL']"
+    [extralinks]="[{image: 'itchio.png', name: 'Itch.io', link: 'https://rylan21.itch.io/galactic-warfare'}]"
+    projectLink="https://rylan21.itch.io/galactic-warfare"
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == '3D Printing'"
+    title="3D Printing"
+    subtitle="FDM 3D printing with a Prusa MK3 i3"
+    [images]="[{id: 0, src: 'case.gif'}, {id: 1, src: 'hansolo.png'}, {id: 2, src: 'cryptex.png'}, {id: 3, src: 'container.png'}, {id: 4, src: 'worldframe.png'}]" 
+    about="At the beginning of high school I got my first FDM 3D printer. I learned to use Fusion360 for designing parts, then at Notre Dame learned SolidWorks. Additionally, I learned Blender for game development in Unity. I've designed and printed tons of various items from containers to puzzles."
+    [skills]="['CAD', 'Fusion360', 'SolidWorks', 'Blender']"
+    [extralinks]="[{image: 'fusion360.png', name: 'Fusion360', link: 'https://www.autodesk.com/products/fusion-360/overview?term=1-YEAR&tab=subscription#top'}, {image: 'blender.png', name: 'Blender', link: 'https://www.blender.org/'}]"
+    projectLink=""
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Woodworking'"
+    title="Woodworking"
+    subtitle="I love wood!"
+    [images]="[{id: 0, src: 'crokinole.png'}, {id: 1, src: 'crokinole2.png'}, {id: 2, src: 'rubberbandneck.png'}, {id: 3, src: 'circlewood.jpeg'}]"
+    about="I love building cool things! I've always come up with projects to do, which led me to my love for woodworking. While I am no pro, I still enjoy this hobby. I've made plenty of things from a couch table to card deck holders. My two favorite projects have been the hexagonal Crokinole board and the electric guitar made from a wood pallet."
+    [skills]="['Sanding', 'Sanding', 'More Sanding', 'More Sanding', 'Even More Sanding', 'Even More Sanding', 'Some More Sanding', 'Lots of Sanding', 'Some More Sanding', '...']"
+    [extralinks]="[]"
+    projectLink=""
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Python Projects'"
+    title="Python Projects"
+    subtitle="Tons of small projects made with Python"
+    [images]="[{id: 0, src: 'commandpoker.png'}, {id: 1, src: 'eventeams.png'}, {id: 2, src: 'pynopoly1.png'}, {id: 3, src: 'pynopoly2.png'}, {id: 4, src: 'balls.png'}, {id: 5, src: 'rallyx.png'}, {id: 6, src: 'signalprocessing1.png'}, {id: 7, src: 'signalprocessing2.png'}, {id: 8, src: 'snake.png'}, {id: 9, src: 'tkinter.png'}, {id: 10, src: 'thecrossing.png'}, {id: 11, src: 'nueralnetworkNCAA.png'}]"
+    about="In sixth grade, I learned Python from a book called Coding Projects in Python by DK. Since then, I have made dozens of Python projects for various applications from web scraping and games to topic generators and signal processors. I've learned how to use many libraries and their different uses. My favorite Python project was a small text based Oregon Trail type game where I experimented with classes and inheritance to make a text based RPG with a storyline, items, armor, currency, and more! This was my first understanding of classes and inheritance, which I then developed even further when I began working on games in Unity with C#. My goto game seems to be snake, I believe I have 6+ versions of snake."
+    [skills]="['Python', 'Numpy', 'Pandas', 'Selenium', 'Tkinter', 'Turtle', 'PIL', 'Matplotlib', 'Sockets', 'Threading']"
+    [extralinks]="[{image: 'python.png', name: 'Python.org', link: 'https://www.python.org/'}]"
+    projectLink=""
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Under Construction'"
+    title="Construction Zone"
+    subtitle="Nothing here yet!"
+    [images]="[]"
+    about=""
+    [skills]="['Constructing']"
+    [extralinks]="[]"
+    projectLink=""
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'Notre Dame'"
+    title="Notre Dame"
+    subtitle="Notre Dame is the best place in the world"
+    [images]="[{id: 0, src: 'domesnow.png'}, {id: 1, src: 'dome.jpg'},{id: 2, src: 'notredame.png'}, {id: 3, src: 'irishsat.png'}]"
+    about="I comlpeted my first 3 semesters at Notre Dame as a Computer Engineer with many software classes, but my fourth semester I switched to Electrical Engeering. I joined EnableND my first year and helped 3D print prosthetic hands for kids around the country. Additionally, I joined IrishSAT where I eventually became the Communication Systems lead. My time spent outside of academics is spent hanging out with friends and playing soccer, volleyball, and tennis."
+    [skills]="['Awesome People', 'Catholicism', 'Football', 'Golden Dome', 'Should I say more?']"
+    [extralinks]="[{image: 'linkedin.png', name: 'LinkedIn', link:'https://www.linkedin.com/in/rylan-paul/'}]"
+    projectLink="https://www.linkedin.com/in/rylan-paul/"
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+      *ngIf="selectedpage == 'Ascent XR'"
+      title="Ascent XR"
+      subtitle="2024 Summer Internship as Software Engineer"
+      [images]="[{id: 0, src: 'quest2.jpg'}, {id: 1, src: 'pico4.jpg'}]"
+      about="During the summer after my freshman year at Notre Dame, I interned at Ascent XR as a software engineer intern. My developed VR applications for use in K-12 classrooms. The bulk of my development took place in Unity with C#. The application is compatible with both Oculus and Pico devices. The second half of development was with a frontend website in Angular with a backend in Firebase which joined Unity and the Website together. A teacher could sign in and upload content on the website. Then they could go into the headset and lead a class of students in virtual reality."
+      [skills]="['Angular', 'TypeScript', 'HTML', 'SCSS', 'Firebase Firestore', 'Firebase Cloudstore',  'Unity3D', 'C#', 'VR', 'Oculus', 'Pico 4']"
+      [extralinks]="[]"
+      projectLink="https://learningtimevr.com/"
+      (buttonClick)="page_select($event)"
+      [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+      *ngIf="selectedpage == 'Neural Network'"
+      title="Neural Network"
+      subtitle="Created a feedforward neural network with Python and Numpy"
+      [images]="[{id: 0, src: 'nueralnetworkNCAA.png'}, {id: 1, src: 'neuralnetwork.png'}]"
+      about="This Python program utlizes Pandas to train on a dataset and optimizes a function via backpropagation to generate outputs. The inputs, layers, neurons, and outputs can all be adjusted as needed. Coded in python, it utilizes mathematical concepts to create an efficient program with minimal error in mind. I've used my neural network to predict Premier League match scores, as well create a March Madness bracket. Funny enough, the neural network's March Madness bracket did just as good as mine!"
+      [skills]="['Python', 'Numpy', 'Pandas', 'Github']"
+      [extralinks]="[{image: 'github-mark-white.png', name: 'GitHub Repo', link: 'https://github.com/rylanp/feedforward_neural_network'}]"
+      projectLink="https://github.com/rylanp/feedforward_neural_network"
+      (buttonClick)="page_select($event)"
+      [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+      *ngIf="selectedpage == 'Discover Posey County'"
+      title="Discover Posey County"
+      subtitle="iOS application to tour Posey Couny"
+      [images]="[{id: 0, src: 'DiscoverPoCoIcon.png'}, {id: 1, src: 'discover1.png'}, {id: 2, src: 'discover2.png'}, {id: 3, src: 'discover3.png'}, {id: 4, src: 'discover4.png'}]"
+      about="During my senior year of high school, I chose to create an app in support of my community. People traveling through my hometown may believe that there is little there, but in contrast they can see all that Posey County has to offer in my app. The app has several locations around the area including restaurants, shops, parks, and historical markers. When a traveler gets close enough to a location, they can search the area in order to answer a question and learn more about the location. Additionally, there are a few hidden locations that are only visible once the user is in a certain range of them. In order to help the user, if they get on the app several days in a row, then they can unlock a hint which will guide them to one of the hidden locations."
+      [skills]="['Swift', 'XCode', 'Excel', 'Outreach', 'Historical Research']"
+      [extralinks]="[{image: 'icons8-apple-250.png', name: 'Contact Form', link: 'https://discoverposeycounty.rylanpaul.com/'}]"
+      projectLink="https://apps.apple.com/us/app/discover-posey-county/id1635389764"
+      (buttonClick)="page_select($event)"
+      [fadeOutEvent]="fadeOutSelectedPageEvent">
+    </app-project-segment>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <app-project-segment
+    *ngIf="selectedpage == 'C Projects'"
+    title="C Projects"
+    subtitle="As a freshman at Notre Dame, I learned C through several courses"
+    [images]="[{id: 0, src: 'gravity2.gif'}, {id: 1, src: 'life.gif'}, {id: 2, src: 'orbits-export.gif'}, {id: 3, src: 'crossword.png'}, {id: 4, src: 'fractals.gif'}]"
+    about="Several courses at Notre Dame use C including Data Structures and Fundamentals of Computing. Although C might be more work than Python, I've grown to appreciate the lower level of C, because I am able to think through my code at a more fundamental level. This allows my code to be possibly be more efficient than a Python alternative where many processes are hidden. My final project for Fundamentals of Computing was a 2D gravity simulator where circular planets would orbit around and a vector field in the background showed the relative gravitaional field. Additionally, I've made a desktop snow app to learn some C++ and GLTW."
+    [skills]="['C', 'C++']"
+    [extralinks]="[]"
+    projectLink=""
+    (buttonClick)="page_select($event)"
+    [fadeOutEvent]="fadeOutSelectedPageEvent">
+  </app-project-segment>
+  <!-- ---------------------------------------------------------------------------------------------------------------- -->
+  </div>
+  <div class="spacecontainer">
+    <app-space-background></app-space-background>
+  </div>
+  
+  <div class="cubesatcontainer">
+    <app-cubesat></app-cubesat>
+  </div>
+</main>
+
+
+<router-outlet />

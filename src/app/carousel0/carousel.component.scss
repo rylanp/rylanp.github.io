@@ -1,0 +1,9 @@
+.slide {
+    // image-rendering: pixelated;
+    // image-rendering: crisp-edges;
+    object-fit: contain;
+}
+::ng-deep c-carousel-indicators button {
+    border: 2px solid rgba(30, 30, 30, 0.45) !important;
+    border-radius: 10px !important;
+  }

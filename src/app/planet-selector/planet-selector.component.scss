@@ -1,0 +1,40 @@
+.top-left {
+    position: absolute;
+    top: 10px; /* Adjust the top offset as needed */
+    left: 25px; /* Adjust the left offset as needed */
+    background-color: transparent;
+    padding: 2px; /* Adds spacing inside the div */
+    padding-right: 25px;
+    display: flex;
+    align-items: center; /* Aligns the items vertically */
+    min-width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.648);
+    border-radius: 30px;
+    color: white;
+    transition: border 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
+    transition: scale 0.15s ease-in-out;
+}
+
+.top-left img {
+    max-width: 150px; /* Set a max width for the image */
+    height: auto;
+    margin-right: 10px; /* Adds spacing between the image and text */
+}
+
+.text p {
+    margin: 0; /* Removes default margin for paragraph */
+    word-wrap: break-word; /* Ensures long text wraps to the next line */
+    font-size: 2vw;
+}
+.transparent {
+    opacity: 0;
+}
+
+.top-left:hover {
+    border: 2px solid rgba(255, 39, 107, 0.648);
+    color: rgba(255, 39, 107, 0.648);
+}
+.top-left:active {
+    scale: 0.8;
+}

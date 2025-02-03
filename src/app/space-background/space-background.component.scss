@@ -1,0 +1,28 @@
+img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow:hidden;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+}
+.bubble {
+  overflow: hidden;
+  transform: scale(1);
+  animation: bubbleAnimation 2s ease-in-out 0.5s infinite;
+}
+@keyframes bubbleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
