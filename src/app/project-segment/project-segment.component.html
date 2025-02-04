@@ -9,7 +9,7 @@
             <div *ngFor="let link of extralinks">
                 <a [href]="link.link" target="_blank">
                     <div class="link">
-                        <img [src]="link.image" style="width: 50px; height: 50px;">
+                        <img [src]="link.image" style="width: 5.5vw; height: 5.5vw; min-width: 40px; min-height: 40px;">
                         {{link.name}}
                     </div>
                 </a>
@@ -18,12 +18,12 @@
             <a *ngIf="this.projectLink != ''" [href]="projectLink" target="_blank">
                 <div class="projectlink">
                     Project Link
-                    <svg [cIcon]="icons.cilExternalLink" width="25" title="Shield Icon"></svg>
+                    <svg [cIcon]="icons.cilExternalLink" width="2.5vw" title="Shield Icon"></svg>
                 </div>
             </a>
         </div>
         <div class="right-side">
-            <div style="margin-left: 50px; margin-top: 50px;">
+            <div class="carousel-container">
                 <app-carousel [slides]="images"></app-carousel>
             </div>
             

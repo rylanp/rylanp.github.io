@@ -1,16 +1,16 @@
-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.image {
+  position: absolute;
+  width: 100vw;
   height: auto;
-  max-width: 100%;
-  overflow:hidden;
+  max-width: 100vw;
+  overflow:visible;
   object-fit: cover;
   display: block;
   user-select: none;
 }
 .bubble {
+  animation-duration: 1s;
+  animation-delay: 0s;
   overflow: hidden;
   transform: scale(1);
   animation: bubbleAnimation 2s ease-in-out 0.5s infinite;
@@ -25,4 +25,37 @@ img {
   100% {
     transform: scale(1);
   }
+}
+
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1000vh;
+  overflow: visible;
+  background-color: #1c0223; /* Fallback color */
+  z-index: -100000;
+}
+.background :nth-child(1){
+  transform: translate(0vw, 60vw);
+}
+.background :nth-child(2){
+  transform: translate(0vw, 120vw);
+}
+.background :nth-child(3){
+  transform: translate(0vw, 180vw);
+}
+.background :nth-child(4){
+  transform: translate(0vw, 240vw);
+}
+  
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }

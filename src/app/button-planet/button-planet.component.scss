@@ -13,13 +13,13 @@
   }
 p{
     position: relative;
-    transform: translate(0px, -115px);
+    transform: translate(0px, -8vw);
     color: white;
     pointer-events: none;
     opacity: 0.25;
     animation: textanim-reverse 0.2s ease-in-out forwards;
     transform-origin: center;
-    font-size:small;
+    font-size:1vw;
 }
 .button:hover ~ p {
     animation: textanim 0.3s ease-in-out forwards;
@@ -27,29 +27,25 @@ p{
 @keyframes textanim {
     from{
         opacity: 0.25;
-        transform: translate(0px, -115px);
         letter-spacing: -1px;
-        font-size:small;
+        font-size:1vw;
     }
     to{
         opacity: 1;
-        transform: translate(0px, -115px);
         letter-spacing: 1.2px;
-        font-size:medium;
+        font-size:1.2vw;
     }
 }
 @keyframes textanim-reverse {
     from{
         opacity: 1;
         letter-spacing: 1.2px;
-        transform: translate(0px, -115px);
-        font-size:medium;
+        font-size:1.2vw;
     }
     to{
         opacity: 0.25;
         letter-spacing: -1px;
-        transform: translate(0px, -115px);
-        font-size:small;
+        font-size:1vw;
     }
 }
 
@@ -83,4 +79,8 @@ p{
         scale: 0.9;
         rotate: 0;
     }
+}
+img {
+    width: 6vw;
+    height: 6vw;
 }

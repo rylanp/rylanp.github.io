@@ -6,7 +6,8 @@
     color: white;
     z-index: 30;
     animation: fadein 1.5s ease-in-out forwards;
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .close-btn {
     position: absolute;
@@ -81,7 +82,7 @@
     height: auto; /* Set a fixed height or allow it to adjust dynamically */
     place-items: center;
     margin: 0;
-    min-width: 50px;
+    min-width: 4vw;
     transform: translate(0px, 0px);
     transition: all 0.2s ease-in-out;
     color: #ffffff;
@@ -105,7 +106,7 @@ p {
 }
 .link {
     padding-left: 15px;
-    max-width: 60%;
+    max-width: 60vw;
     display: flex;
     background-color: #004cff20;
     border: 3px solid #004cff25;
@@ -117,7 +118,9 @@ p {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     color: white;
-    width: 35%;
+    width: 30vw;
+    min-width: 180px;
+    font-size: 1.6vw;
 }
 .link:hover{
     transform: scale(1.1);
@@ -139,7 +142,7 @@ h3 {
     padding-top: 50px;
 }
 .projectlink {
-    margin-top: 100px;
+    margin-top: 4vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,11 +151,12 @@ h3 {
     border-radius: 16px;
     color: white;
     gap: 40px;
-    max-width: 60%;
-    font-size: 32px;
+    max-width: 60vw;
+    font-size: 2.5vw;
     transition: all 0.3s ease-in-out;
     padding-top: 10px;
     padding-bottom: 10px;
+    min-width: 210px;
 }
 .projectlink:hover{
     transform: scale(1.1);
@@ -165,4 +169,42 @@ h3 {
     background-color: #ea526e60;
     border: 3px solid #ea526e75;
     color: rgb(255, 255, 255);
+}
+.carousel-container {
+    margin-left: 15vw;
+    margin-top: 50px;
+
+}
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+    .link{
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projectlink {
+        margin-top: 30px;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        text-align: center;
+    }
+    .left-side a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-side {
+        margin-top:20px;
+    }
+    .carousel-container {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
 }

@@ -7,7 +7,7 @@
     padding-right: 25px;
     display: flex;
     align-items: center; /* Aligns the items vertically */
-    min-width: 300px;
+    min-width: 20vw;
     border: 2px solid rgba(255, 255, 255, 0.648);
     border-radius: 30px;
     color: white;
@@ -17,7 +17,7 @@
 }
 
 .top-left img {
-    max-width: 150px; /* Set a max width for the image */
+    max-width: 10vw; /* Set a max width for the image */
     height: auto;
     margin-right: 10px; /* Adds spacing between the image and text */
 }
