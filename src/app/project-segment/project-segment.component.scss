@@ -2,7 +2,8 @@
     background-color: #1c0223ec;
     border-radius: 100px 100px 0 0;
     border: 3px solid #19647E;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: white;
     z-index: 30;
     animation: fadein 1.5s ease-in-out forwards;
@@ -59,9 +60,11 @@
 }
 .left-side {
     flex: 1;
+    padding-right: 25px;
 }
 .right-side {
     flex: 1;
+    padding-left: 25px;
 }
 
 .skill-container {
@@ -171,8 +174,9 @@ h3 {
     color: rgb(255, 255, 255);
 }
 .carousel-container {
-    margin-left: 15vw;
+    margin-left: 0vw;
     margin-top: 50px;
+    background-color: #19647E;
 
 }
 @media (max-width: 950px) {
@@ -194,6 +198,8 @@ h3 {
     .left-side, .right-side {
         width: 100%;
         text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .left-side a {
         display: flex;
