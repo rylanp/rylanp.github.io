@@ -25,7 +25,7 @@ export class AppComponent {
   
   constructor(private viewportScroller: ViewportScroller) {}
   page_select(event: { text: string; img: string }) {
-    if (this.selectedpage !== event.text && event.text !== ""){
+    if (event.text !== ""){
       this.selectedpage = event.text;
       this.selectedimage = event.img;
       this.selectorpage = event.text;
