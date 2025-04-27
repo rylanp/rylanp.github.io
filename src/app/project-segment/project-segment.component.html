@@ -6,14 +6,13 @@
             <h3>ABOUT</h3>
             <p>{{about}}</p>
             <h3 *ngIf="this.extralinks.length > 0">LINKS</h3>
-            <div *ngFor="let link of extralinks">
+            <div *ngFor="let link of extralinks" class="linkparent">
                 <a [href]="link.link" target="_blank">
                     <div class="link">
                         <img [src]="link.image" style="width: 5.5vw; height: 5.5vw; min-width: 40px; min-height: 40px;">
                         {{link.name}}
                     </div>
                 </a>
-                
             </div>
             <a *ngIf="this.projectLink != ''" [href]="projectLink" target="_blank">
                 <div class="projectlink">
