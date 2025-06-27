@@ -2,7 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-space-background',
-  imports: [NgFor],
+  imports: [],
   templateUrl: './space-background.component.html',
   styleUrl: './space-background.component.scss'
 })

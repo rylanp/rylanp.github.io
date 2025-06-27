@@ -1,0 +1,47 @@
+<ng-container *ngIf="this.sentform == false; else elseTemplate" style="padding: 500px;">
+  <div class="container d-flex justify-content-center align-items-center">
+    <form class="contact-form" (submit)="sendEmail($event)">
+      <h1 class="title text-center mb-4" style="color: white;">Contact Recipe-Vault</h1>
+
+      <!-- Name -->
+      <div class="form-group position-relative">
+        <label for="formName" class="d-block">
+          <i class="icon" data-feather="user"></i>
+        </label>
+        <input type="text" class="form-control form-control-lg thick" name="name" placeholder="Name">
+      </div>
+
+      <!-- E-mail -->
+      <div class="form-group position-relative">
+        <label for="formName" class="d-block">
+          <i class="icon" data-feather="user"></i>
+        </label>
+        <input type="text" class="form-control form-control-lg thick" name="email" placeholder="E-mail">
+      </div>
+      <!-- Subject -->
+      <div class="form-group position-relative">
+        <label for="formName" class="d-block">
+          <i class="icon" data-feather="user"></i>
+        </label>
+        <input type="text" class="form-control form-control-lg thick" name="subject" placeholder="Subject">
+      </div>
+
+      <!-- Message -->
+      <div class="form-group message">
+        <textarea class="form-control form-control-lg" rows="7" name="message" placeholder="Message"></textarea>
+      </div>
+
+      <!-- Submit btn -->
+      <div class="text-center" style="padding-top: 30px;">
+        <button type="submit" value="Send" class="btn btn-primary" tabIndex="-1">Send Message</button>
+      </div>
+    </form>
+  </div>
+</ng-container>
+
+<ng-template #elseTemplate style="padding: 50px;">
+  <div style="padding-top: 150px;">
+    <h1 class="title text-center mb-4" style="color: white;">Message Sent!</h1>
+    <h5 class="text-center mb-4" style="color: white;">I'll contact soon</h5>
+  </div>
+</ng-template>

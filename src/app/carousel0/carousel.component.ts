@@ -4,13 +4,12 @@ import { RouterLink } from '@angular/router';
 import { CarouselComponent, CarouselControlComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, ThemeDirective } from '@coreui/angular';
 import { CarouselModule } from '@coreui/angular';
 import { cilCaretLeft, cilCaretRight } from '@coreui/icons';
-import { IconDirective } from '@coreui/icons-angular';
 import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-carousel',
-  imports: [ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, NgFor, CarouselItemComponent, CarouselControlComponent, RouterLink, CarouselModule, IconDirective, CommonModule],
+  imports: [ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, NgFor, CarouselItemComponent, CarouselControlComponent, RouterLink, CarouselModule, CommonModule],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })

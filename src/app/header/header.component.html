@@ -1,0 +1,74 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button routerLink="/"  class="RP"><img src="RP.gif" alt="RP" style="user-select: none; object-fit: contain; width: 64px; height: 64px; object-position: center; background-color: transparent;"></button>
+        <span class="toolbar-spacer"></span>
+
+        <ng-container *ngIf="!isHandset">
+            <button mat-button [matMenuTriggerFor]="discgolfmenu" style="color: white;">Disc Golf Score Tracker</button>
+            <mat-menu #discgolfmenu="matMenu">
+                <button mat-menu-item routerLink="/discgolf">Home</button>
+                <button mat-menu-item routerLink="/discgolf">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discgolf">Cookie Policy</button>
+                <button mat-menu-item routerLink="/discgolf">Contact</button>
+            </mat-menu>
+
+            <button mat-button [matMenuTriggerFor]="recipevaultmenu" style="color: white;">Recipe-Vault</button>
+            <mat-menu #recipevaultmenu="matMenu">
+                <button mat-menu-item routerLink="/recipe-vault/home">Home</button>
+                <button mat-menu-item routerLink="/recipe-vault/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/recipe-vault/cookie-policy">Cookie Policy</button>
+                <button mat-menu-item routerLink="/recipe-vault/contact">Contact</button>
+            </mat-menu>
+
+            <button mat-button [matMenuTriggerFor]="galacticmenu" style="color: white;">Galactic Warfare</button>
+            <mat-menu #galacticmenu="matMenu">
+                <button mat-menu-item routerLink="/galactic-warfare">Play game</button>
+                 <a href="https://rylan21.itch.io/galactic-warfare" target="_blank" class="mat-menu-item-link" style="text-decoration: none;"><button mat-menu-item>itch.io</button></a>
+            </mat-menu>
+
+            <button mat-button [matMenuTriggerFor]="discoverpocomenu" style="color: white;">Discover PoCo</button>
+            <mat-menu #discoverpocomenu="matMenu">
+                <button mat-menu-item routerLink="/poco-home">Home</button>
+                <button mat-menu-item routerLink="/poco-privacy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/poco-cookie">Cookie Policy</button>
+                <button mat-menu-item routerLink="/poco-contact">Contact</button>
+            </mat-menu>
+        </ng-container>
+
+        <button mat-icon-button [matMenuTriggerFor]="mobileMenu" *ngIf="isHandset" style="color: white;">
+            <mat-icon>menu</mat-icon> </button>
+
+        <mat-menu #mobileMenu="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="discgolfSubMenu">Disc Golf Score Tracker</button>
+            <mat-menu #discgolfSubMenu="matMenu">
+                <button mat-menu-item routerLink="/discgolf-home">Home</button>
+                <button mat-menu-item routerLink="/discgolf-privacy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discgolf-cookie">Cookie Policy</button>
+                <button mat-menu-item routerLink="/discgolf-contact">Contact</button>
+            </mat-menu>
+
+            <button mat-menu-item [matMenuTriggerFor]="recipevaultSubMenu">Recipe-Vault</button>
+            <mat-menu #recipevaultSubMenu="matMenu">
+                <button mat-menu-item routerLink="/recipe-vault/home">Home</button>
+                <button mat-menu-item routerLink="/recipe-vault/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/recipe-vault/cookie-policy">Cookie Policy</button>
+                <button mat-menu-item routerLink="/recipe-vault/contact">Contact</button>
+            </mat-menu>
+
+            <button mat-menu-item [matMenuTriggerFor]="galacticSubMenu">Galactic Warfare</button>
+            <mat-menu #galacticSubMenu="matMenu">
+                <button mat-menu-item routerLink="/galactic-warfare">Play game</button>
+                <a href="https://rylan21.itch.io/galactic-warfare" target="_blank" class="mat-menu-item-link" style="text-decoration: none;"><button mat-menu-item>itch.io</button></a>
+            </mat-menu>
+
+            <button mat-menu-item [matMenuTriggerFor]="discoverpocoSubMenu">Discover PoCo</button>
+            <mat-menu #discoverpocoSubMenu="matMenu">
+                <button mat-menu-item routerLink="/poco-home">Home</button>
+                <button mat-menu-item routerLink="/poco-privacy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/poco-cookie">Cookie Policy</button>
+                <button mat-menu-item routerLink="/poco-contact">Contact</button>
+            </mat-menu>
+        </mat-menu>
+
+    </mat-toolbar-row>
+</mat-toolbar>

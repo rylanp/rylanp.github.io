@@ -1,5 +1,4 @@
 import { Component, Input, ElementRef, Renderer2, Output, EventEmitter} from '@angular/core';
-import { ColorPalette } from '../../styles/color-palette';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-button-planet',
