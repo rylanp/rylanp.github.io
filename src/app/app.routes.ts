@@ -11,6 +11,7 @@ import { PrivacyPolicyComponentDiscGolf } from './discgolf/privacy-policy/privac
 import { AppAdsComponent } from './discgolf/app-ads/app-ads.component';
 import { DiscoverpocoComponent } from './discoverpoco/discoverpoco.component';
 import { PrivacyPolicyComponentPoco } from './discoverpoco/privacy-policy/privacy-policy.component';
+
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
