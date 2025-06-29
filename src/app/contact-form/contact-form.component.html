@@ -1,8 +1,9 @@
 <ng-container *ngIf="this.sentform == false; else elseTemplate" style="padding: 500px;">
   <div class="container d-flex justify-content-center align-items-center">
     <form class="contact-form" (submit)="sendEmail($event)">
-      <h1 class="title text-center mb-4" style="color: white;">Contact Recipe-Vault</h1>
-
+      <h1 class="title text-center mb-4" style="color: white;">Contact {{formName}}</h1>
+      <!-- Form Name (hidden)-->
+      <input type="hidden" name="formname" [value]="formName">
       <!-- Name -->
       <div class="form-group position-relative">
         <label for="formName" class="d-block">

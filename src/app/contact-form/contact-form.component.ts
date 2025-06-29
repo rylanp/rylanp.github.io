@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class ContactFormComponent {
+  @Input() formName: string = 'Contact Form';
+
   sentform: Boolean = false;
 
   public sendEmail(e: Event) {

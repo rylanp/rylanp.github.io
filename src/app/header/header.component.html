@@ -6,10 +6,9 @@
         <ng-container *ngIf="!isHandset">
             <button mat-button [matMenuTriggerFor]="discgolfmenu" style="color: white;">Disc Golf Score Tracker</button>
             <mat-menu #discgolfmenu="matMenu">
-                <button mat-menu-item routerLink="/discgolf">Home</button>
-                <button mat-menu-item routerLink="/discgolf">Privacy Policy</button>
-                <button mat-menu-item routerLink="/discgolf">Cookie Policy</button>
-                <button mat-menu-item routerLink="/discgolf">Contact</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker">Home</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker">Contact</button>
             </mat-menu>
 
             <button mat-button [matMenuTriggerFor]="recipevaultmenu" style="color: white;">Recipe-Vault</button>
@@ -28,10 +27,9 @@
 
             <button mat-button [matMenuTriggerFor]="discoverpocomenu" style="color: white;">Discover PoCo</button>
             <mat-menu #discoverpocomenu="matMenu">
-                <button mat-menu-item routerLink="/poco-home">Home</button>
-                <button mat-menu-item routerLink="/poco-privacy">Privacy Policy</button>
-                <button mat-menu-item routerLink="/poco-cookie">Cookie Policy</button>
-                <button mat-menu-item routerLink="/poco-contact">Contact</button>
+                <button mat-menu-item routerLink="/discoverpoco">Home</button>
+                <button mat-menu-item routerLink="/discoverpoco/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discoverpoco/contact">Contact</button>
             </mat-menu>
         </ng-container>
 
@@ -41,10 +39,9 @@
         <mat-menu #mobileMenu="matMenu">
             <button mat-menu-item [matMenuTriggerFor]="discgolfSubMenu">Disc Golf Score Tracker</button>
             <mat-menu #discgolfSubMenu="matMenu">
-                <button mat-menu-item routerLink="/discgolf-home">Home</button>
-                <button mat-menu-item routerLink="/discgolf-privacy">Privacy Policy</button>
-                <button mat-menu-item routerLink="/discgolf-cookie">Cookie Policy</button>
-                <button mat-menu-item routerLink="/discgolf-contact">Contact</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker">Home</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discgolfscoretracker">Contact</button>
             </mat-menu>
 
             <button mat-menu-item [matMenuTriggerFor]="recipevaultSubMenu">Recipe-Vault</button>
@@ -62,11 +59,10 @@
             </mat-menu>
 
             <button mat-menu-item [matMenuTriggerFor]="discoverpocoSubMenu">Discover PoCo</button>
-            <mat-menu #discoverpocoSubMenu="matMenu">
-                <button mat-menu-item routerLink="/poco-home">Home</button>
-                <button mat-menu-item routerLink="/poco-privacy">Privacy Policy</button>
-                <button mat-menu-item routerLink="/poco-cookie">Cookie Policy</button>
-                <button mat-menu-item routerLink="/poco-contact">Contact</button>
+             <mat-menu #discoverpocoSubMenu="matMenu">
+                <button mat-menu-item routerLink="/discoverpoco">Home</button>
+                <button mat-menu-item routerLink="/discoverpoco/privacy-policy">Privacy Policy</button>
+                <button mat-menu-item routerLink="/discoverpoco/contact">Contact</button>
             </mat-menu>
         </mat-menu>
 
