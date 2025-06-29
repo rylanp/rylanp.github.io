@@ -19,6 +19,7 @@ export class ProjectSegmentComponent {
   @Input() skills: string[] = ["Skill 1", "Skill 2", "Skill 3"];
   @Input() extralinks: Link[] = [];
   @Input() projectLink: string = "https:example_link.linky.link";
+  @Input() opennewtab: boolean = true;
   @Output() buttonClick = new EventEmitter<{ text: string; img: string }>();
   @Input() fadeOutEvent!: EventEmitter<string>;
 
@@ -58,4 +59,5 @@ export class Link {
   image: string = "path_to_image";
   name: string = "Link Name";
   link: string = "https:example_link.linky.link";
+  opennewtab: boolean = true;
 }

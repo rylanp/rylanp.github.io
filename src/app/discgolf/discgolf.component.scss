@@ -1,0 +1,47 @@
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .icon-container {
+    padding: 2vw;
+    flex: 0 0 auto;
+  }
+
+  .icon-container img {
+    width: 40vw;
+    height: 40vw;
+    border: #ffffff solid 3px;
+    border-radius: 25%;
+  }
+
+  .form-container {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icon-container img {
+      width: 60vw;
+      height: 60vw;
+    }
+
+    .form-container {
+      width: 100%;
+    }
+  }
+
+  .description {
+    padding: 12vw 15vw;
+    color: white;
+    h5 {
+        padding: 50px;
+        border: white solid 2px;
+        border-radius: 25px;
+    }
+  }
