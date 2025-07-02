@@ -33,7 +33,8 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "src/CNAME"
+              "src/CNAME",
+              "src/app-ads.txt" 
             ],
             "styles": [
               "src/styles.scss",
