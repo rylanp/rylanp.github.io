@@ -4,9 +4,10 @@ import { NgFor, NgStyle, NgIf } from '@angular/common';
 import { Carousel0Component } from '../carousel0/carousel.component';
 import { cilExternalLink } from '@coreui/icons';
 import { IconDirective } from '@coreui/icons-angular';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-project-segment',
-  imports: [NgFor, Carousel0Component, NgStyle, NgIf, IconDirective],
+  imports: [NgFor, Carousel0Component, NgStyle, NgIf, IconDirective, RouterLink],
   templateUrl: './project-segment.component.html',
   styleUrl: './project-segment.component.scss'
 })
@@ -60,4 +61,5 @@ export class Link {
   name: string = "Link Name";
   link: string = "https:example_link.linky.link";
   opennewtab: boolean = true;
+  router: boolean = false;
 }
