@@ -31,3 +31,16 @@ Hopefully this was a massive help, if you have questions, comments, concerns, im
 Cool.
 
 Enjoy!
+
+
+## Build Intructions
+
+> After making all desired changes on the development branch
+>
+> Test with ```ng serve```
+>
+> Run ```ng build```
+>
+> This will build the entire website in the docs folder
+>
+> Then create a pull request and merge development into main
