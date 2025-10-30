@@ -1,0 +1,13 @@
+.spaceship {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    max-width: 100%;
+    img {
+        z-index: 110;
+        object-fit: contain;
+        user-select: none;
+    }
+    
+}

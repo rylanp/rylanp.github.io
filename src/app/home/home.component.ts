@@ -2,6 +2,7 @@ import { Component, EventEmitter } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SpaceBackgroundComponent } from '../space-background/space-background.component';
 import { CubesatComponent } from '../cubesat/cubesat.component';
+import { SpaceshipComponent } from '../spaceship/spaceship.component';
 import { ProjectSegmentComponent } from '../project-segment/project-segment.component';
 import { NgIf, ViewportScroller } from '@angular/common';
 import { ButtonPlanetComponent } from '../button-planet/button-planet.component';
@@ -10,7 +11,7 @@ import { text } from 'body-parser';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SpaceBackgroundComponent, CubesatComponent, NgIf, ProjectSegmentComponent, ButtonPlanetComponent, PlanetSelectorComponent, CommonModule],
+  imports: [RouterOutlet, SpaceBackgroundComponent, CubesatComponent, SpaceshipComponent, NgIf, ProjectSegmentComponent, ButtonPlanetComponent, PlanetSelectorComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
