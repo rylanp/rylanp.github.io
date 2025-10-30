@@ -67,7 +67,7 @@ export class CubesatComponent implements OnInit {
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
 
-    const targetRotation = Math.atan2(dy, dx) * (180 / Math.PI) + 45;
+    const targetRotation = Math.atan2(this.mousePosition.y - this.position.y, this.mousePosition.x - this.position.x) * (180.0 / Math.PI) + 45;
     this.rotation = this.lerp(this.rotation, targetRotation, this.rotationSmoothingFactor);
 
     this.updateElementStyles();
