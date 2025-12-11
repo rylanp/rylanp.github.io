@@ -1,0 +1,10 @@
+<!-- <h1>♥ Vanessa ♥</h1> -->
+<div *ngIf="isLoading" class="loading-message">
+  Loading crossword puzzle...
+</div>
+
+<app-crossword
+  *ngIf="puzzleData"
+  [grid]="puzzleData.grid"
+  [clues]="puzzleData.clues">
+</app-crossword>

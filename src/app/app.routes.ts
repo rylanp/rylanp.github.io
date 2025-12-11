@@ -1,17 +1,19 @@
 import { Routes } from '@angular/router';
-import { RecipeVaultComponent } from './recipe-vault/recipe-vault.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { RecipeVaultComponent } from './pages/recipe-vault/recipe-vault.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { GalacticwarfarepageComponent } from './galacticwarfarepage/galacticwarfarepage.component';
-import { PrivacyPolicyComponent } from './recipe-vault/privacy-policy/privacy-policy.component';
-import { CookiePolicyComponent } from './recipe-vault/cookie-policy/cookie-policy.component';
-import { DiscgolfComponent } from './discgolf/discgolf.component';
-import { PrivacyPolicyComponentDiscGolf } from './discgolf/privacy-policy/privacy-policy.component';
-import { AppAdsComponent } from './discgolf/app-ads/app-ads.component';
-import { DiscoverpocoComponent } from './discoverpoco/discoverpoco.component';
-import { PrivacyPolicyComponentPoco } from './discoverpoco/privacy-policy/privacy-policy.component';
-
+import { HomeComponent } from './pages/home/home.component';
+import { GalacticwarfarepageComponent } from './pages/galacticwarfarepage/galacticwarfarepage.component';
+import { PrivacyPolicyComponent } from './pages/recipe-vault/privacy-policy/privacy-policy.component';
+import { CookiePolicyComponent } from './pages/recipe-vault/cookie-policy/cookie-policy.component';
+import { DiscgolfComponent } from './pages/discgolf/discgolf.component';
+import { PrivacyPolicyComponentDiscGolf } from './pages/discgolf/privacy-policy/privacy-policy.component';
+import { AppAdsComponent } from './pages/discgolf/app-ads/app-ads.component';
+import { DiscoverpocoComponent } from './pages/discoverpoco/discoverpoco.component';
+import { PrivacyPolicyComponentPoco } from './pages/discoverpoco/privacy-policy/privacy-policy.component';
+import { VaultComponent } from './pages/vault/vault.component';
+import { VanessaComponent } from './pages/vault/pages/vanessa/vanessa.component';
+import { GuardService } from './services/guard.service';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,6 +36,9 @@ export const routes: Routes = [
     { path: 'discoverpoco/contact', redirectTo: 'discoverpoco', pathMatch: 'full' },
 
     { path: 'galactic-warfare', component: GalacticwarfarepageComponent},
+
+    {path: 'vault', component: VaultComponent},
+    {path: 'vault/vanessa', component: VanessaComponent, canActivate: [GuardService], data: { url: 'vault/vanessa' } },
 
     { path: 'lost', component: PagenotfoundComponent},
     { path: '**', redirectTo: 'lost', pathMatch: 'full' },

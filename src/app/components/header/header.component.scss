@@ -1,0 +1,104 @@
+/* src/app/header/header.component.scss */
+
+// Define some basic color variables for consistency
+$primary-text-color: white;
+$menu-item-hover-bg: rgba(255, 255, 255, 0.1); // Light hover for menu items
+
+mat-toolbar {
+    padding: 0 16px; // Standard padding for toolbars
+    height: 64px; // Standard height for desktop toolbars
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0); // Subtle shadow for depth
+    background-color: rgba(0, 0, 0, 0);
+
+    // Styles for the toolbar row, ensuring items are aligned
+    mat-toolbar-row {
+        display: flex;
+        align-items: center; // Vertically center items
+        width: 100%;
+        height: 100%; // Take full height of the toolbar
+    }
+
+    // Styles for the logo image
+    img {
+        user-select: none;
+        object-fit: contain;
+        width: 80px;
+        object-position: center;
+        margin-right: 16px; // Space between logo and first button
+    }
+}
+
+// Spacer to push elements to the right
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+/* --- Desktop Navigation Buttons --- */
+// Styles applied when NOT on a handset (i.e., desktop/tablet)
+// These target the mat-buttons directly used in the toolbar for main navigation
+button[mat-button] {
+    font-family: "Tiny5";
+    color: $primary-text-color;
+    font-weight: 500; // Slightly bolder text
+    text-transform: uppercase; // Common for navigation items
+    padding: 0 16px; // Padding for button text
+    min-width: 0; // Allow buttons to shrink
+
+    // Hover/focus state
+    &:hover,
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.1); // Slight background on hover
+    }
+}
+
+
+/* --- Mobile Hamburger Button --- */
+// Styles applied when on a handset
+// This targets the mat-icon-button that acts as the hamburger toggle
+button[mat-icon-button] {
+    font-family: "Tiny5";
+    color: $primary-text-color;
+    // Specific padding for icon buttons if needed, Material defaults are usually good
+}
+
+/* --- Menu Items (for both desktop and mobile menus) --- */
+// These styles apply to the actual dropdown items
+.mat-mdc-menu-item {
+    // Targeting the specific Material class for menu items
+    font-family: "Tiny5";
+    color: #333; // Default dark text for light menu background
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+        background-color: $menu-item-hover-bg; // Lighter hover effect for menu items
+    }
+}
+
+// If you want to customize the menu panel background itself (optional)
+.mat-mdc-menu-panel {
+    font-family: "Tiny5";
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.RP {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    transition: all ease-in-out 0.1s;
+}
+
+
+.RP:hover {
+    scale: 115%;
+}
+
+.RP:active {
+    scale: 90%;
+}
+
+.timer {
+    font-family: "Tiny5" !important;
+    color: $primary-text-color;
+}
