@@ -1,0 +1,175 @@
+/* src/app/components/crossword/crossword.component.css */
+
+$cell-size: 3em; 
+$number-color: #333;
+
+/* 1. Set up the overall grid container */
+.crossword-grid {
+    display: flex; /* Use flex to stack rows */
+    flex-direction: column; /* Ensure rows stack vertically */
+    /* Optional: Add spacing or border around the entire puzzle */
+    flex-shrink: 0;
+    border: 2px solid #333;
+    max-width: fit-content; /* Ensure the container only takes up the grid's size */
+}
+
+/* 2. Set up the rows to align cells horizontally */
+.crossword-row {
+    display: flex; /* Crucial: Makes cells line up side-by-side */
+    flex-direction: row;
+}
+
+/* 3. Define the dimensions and base styling for each cell */
+.cell-square {
+    width: $cell-size; 
+    height: $cell-size;
+    
+    /* Center the input */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Base border styling */
+    border: 1px solid #999;
+    box-sizing: border-box; 
+    
+    // **CRUCIAL: This sets the reference point for the absolutely positioned number**
+    position: relative; 
+    cursor: pointer;
+}
+
+/* 4. Style the black squares */
+.black-square {
+    background-color: #333;
+    pointer-events: none; 
+}
+
+/* 5. Style the input field inside the cell */
+.cell-square input {
+    // Ensure the input field is positioned above the cell background but below the number
+    position: relative;
+    z-index: 5; 
+
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none; 
+}
+
+.cell-number {
+    // **CRUCIAL: Positions the element relative to its parent (.cell-square)**
+    position: absolute;
+    
+    // Position it just inside the top-left corner
+    top: 1px;
+    left: 2px;
+    
+    // Set a very high z-index to ensure it sits visibly above the input field
+    z-index: 10;
+    
+    // Styling for small, subtle text
+    font-size: 1em; /* Adjust to be small */
+    line-height: 1;  /* Tighten line spacing */
+    font-weight: bold;
+    color: $number-color;
+    
+    // Prevent the number from interfering with click events on the input
+    pointer-events: none;
+}
+
+.crossword-container {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap; // Allows controls to wrap below on smaller screens
+    gap: 20px;       // Space between the grid and the clue lists
+    align-items: flex-start; // Aligns items to the top
+}
+
+.clue-lists {
+    flex-grow: 1; 
+    display: flex;
+    gap: 20px;
+    max-width: 600px; 
+}
+
+.clue-lists h3 {
+    // Ensure the heading takes up the full width of its list container
+    width: 100%; 
+    
+    // **NEW STYLE: Center the text**
+    text-align: center;
+    
+    // Aesthetic styling
+    margin-top: 0; 
+    margin-bottom: 10px; // Add space between header and list
+    font-size: 1.1em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.clue-lists ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; 
+    min-width: 250px; 
+    
+    // **NEW STYLE: Make the <ul> itself a flex container**
+    // This allows the list items and header to be arranged easily if needed,
+    // though the current layout keeps the H3 separate.
+    display: flex;
+    flex-direction: column; 
+    
+    // Center the content within the column (e.g., if list items were block-level)
+    // text-align: left; // Keep list items left-aligned for readability
+}
+
+.clue-lists li {
+    padding: 3px 0;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.clue-lists {
+    line-height: 0.8em;
+    font-size: 1.7em;
+    // This contai takes up remaining space and uses its own Flexbox for the inner columns
+    text-align: left;
+    flex-grow: 1; 
+    display: flex;
+    gap: 20px;
+    max-width: 600px; // Prevent clues from stretching too wide
+}
+
+.clue-lists h3 {
+    // Remove default margin from headings for cleaner list alignment
+    margin-top: 0; 
+}
+
+.clue-lists ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // Each list takes up equal width
+    flex: 1; 
+    min-width: 250px; // Ensure columns don't get too narrow
+}
+
+.clue-lists li {
+    padding: 3px 0;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+// Ensure controls stay below the main content area
+.controls {
+    flex-basis: 100%; // Make controls take up the full width below the grid and clues
+    margin-top: 20px;
+}

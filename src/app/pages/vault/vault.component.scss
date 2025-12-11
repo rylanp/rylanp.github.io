@@ -1,0 +1,102 @@
+* {
+    font-family: "Tiny5";
+    color: white;
+}
+
+h1 {
+text-align: center;
+}
+.input-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.131);
+    border-radius: 15px;
+    border: 3px white solid;
+    min-width: 30%;
+    text-align: center;
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8px;
+}
+
+
+
+
+.burst-btn {
+    background-color: rgb(234, 82, 110);
+    padding: 8px 55px 8px 55px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    border-radius: 25px;
+    border-color: rgb(182, 53, 79);
+    transition: ease-in-out 0.15s;
+    position: relative;
+    overflow: visible;
+}
+
+.burst-btn span.burst {
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    background: rgb(234, 82, 110);
+    border-radius: 3px;
+    opacity: 0;
+
+    transition: transform 0.18s ease-out, opacity 0.18s ease-out;
+
+    /* default off state */
+    transform: scaleX(0) rotate(var(--angle));
+}
+
+/* Left side positions */
+.burst.left {
+    left: -10px;
+}
+.burst.left.top    { top: calc(50% - 12px); --angle: 45deg; }
+.burst.left.mid    { top: 50%;             --angle: 0deg; }
+.burst.left.bottom { top: calc(50% + 12px);--angle: -45deg; }
+
+/* Right side positions */
+.burst.right {
+    right: -10px;
+}
+.burst.right.top    { top: calc(50% - 12px); --angle: -45deg; }
+.burst.right.mid    { top: 50%;              --angle: 0deg; }
+.burst.right.bottom { top: calc(50% + 12px); --angle: 45deg; }
+
+/* CLICK ANIMATION */
+/* left bursts shoot left */
+.burst-btn:active .burst.left {
+    opacity: 1;
+    transform: translateX(-12px) scaleX(1) rotate(var(--angle));
+}
+
+/* right bursts shoot right */
+.burst-btn:active .burst.right {
+    opacity: 1;
+    transform: translateX(12px) scaleX(1) rotate(var(--angle));
+}
+
+
+// button {
+//     background-color: rgba(255, 255, 255, 0.468);
+//     padding: 8px 55px 8px 55px;
+//     margin-top: auto;
+//     margin-bottom: auto;
+//     font-size: 25px;
+//     border-radius: 40px;
+//     transition: ease-in-out 0.15s;
+// }
+// button:hover {
+//     scale: 110%;
+// }
+// button:active {
+//     scale: 90%;
+// }

@@ -1,0 +1,68 @@
+<div class="crossword-container">
+  
+  <div class="crossword-grid">
+    <div class="crossword-row" *ngFor="let row of grid; let i = index">
+      
+      <div 
+        *ngFor="let cell of row; let j = index"
+        [ngClass]="{
+          'cell-square': true,
+          'black-square': !cell.isLetter,
+          'active': isCellActive(i, j),
+          'highlighted': isCellHighlighted(i, j),
+          'incorrect': cell.status === 'incorrect',
+          'correct': cell.status === 'correct'
+        }"
+        (click)="onCellClick(i, j)">
+        
+        <ng-container *ngIf="cell.isLetter">
+          
+          <span class="cell-number" *ngIf="cell.number">{{ cell.number }}</span>
+          
+          <input
+            type="text"
+            #cellInput
+            maxlength="1"
+            [value]="cell.userInput"
+            (input)="onInput($event, i, j)"
+            (keydown.backspace)="onBackspace(i, j)"
+            (keydown.arrowup)="moveFocus(i, j, 'up')"
+            (keydown.arrowdown)="moveFocus(i, j, 'down')"
+            (keydown.arrowleft)="moveFocus(i, j, 'left')"
+            (keydown.arrowright)="moveFocus(i, j, 'right')">
+
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="clue-lists">
+    <div class="clue-column">
+    <pre style="font-family: 'Tiny5';">   ACROSS</pre>
+        <ul>
+        <li 
+            *ngFor="let clue of clues.across" 
+            [class.active-clue]="isActiveClue(clue.id, 'across')"
+            (click)="setActiveClue(clue.id, 'across')">
+            {{ clue.number }}) {{ clue.text }}
+        </li>
+        </ul>
+    </div>
+    <div class="clue-column">
+    <pre style="font-family: 'Tiny5';">   DOWN</pre>
+        <ul>
+        <li 
+            *ngFor="let clue of clues.down"
+            [class.active-clue]="isActiveClue(clue.id, 'down')"
+            (click)="setActiveClue(clue.id, 'down')">
+            {{ clue.number }}) {{ clue.text }}
+        </li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button (click)="checkAnswers()">Check Answers</button>
+    <button (click)="resetGrid()">Clear Grid</button>
+  </div>
+</div>
