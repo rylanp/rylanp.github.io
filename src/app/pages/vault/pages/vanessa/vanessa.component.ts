@@ -26,39 +26,39 @@ ELSE##SEX
 
 Across Words:
 ( 0, 0)             WHUG  A great act of wrapping up an adored one
-( 0, 6)              RPH  Originally thought to never occur, it was realized in October of 2025
-( 1, 0)            EATUP  Are you hungry?
-( 1, 6)              ALE  A ginger soda
-( 2, 0)             THAI  Future date
-( 2, 6)              TEA  Just needs milk, sugar, and love from a special someone
-( 3, 4)            TRIAD  Chord made with only 3 notes
-( 4, 0)             BRAS  Very complicated to release someone from
-( 4, 6)               OD  Too much
-( 6, 1)           MARKET  I am not on it
+( 0, 6)              RPH  Originally thought to never occur, realized in October of 2025
+( 1, 0)            EATUP  Snack time!
+( 1, 6)              ALE  Ginger soda
+( 2, 0)             THAI  Cuisine for a future date
+( 2, 6)              TEA  Milk, sugar, and love from a special someone
+( 3, 4)            TRIAD  Three notes
+( 4, 0)             BRAS  Challenging to remove, well worth the reward
+( 4, 6)               OD  Excess of
+( 6, 1)           MARKET  RP is not on it
 ( 7, 0)              LOL  Haha, that's funny
 ( 7, 4)            INERT  As it may appear before any arousal
 ( 8, 0)          ORALSEX  👉😝 ↔️ 📦😝
-( 9, 0)          VANESSA  Cutest, kindest woman in the world
-(10, 0)             ELSE  If ... then ... ____
-(10, 6)              SEX  👉👌
+( 9, 0)          VANESSA  Cutest, kindest woman in the world (hot too!)
+(10, 0)             ELSE  If then ____
+(10, 6)              SEX  👉👌 🤰
 
 Down Words:
-( 0, 0)              WET  You get 💦
-( 7, 0)             LOVE  💕 💕 💕
+( 0, 0)              WET  Horny when my bf is shirtless 🥵
 ( 0, 1)              HAH  🤡
-( 6, 1)            MORAL  Do the right thing
-( 0, 2)            UTAMA  The family of a lovely woman
-( 6, 2)            ALANS  Who's is this?
+( 0, 2)            UTAMA  The loving family of a lovely woman
 ( 0, 3)              GUI  Visually stunning software
-( 4, 3)              SIR  Lil Raccoon
-( 8, 3)              LEE  Enter the Dragon star
-( 6, 4)             KISS  Generally the first step before sleepovers
-( 5, 5)            GENES  Soudns like my new pants, but they are not worn
 ( 0, 6)            RATIO  About 3 ciders to every 1 wine is good
-( 6, 6)            TEXAS  Cowboy and cowgirl homeland
-( 0, 7)            PLEAD  I really want a hug!
-( 0, 8)             HEAD  Preferred alternative to avoid pregnancy
-( 5, 8)           EATBOX  Hold your breath and where a wetsuit!
+( 0, 7)            PLEAD  I really want a hug! 🙏
+( 0, 8)             HEAD  Very versatile: showers, cars, beds, etc.
+( 4, 3)              SIR  Little Raccoon
+( 5, 5)            GENES  Hand me downs from ones parents
+( 5, 8)           EATBOX  Tongue meets splash zone
+( 6, 1)            MORAL  Do the right thing
+( 6, 2)            ALANS  Who's hex key is this?
+( 6, 4)             KISS  First step before sleepovers for some
+( 6, 6)            TEXAS  Cowboy and cowgirl homeland 🤠
+( 7, 0)             LOVE  💕 💕 💕
+( 8, 3)              LEE  Enter the Dragon star
 `;
   ngOnInit() {
       // 1. Call the parser directly with the string data
