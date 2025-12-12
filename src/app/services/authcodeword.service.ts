@@ -8,7 +8,7 @@ type CodePage = Record<string, Page>;
 })
 export class AuthcodewordService {
   private dict: CodePage = {
-    "CUTIE": {url: "vault/vanessa", access: false},
+    "LOVE": {url: "vault/vanessa", access: false},
   };
 
   constructor(private router: Router) { }
