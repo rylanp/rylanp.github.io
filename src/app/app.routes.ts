@@ -38,7 +38,7 @@ export const routes: Routes = [
     { path: 'galactic-warfare', component: GalacticwarfarepageComponent},
 
     {path: 'vault', component: VaultComponent},
-    {path: 'vault/vanessa', component: VanessaComponent, canActivate: [GuardService], data: { url: 'vault/vanessa' } },
+    // {path: 'vault/vanessa', component: VanessaComponent, canActivate: [GuardService], data: { url: 'vault/vanessa' } },
 
     { path: 'lost', component: PagenotfoundComponent},
     { path: '**', redirectTo: 'lost', pathMatch: 'full' },

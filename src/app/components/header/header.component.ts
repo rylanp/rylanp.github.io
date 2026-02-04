@@ -8,6 +8,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Subject, interval, map, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { RouterLink } from '@angular/router';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-header',
   imports: [
@@ -26,9 +27,8 @@ export class HeaderComponent implements OnInit, OnDestroy{
   private destroyed = new Subject<void>();
 
   isHandset: boolean = false; // True if on a small screen (handset)
-  timer$ = interval(10).pipe( map(() => this.getTimeLeft()) );
+  timer$ = interval(1).pipe( map(() => this.getTimeLeft()) );
   private sub?: Subscription;
-  targetDate = new Date('2026-01-11T13:00:00-05:00');// UTC - 5
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -42,17 +42,17 @@ export class HeaderComponent implements OnInit, OnDestroy{
   }
   getTimeLeft(): string {
     const now = new Date().getTime();
-    const target = this.targetDate.getTime();
-    const diff = target - now;
 
-    if (diff <= 0) return '< LOOKIN GOOD >'; // enables this as a button, user can click to enter the code word and play an easter egg
-
-    const seconds = Math.floor((diff / 1000) % 60);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24) % 7);
-    const weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
-    const ms = Math.floor(diff % 1000);
+    const seconds = Math.floor((now / 1000) % 60);
+    const minutes = Math.floor((now / (1000 * 60)) % 60);
+    const hours = Math.floor((now / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(now / (1000 * 60 * 60 * 24) % 7);
+    const weeks = Math.floor(now / (1000 * 60 * 60 * 24 * 7));
+    const ms = Math.floor(now % 1000);
+    const pipe = new DatePipe('en-US');
+    return pipe.transform(new Date(), 'MMM d, y - HH:mm ss.SSS') ?? '';
+    // return this.datePipe.transform(new Date(), 'MMM d, y HH:mm') ?? '';
+    // return formatDate(new Date().getTime(), 'MM/dd/yyyy', 'en-GB');
 
     return `${weeks}w ${days}d ${hours}h ${minutes}min ${seconds}sec`;
   }
