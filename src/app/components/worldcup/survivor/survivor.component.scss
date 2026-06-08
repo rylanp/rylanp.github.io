@@ -5,7 +5,7 @@
   grid-template-columns:
     repeat(
       auto-fill,
-      minmax(500px, 1fr)
+      minmax(375px, 1fr)
     );
 }
 
@@ -35,12 +35,11 @@
 .pick-row {
   display: grid;
   grid-template-columns:
-    60px
-    minmax(100px, 1fr)
-    40px
-    20px
-    40px
-    minmax(100px, 1fr);
+    15px      /* round */
+    30%     /* team A */
+    100px      /* score group */
+    30%;    /* team B */
+
   align-items: center;
   border-radius: 6px;
   padding: 5px;
@@ -50,30 +49,36 @@
   font-weight: 100;
 }
 
-.teamA {
-  text-align: right;
-  padding-right: 20px;
+.score-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
+}
 
+.score {
+  width: 28px;
+  text-align: center;
+}
+
+.dash {
+  width: 16px;
+  text-align: center;
+}
+
+.teamA,
+.teamB {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.teamA {
+  text-align: right;
+  font-weight: 600;
+}
+
 .teamB {
   text-align: left;
-  padding-left: 20px;
-  overflow:hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.score {
-  text-align: center;
-  font-weight: 600;
-}
-
-.dash {
-  text-align: center;
-  font-weight: 600;
 }
