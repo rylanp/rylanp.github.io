@@ -24,26 +24,33 @@
             track $index
           ) {
 
-            <div class="pick-row" [style.background-color]="pick.won ? '#f7f7f7' : '#ffc3c3'">
+            <div class="pick-row"  [style.background-color]="pick.won ? '#f7f7f7' : '#ffc3c3'">
 
-              <span class="round">{{ pick.round }}</span>
-              <span class="teamA" [style.color]="pick.won ? 'black' : 'red'">
-                {{ pick.teamA }}
-              </span>
-              <span class="score">
-                {{ Number.isNaN(pick.scoreA) ? '__' : pick.scoreA }}
-              </span>
-              <span class="dash">
-                —
-              </span>
-              <span class="score">
-                {{ Number.isNaN(pick.scoreB) ? '__' : pick.scoreB }}
-              </span>
-              <span class="teamB">
-                {{ pick.teamB }}
-              </span>
+          <span class="round">{{ pick.round }}</span>
 
-            </div>
+          <span
+            class="teamA"
+            [style.color]="pick.won ? 'black' : 'red'">
+            {{ pick.teamA }}
+          </span>
+
+          <span class="score-group">
+            <span class="score">
+              {{ Number.isNaN(pick.scoreA) ? '__' : pick.scoreA }}
+            </span>
+
+            <span class="dash">—</span>
+
+            <span class="score">
+              {{ Number.isNaN(pick.scoreB) ? '__' : pick.scoreB }}
+            </span>
+          </span>
+
+          <span class="teamB">
+            {{ pick.teamB }}
+          </span>
+
+        </div>
 
           }
 
