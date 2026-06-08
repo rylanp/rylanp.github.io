@@ -1,0 +1,56 @@
+@if (loading) {
+
+  <p>Loading...</p>
+
+} @else {
+
+  <div class="match-grid">
+
+    @for (
+      match of matches;
+      track $index
+    ) {
+
+      <div class="match-card">
+
+        <div class="match-header">
+          Round {{ match.round }}
+        </div>
+
+        <div class="match-row">
+
+          <span class="teamA">
+            {{ match.teamA }}
+          </span>
+
+          <span class="score">
+            {{ Number.isNaN(match.scoreA) ? '__' : match.scoreA }}
+          </span>
+
+          <span class="dash">
+            —
+          </span>
+
+          <span class="score">
+            {{ Number.isNaN(match.scoreB) ? '__' : match.scoreB }}
+          </span>
+
+          <span class="teamB">
+            {{ match.teamB }}
+          </span>
+
+        </div>
+
+        @if (match?.date) {
+          <div class="match-date">
+            {{ match.date}}
+          </div>
+        }
+
+      </div>
+
+    }
+
+  </div>
+
+}

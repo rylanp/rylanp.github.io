@@ -1,0 +1,79 @@
+.player-grid {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(500px, 1fr)
+    );
+}
+
+.player-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  background: white;
+
+  box-shadow:
+    0 2px 6px rgba(0,0,0,.08);
+}
+
+.player-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.pick-row {
+  display: grid;
+  grid-template-columns:
+    60px
+    minmax(100px, 1fr)
+    40px
+    20px
+    40px
+    minmax(100px, 1fr);
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.round {
+  font-weight: 100;
+}
+
+.teamA {
+  text-align: right;
+  padding-right: 20px;
+  font-weight: 600;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teamB {
+  text-align: left;
+  padding-left: 20px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score {
+  text-align: center;
+  font-weight: 600;
+}
+
+.dash {
+  text-align: center;
+  font-weight: 600;
+}
