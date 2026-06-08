@@ -50,7 +50,8 @@ export class HeaderComponent implements OnInit, OnDestroy{
     const weeks = Math.floor(now / (1000 * 60 * 60 * 24 * 7));
     const ms = Math.floor(now % 1000);
     const pipe = new DatePipe('en-US');
-    return pipe.transform(new Date(), 'MMM d, y - HH:mm ss.SSS') ?? '';
+    return pipe.transform(new Date(), 'MMM d, y - HH:mm') ?? '';
+    // return pipe.transform(new Date(), 'MMM d, y - HH:mm ss.SSS') ?? '';
     // return this.datePipe.transform(new Date(), 'MMM d, y HH:mm') ?? '';
     // return formatDate(new Date().getTime(), 'MM/dd/yyyy', 'en-GB');
 
