@@ -59,7 +59,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "https://rylanpaul.com/"
+              "baseHref": "/"
             },
             "development": {
               "optimization": false,
