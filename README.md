@@ -41,6 +41,8 @@ Enjoy!
 >
 > Run ```ng build```
 >
+> Run `build-server` to build into the **build** directory and copy that to `/var/www/html/`
+>
 > This will build the entire website in the docs folder
 >
 > Then create a pull request and merge development into main

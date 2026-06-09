@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-server": "ng build && sudo rm -rf /var/www/html/* && sudo cp -r docs/* /var/www/html/"
   },
   "private": true,
   "dependencies": {
