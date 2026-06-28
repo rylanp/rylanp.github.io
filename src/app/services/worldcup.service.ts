@@ -128,6 +128,7 @@ export class WorldcupService {
 
     const matches =
       rounds.flatMap(r => r.matches);
+      
     const matchlist = this.loadmatchlist(workbook);
 
     return {
@@ -178,26 +179,75 @@ export class WorldcupService {
         name: String(r[0]).trim()
       }));
   }
-  private loadmatchlist(workbook: XLSX.WorkBook): Match[] {
-    const rows = this.sheet(workbook, '2026 World Cup');
-    var matches: Match[] = [];
-    for (let index = 6; index < rows.length; index++) {
-      const m:Match = {
-        round: Math.floor((index - 6) / 24) + 1,
-        teamA: rows[index][4],
-        scoreA: Number(rows[index][5]),
-        teamB: rows[index][7],
-        scoreB: Number(rows[index][6]),
-        won: Number(rows[index][5]) > Number(rows[index][6]),
-        date: rows[index][1] + ". " + rows[index][2] + " " + this.excelTimeToString(rows[index][3]) + " EST"
-      };
-      if (m.teamA?.trim() == "" || m.teamA == undefined){
-        continue;
+
+  private loadmatchlist(
+    workbook: XLSX.WorkBook
+  ): Match[] {
+
+    const rows =
+      this.sheet(workbook, 'Rounds');
+
+    const rounds: Round[] = [];
+
+    for (let roundIndex = 0; roundIndex < 8; roundIndex++) {
+
+      const baseCol =
+        roundIndex * 4;
+
+      const matches: Match[] = [];
+
+      for (let row = 1; row < rows.length; row++) {
+
+        const r = rows[row];
+
+        const teamA =
+          r?.[baseCol];
+
+        const scoreA =
+          Number(r?.[baseCol + 1] ?? undefined);
+
+        const scoreB =
+          Number(r?.[baseCol + 2] ?? undefined);
+
+        const teamB =
+          r?.[baseCol + 3];
+
+        if (
+          !teamA ||
+          !teamB
+        ) {
+          continue;
+        }
+
+        const canwin = (scoreA != undefined && scoreB != undefined)
+        var won = false;
+        if (canwin){
+          won = scoreA > scoreB
+        }
+
+        matches.push({
+          round: roundIndex + 1,
+
+          teamA: String(teamA),
+          scoreA,
+
+          teamB: String(teamB),
+          scoreB,
+          won: won,
+          date: undefined
+        });
       }
-      matches.push(m);
+
+      rounds.push({
+        roundNumber:
+          roundIndex + 1,
+        matches
+      });
     }
-    return matches;
+
+    return rounds.flatMap(r => r.matches);
   }
+
   private excelTimeToString(excelTime: number): string {
 
     const totalMinutes =
