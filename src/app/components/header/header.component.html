@@ -8,12 +8,6 @@
         <ng-container *ngIf="!isHandset">
             <button mat-button routerLink="/home" style="color: white;">Home</button>
 
-            <button mat-button [matMenuTriggerFor]="worldcupmenu" style="color: white;">World Cup 2026</button>
-            <mat-menu #worldcupmenu="matMenu" class="custom-menu">
-                <button mat-menu-item routerLink="/worldcup2026/survivor">Survivor</button>
-                <button mat-menu-item routerLink="/worldcup2026/matches">Matches</button>
-            </mat-menu>
-
             <button mat-button [matMenuTriggerFor]="discgolfmenu" style="color: white;">Disc Golf Score Tracker</button>
             <mat-menu #discgolfmenu="matMenu" class="custom-menu">
                 <button mat-menu-item routerLink="/discgolfscoretracker">Home</button>
@@ -47,11 +41,6 @@
             <mat-icon>menu</mat-icon> </button>
 
         <mat-menu #mobileMenu="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="worldcupsubmenu">World Cup 2026</button>
-            <mat-menu #worldcupsubmenu="matMenu" class="custom-menu">
-                <button mat-menu-item routerLink="/worldcup2026/survivor">Survivor</button>
-                <button mat-menu-item routerLink="/worldcup2026/matches">Matches</button>
-            </mat-menu>
 
             <button mat-menu-item [matMenuTriggerFor]="discgolfSubMenu">Disc Golf Score Tracker</button>
             <mat-menu #discgolfSubMenu="matMenu" class="custom-menu">
