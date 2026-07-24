@@ -14,9 +14,6 @@ import { PrivacyPolicyComponentPoco } from './pages/discoverpoco/privacy-policy/
 import { VaultComponent } from './pages/vault/vault.component';
 import { VanessaComponent } from './pages/vault/pages/vanessa/vanessa.component';
 import { GuardService } from './services/guard.service';
-import { WorldcupComponent } from './components/worldcup/worldcup/worldcup.component';
-import { SurvivorComponent } from './components/worldcup/survivor/survivor.component';
-import { BracketComponent } from './components/worldcup/bracket/bracket.component';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -42,9 +39,6 @@ export const routes: Routes = [
 
     {path: 'vault', component: VaultComponent},
     // {path: 'vault/vanessa', component: VanessaComponent, canActivate: [GuardService], data: { url: 'vault/vanessa' } },
-
-    {path: 'worldcup2026/matches', component: WorldcupComponent},
-    {path: 'worldcup2026/survivor', component: SurvivorComponent},
 
     { path: 'lost', component: PagenotfoundComponent},
     { path: '**', redirectTo: 'lost', pathMatch: 'full' },
